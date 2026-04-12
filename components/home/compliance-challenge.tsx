@@ -74,11 +74,20 @@ export function ComplianceChallenge() {
         </div>
 
         <div className="mt-12 rounded-xl border border-accent/30 bg-accent/10 p-6 sm:p-8">
-          <p className="text-center text-lg font-medium text-foreground">
-            The question regulators will ask is: <em>&quot;What systems did you have in place, and can you prove they were functioning?&quot;</em>
+          <h3 className="text-lg font-semibold text-foreground mb-4">The 2026 Enforcement Landscape Has Changed</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p><strong className="text-foreground">Paramountcy Principle</strong> — child safety now overrides cost in every operational decision</p>
+            <p><strong className="text-foreground">Biological Hazards Code (March 2026)</strong> — explicitly covers childcare; classifies biological hazards as high risk</p>
+            <p><strong className="text-foreground">Worker Register</strong> — every person entering a centre must be registered, including cleaners</p>
+            <p><strong className="text-foreground">Fines tripled</strong> — new penalty framework in force</p>
+            <p><strong className="text-foreground">160,000 additional site checks</strong> — unannounced inspections commenced</p>
+            <p><strong className="text-foreground">Personal liability</strong> — insurance protections removed; directors personally exposed</p>
+          </div>
+          <p className="mt-6 text-foreground leading-relaxed">
+            Combined, these changes significantly increase expectations for PCBUs under WHS. Infection-control cleaning in childcare now carries the same risk classification and safety expectations as working at heights in construction — structured controls, documented competency, verified supervision, and auditable compliance are not optional.
           </p>
-          <p className="mt-3 text-center text-muted-foreground">
-            If you can&apos;t answer that with documented evidence, you have a personal liability gap.
+          <p className="mt-4 font-semibold text-foreground">
+            Centres must now prove compliance — not just claim it.
           </p>
         </div>
       </div>
