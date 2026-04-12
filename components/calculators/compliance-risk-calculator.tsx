@@ -9,7 +9,8 @@ import { CalculatorWizard, WizardStep } from "./calculator-wizard"
 import Link from "next/link"
 
 type YesNo = "yes" | "no" | ""
-type RiskLevel = "low" | "medium" | "high" | "critical"
+type Maybe = "yes" | "no" | "maybe" | ""
+type RiskLevel = "compliant" | "partial" | "significant" | "noncompliant"
 
 export function ComplianceRiskCalculator() {
   const [hasWorkerRegister, setHasWorkerRegister] = useState<YesNo>("")
@@ -17,6 +18,11 @@ export function ComplianceRiskCalculator() {
   const [hasDocumentation, setHasDocumentation] = useState<YesNo>("")
   const [hasBiohazardProcedure, setHasBiohazardProcedure] = useState<YesNo>("")
   const [hasRatioConflict, setHasRatioConflict] = useState<YesNo>("")
+  const [hasNapTimeCleaning, setHasNapTimeCleaning] = useState<YesNo>("")
+  const [hasAfterHoursQuals, setHasAfterHoursQuals] = useState<Maybe>("")
+  const [hasVerificationLogs, setHasVerificationLogs] = useState<YesNo>("")
+  const [usesTGAProducts, setUsesTGAProducts] = useState<YesNo>("")
+  const [hasChemicalControls, setHasChemicalControls] = useState<YesNo>("")
 
   const results = useMemo(() => {
     const answers = [
@@ -25,52 +31,61 @@ export function ComplianceRiskCalculator() {
       hasDocumentation,
       hasBiohazardProcedure,
       hasRatioConflict,
+      hasNapTimeCleaning,
+      hasAfterHoursQuals,
+      hasVerificationLogs,
+      usesTGAProducts,
+      hasChemicalControls,
     ]
 
-    // For ratio conflict, "yes" means they DO have a problem (cleaner is on ratio)
-    // So we count "no" for most questions as a gap, but "yes" for ratio conflict as a gap
-    const gaps = [
-      hasWorkerRegister === "no",
-      hasInfectionTraining === "no",
-      hasDocumentation === "no",
-      hasBiohazardProcedure === "no",
-      hasRatioConflict === "yes", // This is reversed - "yes" means they have a problem
+    // Count passes: for inverted questions (5, 6), "no" is a pass. For question 7, only "yes" is a pass.
+    const passes = [
+      hasWorkerRegister === "yes",
+      hasInfectionTraining === "yes",
+      hasDocumentation === "yes",
+      hasBiohazardProcedure === "yes",
+      hasRatioConflict === "no", // Inverted: "no" = pass
+      hasNapTimeCleaning === "no", // Inverted: "no" = pass
+      hasAfterHoursQuals === "yes", // Only "yes" = pass, "no" and "maybe" both fail
+      hasVerificationLogs === "yes",
+      usesTGAProducts === "yes",
+      hasChemicalControls === "yes",
     ].filter(Boolean).length
 
     const answered = answers.filter((a) => a !== "").length
 
-    if (answered < 5) return null
+    if (answered < 10) return null
 
     let riskLevel: RiskLevel
     let riskScore: number
     let financialExposure: { min: number; max: number }
     let personalLiabilityRisk: string
+    let riskDescription: string
 
-    if (gaps >= 4) {
-      riskLevel = "critical"
-      riskScore = 95
-      financialExposure = { min: 100000, max: 700000 }
-      personalLiabilityRisk = "Extreme — Directors face personal prosecution risk"
-    } else if (gaps >= 3) {
-      riskLevel = "high"
-      riskScore = 75
-      financialExposure = { min: 50000, max: 150000 }
-      personalLiabilityRisk = "High — Significant due diligence gaps"
-    } else if (gaps >= 2) {
-      riskLevel = "medium"
-      riskScore = 50
-      financialExposure = { min: 20000, max: 75000 }
-      personalLiabilityRisk = "Moderate — Documentation gaps present"
-    } else if (gaps === 1) {
-      riskLevel = "low"
-      riskScore = 25
-      financialExposure = { min: 5000, max: 25000 }
-      personalLiabilityRisk = "Low — Minor compliance improvements needed"
-    } else {
-      riskLevel = "low"
+    if (passes >= 9) {
+      riskLevel = "compliant"
       riskScore = 10
       financialExposure = { min: 0, max: 5000 }
       personalLiabilityRisk = "Minimal — Strong compliance position"
+      riskDescription = "Your centre appears to meet current compliance requirements. Consider NCCS certification to formalise and document your position."
+    } else if (passes >= 5) {
+      riskLevel = "partial"
+      riskScore = 50
+      financialExposure = { min: 20000, max: 75000 }
+      personalLiabilityRisk = "Moderate — Documentation gaps present"
+      riskDescription = "Your centre has compliance gaps that expose you to regulatory action. Address these before your next audit or inspection."
+    } else if (passes >= 3) {
+      riskLevel = "significant"
+      riskScore = 75
+      financialExposure = { min: 50000, max: 150000 }
+      personalLiabilityRisk = "High — Significant due diligence gaps"
+      riskDescription = "Your centre has significant compliance gaps across multiple areas. Directors and Approved Providers are personally exposed. Immediate action recommended."
+    } else {
+      riskLevel = "noncompliant"
+      riskScore = 95
+      financialExposure = { min: 100000, max: 700000 }
+      personalLiabilityRisk = "Extreme — Directors face personal prosecution risk"
+      riskDescription = "Your centre is substantially non-compliant. The risk of regulatory enforcement, personal prosecution, and financial penalty is high. Contact us immediately."
     }
 
     return {
@@ -78,10 +93,11 @@ export function ComplianceRiskCalculator() {
       riskScore,
       financialExposure,
       personalLiabilityRisk,
-      gaps,
-      strengths: 5 - gaps,
+      riskDescription,
+      passes,
+      gaps: 10 - passes,
     }
-  }, [hasWorkerRegister, hasInfectionTraining, hasDocumentation, hasBiohazardProcedure, hasRatioConflict])
+  }, [hasWorkerRegister, hasInfectionTraining, hasDocumentation, hasBiohazardProcedure, hasRatioConflict, hasNapTimeCleaning, hasAfterHoursQuals, hasVerificationLogs, usesTGAProducts, hasChemicalControls])
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("en-AU", {
@@ -93,27 +109,40 @@ export function ComplianceRiskCalculator() {
 
   const getRiskColor = (level: RiskLevel) => {
     switch (level) {
-      case "critical":
+      case "noncompliant":
         return "text-red-600"
-      case "high":
+      case "significant":
         return "text-orange-600"
-      case "medium":
+      case "partial":
         return "text-amber-600"
-      case "low":
+      case "compliant":
         return "text-green-600"
     }
   }
 
   const getRiskBg = (level: RiskLevel) => {
     switch (level) {
-      case "critical":
+      case "noncompliant":
         return "bg-red-100"
-      case "high":
+      case "significant":
         return "bg-orange-100"
-      case "medium":
+      case "partial":
         return "bg-amber-100"
-      case "low":
+      case "compliant":
         return "bg-green-100"
+    }
+  }
+
+  const getRiskEmoji = (level: RiskLevel) => {
+    switch (level) {
+      case "noncompliant":
+        return "🔴"
+      case "significant":
+        return "🟠"
+      case "partial":
+        return "🟡"
+      case "compliant":
+        return "🟢"
     }
   }
 
@@ -123,6 +152,11 @@ export function ComplianceRiskCalculator() {
     setHasDocumentation("")
     setHasBiohazardProcedure("")
     setHasRatioConflict("")
+    setHasNapTimeCleaning("")
+    setHasAfterHoursQuals("")
+    setHasVerificationLogs("")
+    setUsesTGAProducts("")
+    setHasChemicalControls("")
   }
 
   const YesNoRadio = ({
@@ -162,6 +196,66 @@ export function ComplianceRiskCalculator() {
     </RadioGroup>
   )
 
+  const ThreeWayRadio = ({
+    value,
+    onChange,
+    yesId,
+    noId,
+    maybeId,
+    onMaybeSelect,
+  }: {
+    value: Maybe
+    onChange: (value: Maybe) => void
+    yesId: string
+    noId: string
+    maybeId: string
+    onMaybeSelect?: () => void
+  }) => (
+    <div className="space-y-4">
+      <RadioGroup
+        value={value}
+        onValueChange={(v) => {
+          onChange(v as Maybe)
+          if (v === "maybe") onMaybeSelect?.()
+        }}
+        className="flex gap-4"
+      >
+        <div className="flex items-center">
+          <RadioGroupItem value="yes" id={yesId} className="peer sr-only" />
+          <Label
+            htmlFor={yesId}
+            className="flex h-12 w-20 cursor-pointer items-center justify-center rounded-lg border-2 border-border bg-card text-card-foreground transition-all peer-data-[state=checked]:border-accent peer-data-[state=checked]:bg-accent/10 peer-data-[state=checked]:text-accent hover:bg-muted text-sm"
+          >
+            Yes
+          </Label>
+        </div>
+        <div className="flex items-center">
+          <RadioGroupItem value="maybe" id={maybeId} className="peer sr-only" />
+          <Label
+            htmlFor={maybeId}
+            className="flex h-12 w-20 cursor-pointer items-center justify-center rounded-lg border-2 border-border bg-card text-card-foreground transition-all peer-data-[state=checked]:border-amber-600 peer-data-[state=checked]:bg-amber-100/50 peer-data-[state=checked]:text-amber-600 hover:bg-muted text-sm"
+          >
+            Maybe
+          </Label>
+        </div>
+        <div className="flex items-center">
+          <RadioGroupItem value="no" id={noId} className="peer sr-only" />
+          <Label
+            htmlFor={noId}
+            className="flex h-12 w-20 cursor-pointer items-center justify-center rounded-lg border-2 border-border bg-card text-card-foreground transition-all peer-data-[state=checked]:border-destructive peer-data-[state=checked]:bg-destructive/10 peer-data-[state=checked]:text-destructive hover:bg-muted text-sm"
+          >
+            No
+          </Label>
+        </div>
+      </RadioGroup>
+      {value === "maybe" && (
+        <div className="rounded-lg bg-amber-50 border border-amber-200 p-3">
+          <p className="text-sm text-amber-900 font-medium">If you&apos;re unsure, that&apos;s a gap.</p>
+        </div>
+      )}
+    </div>
+  )
+
   const HelperText = ({ children }: { children: React.ReactNode }) => (
     <div className="mt-4 flex items-start gap-2 rounded-lg bg-muted/50 p-3 text-sm text-muted-foreground">
       <Info className="h-4 w-4 flex-shrink-0 mt-0.5" />
@@ -173,6 +267,7 @@ export function ComplianceRiskCalculator() {
     {
       id: "worker-register",
       question: "Are all cleaning staff listed on the National Early Childhood Worker Register?",
+      helper: "Worker Register requirement",
       component: (
         <div>
           <YesNoRadio
@@ -191,6 +286,7 @@ export function ComplianceRiskCalculator() {
     {
       id: "infection-training",
       question: "Do your cleaning staff hold documented training in infection-control cleaning and biological hazard management specific to childcare environments?",
+      helper: "ECEC-specific training requirement",
       component: (
         <div>
           <YesNoRadio
@@ -209,6 +305,7 @@ export function ComplianceRiskCalculator() {
     {
       id: "documentation",
       question: "Can your centre produce all of the following right now: a risk-based cleaning schedule that specifies tasks by room and frequency, daily cleaning logs signed by the person who performed each task, Safety Data Sheets for every chemical product in use, and records showing who is responsible for verifying the work was completed?",
+      helper: "Complete documentation",
       component: (
         <div>
           <YesNoRadio
@@ -227,6 +324,7 @@ export function ComplianceRiskCalculator() {
     {
       id: "biohazard",
       question: "Does your centre have a documented biohazard incident response procedure — including bodily fluid spills, gastro or infectious disease outbreaks, and contaminated waste disposal — with designated staff trained to carry it out?",
+      helper: "Biohazard procedures",
       component: (
         <div>
           <YesNoRadio
@@ -245,6 +343,7 @@ export function ComplianceRiskCalculator() {
     {
       id: "ratio-conflict",
       question: "Is the person responsible for performing infection-control cleaning also counted in your educator-to-child ratios?",
+      helper: "Ratio separation principle",
       component: (
         <div>
           <YesNoRadio
@@ -260,26 +359,130 @@ export function ComplianceRiskCalculator() {
       ),
       getSummary: () => hasRatioConflict === "yes" ? "Yes — Ratio conflict exists" : "No — No ratio conflict",
     },
+    {
+      id: "nap-time",
+      question: "Does your centre perform the bulk of its infection-control cleaning during nap time?",
+      helper: "Daytime coverage requirement",
+      component: (
+        <div>
+          <YesNoRadio
+            value={hasNapTimeCleaning}
+            onChange={setHasNapTimeCleaning}
+            yesId="nap-yes"
+            noId="nap-no"
+          />
+          <HelperText>
+            If the majority of cleaning happens during nap time, your centre is relying on a narrow window to manage biological hazards that accumulate throughout the entire day. Nappy changes, mouthed toys, bodily fluid spills, and high-touch surface contamination occur continuously during operating hours — not just at nap time. A compliant infection prevention schedule is risk-based and distributed across the full operating day.
+          </HelperText>
+        </div>
+      ),
+      getSummary: () => hasNapTimeCleaning === "yes" ? "Yes — Bulk cleaning during nap time only" : "No — Distributed throughout day",
+    },
+    {
+      id: "after-hours-quals",
+      question: "Does your after-hours cleaner hold certified infection-control cleaning qualifications specific to childcare environments?",
+      helper: "After-hours cleaner credentials",
+      component: (
+        <div>
+          <ThreeWayRadio
+            value={hasAfterHoursQuals}
+            onChange={setHasAfterHoursQuals}
+            yesId="quals-yes"
+            maybeId="quals-maybe"
+            noId="quals-no"
+            onMaybeSelect={() => {}}
+          />
+          <HelperText>
+            A Cert III in Cleaning Operations or general commercial cleaning experience does not cover childcare-specific biological hazards, TGA-approved child-safe products, or ECEC infection-control protocols. If you&apos;re unsure whether your cleaner holds childcare-specific IPC qualifications — they almost certainly don&apos;t. &apos;Maybe&apos; is not evidence of competency.
+          </HelperText>
+        </div>
+      ),
+      getSummary: () => hasAfterHoursQuals === "yes" ? "Yes — Certified in ECEC infection control" : hasAfterHoursQuals === "maybe" ? "Maybe — Unclear" : "No — No ECEC-specific qualifications",
+    },
+    {
+      id: "verification-logs",
+      question: "Does your after-hours cleaner provide cleaning verification logs on a nightly basis?",
+      helper: "Verification documentation",
+      component: (
+        <div>
+          <YesNoRadio
+            value={hasVerificationLogs}
+            onChange={setHasVerificationLogs}
+            yesId="logs-yes"
+            noId="logs-no"
+          />
+          <HelperText>
+            Verification logs must show what was cleaned, when, by whom, with what products, and whether the work was completed to schedule. A signature on a generic sign-off sheet is not a verification log. If your cleaner does not provide nightly documentation — you have no evidence the work was done to any standard.
+          </HelperText>
+        </div>
+      ),
+      getSummary: () => hasVerificationLogs === "yes" ? "Yes — Nightly logs provided" : "No — No verification logs",
+    },
+    {
+      id: "tga-products",
+      question: "Does your centre use TGA-approved cleaning chemicals only?",
+      helper: "TGA product compliance",
+      component: (
+        <div>
+          <YesNoRadio
+            value={usesTGAProducts}
+            onChange={setUsesTGAProducts}
+            yesId="tga-yes"
+            noId="tga-no"
+          />
+          <HelperText>
+            All disinfectants used in high-risk zones (nursery, bathrooms, nappy change areas) should be TGA-listed (ARTG registered) as hospital-grade or appropriate for the surface type. Products used on surfaces children mouth must be safe for mucous membrane contact. If you don&apos;t know whether your products are TGA-approved — check. The ARTG register is searchable at tga.gov.au.
+          </HelperText>
+        </div>
+      ),
+      getSummary: () => usesTGAProducts === "yes" ? "Yes — TGA products only" : "No — Non-approved products in use",
+    },
+    {
+      id: "chemical-controls",
+      question: "Do you have verifiable control documents for chemical handling and dilution?",
+      helper: "Chemical management controls",
+      component: (
+        <div>
+          <YesNoRadio
+            value={hasChemicalControls}
+            onChange={setHasChemicalControls}
+            yesId="controls-yes"
+            noId="controls-no"
+          />
+          <HelperText>
+            This means: a current Chemical Register listing every product in use with ARTG numbers, SDS currency dates, and expiry tracking. Plus documented dilution ratios recorded per shift — not just the label instructions, but evidence that the correct ratio was actually used. If your chemical management consists of a bottle of spray under the sink with no register, no SDS folder, and no dilution records — that is a WHS compliance gap.
+          </HelperText>
+        </div>
+      ),
+      getSummary: () => hasChemicalControls === "yes" ? "Yes — Chemical controls documented" : "No — No chemical documentation",
+    },
   ]
 
   const resultsPanel = results && (
     <div className="space-y-6">
       {/* Risk Score Header */}
       <div className={`rounded-xl p-6 ${getRiskBg(results.riskLevel)}`}>
-        <div className="flex flex-col items-center text-center sm:flex-row sm:text-left sm:justify-between">
+        <div className="flex flex-col items-center text-center sm:flex-row sm:text-left sm:justify-between gap-4">
           <div>
             <p className="text-sm font-medium text-muted-foreground">Risk Level</p>
-            <p className={`text-3xl font-bold ${getRiskColor(results.riskLevel)}`}>
-              {results.riskLevel.toUpperCase()}
+            <p className={`text-3xl font-bold ${getRiskColor(results.riskLevel)} flex items-center gap-2`}>
+              {getRiskEmoji(results.riskLevel)} {results.riskLevel === "compliant" ? "COMPLIANT" : results.riskLevel === "partial" ? "PARTIALLY COMPLIANT" : results.riskLevel === "significant" ? "SIGNIFICANT GAPS" : "NON-COMPLIANT"}
             </p>
           </div>
-          <div className="mt-4 sm:mt-0 sm:text-right">
-            <p className="text-sm font-medium text-muted-foreground">Risk Score</p>
+          <div className="sm:text-right">
+            <p className="text-sm font-medium text-muted-foreground">Passing Areas</p>
             <p className={`text-3xl font-bold ${getRiskColor(results.riskLevel)}`}>
-              {results.riskScore}/100
+              {results.passes}/10
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Risk Description */}
+      <div className="rounded-xl border border-border bg-card p-6">
+        <p className="text-foreground leading-relaxed">
+          {results.riskDescription}
+        </p>
       </div>
 
       {/* Financial Exposure */}
@@ -306,29 +509,17 @@ export function ComplianceRiskCalculator() {
         </p>
       </div>
 
-      {/* Summary */}
-      <div className="grid grid-cols-2 gap-4">
-        <div className="rounded-lg bg-muted p-4 text-center">
-          <p className="text-3xl font-bold text-destructive">{results.gaps}</p>
-          <p className="text-sm text-muted-foreground">Compliance Gaps</p>
-        </div>
-        <div className="rounded-lg bg-muted p-4 text-center">
-          <p className="text-3xl font-bold text-green-600">{results.strengths}</p>
-          <p className="text-sm text-muted-foreground">Areas Compliant</p>
-        </div>
-      </div>
-
       {/* CTA */}
-      {results.riskLevel !== "low" && (
+      {results.riskLevel !== "compliant" && (
         <div className="rounded-xl border border-accent bg-accent/10 p-6">
-          <p className="font-medium text-foreground">
-            {results.riskLevel === "critical" 
-              ? "Your centre has critical compliance gaps. Immediate action recommended."
-              : results.riskLevel === "high"
-              ? "Your centre has significant compliance gaps that require attention."
-              : "Your centre has some compliance gaps that should be addressed."}
+          <p className="font-medium text-foreground mb-3">
+            {results.riskLevel === "noncompliant" 
+              ? "Your centre is substantially non-compliant. Immediate action required."
+              : results.riskLevel === "significant"
+              ? "Your centre has significant compliance gaps. Directors are personally exposed."
+              : "Your centre has compliance gaps that should be addressed."}
           </p>
-          <Button asChild className="mt-4 bg-accent text-accent-foreground hover:bg-accent/90">
+          <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/contact">
               <Phone className="mr-2 h-4 w-4" />
               Book a Compliance Review
@@ -347,7 +538,7 @@ export function ComplianceRiskCalculator() {
   return (
     <CalculatorWizard
       headline="What's Your Compliance Exposure?"
-      description="Answer 5 questions to see your centre's financial risk."
+      description="Answer 10 questions to see your centre's compliance risk and financial exposure."
       buttonText="Check Now"
       steps={steps}
       resultsPanel={resultsPanel}
