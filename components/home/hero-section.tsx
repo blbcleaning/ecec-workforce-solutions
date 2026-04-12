@@ -9,10 +9,11 @@ export function HeroSection() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl xl:text-6xl">
-            Get Your Centre Compliant. Certify Your Infection Prevention Team. Protect Your Licence.
+            <span className="block">Educators Educate. Cleaners Clean.</span>
+            <span className="block mt-2">We Train And Certify The Workforce That Makes It Possible.</span>
           </h1>
-          <p className="mt-6 text-pretty text-lg leading-relaxed text-primary-foreground/80 sm:text-xl">
-            ECEC Workforce Solutions delivers NCCS certification, compliance tools, and consulting — built specifically for childcare centres and cleaning companies operating in early childhood education.
+          <p className="mt-6 text-pretty text-lg leading-relaxed italic text-primary-foreground/80 sm:text-xl font-normal">
+            Australia&apos;s First Infection Prevention Standard For Childcare. For Centres. For Cleaning Companies.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
