@@ -35,7 +35,7 @@ export function HeroSection() {
             </div>
             <div>
               <p className="font-semibold text-primary-foreground">NCCS Certified</p>
-              <p className="text-sm text-primary-foreground/70">Australia&apos;s first standard</p>
+              <p className="text-sm text-primary-foreground/70">Childcare Infection Prevention</p>
             </div>
           </div>
           <div className="flex items-center gap-4 rounded-lg border border-primary-foreground/10 bg-primary-foreground/5 p-4">
