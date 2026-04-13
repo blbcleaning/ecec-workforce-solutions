@@ -47,10 +47,10 @@ export function DocumentationSection() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
-              WHS-Compliant Documentation Systems
+              WHS Statutory Documentation & Integrated Compliance Systems
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Complete documentation frameworks that make your centre audit-ready and WHS-compliant. Every document is structured to satisfy both NQF quality area requirements and WHS record-keeping obligations.
+              Deploy a robust evidence-of-compliance framework designed to withstand rigorous regulatory scrutiny. Our systems provide a direct nexus between NQF Quality Area requirements and WHS statutory record-keeping obligations. Every document is engineered to satisfy the PCBU&apos;s Duty of Care and provide a defensible audit trail that demonstrates &quot;so far as is reasonably practicable&quot; safety management.
             </p>
             <div className="mt-8 rounded-lg border border-accent/30 bg-accent/10 p-4">
               <p className="text-sm font-medium text-foreground">
