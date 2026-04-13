@@ -113,6 +113,71 @@ export default function ForCleaningCompaniesPage() {
           </div>
         </section>
 
+        {/* A New Market Standard Section */}
+        <section className="bg-accent/5 py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                A New Market Standard: The End of the &quot;Race to the Bottom&quot;
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                Historically, childcare has been one of the cleaning industry&apos;s most challenging sectors—defined by razor-thin margins and a &quot;lowest price&quot; mentality. <strong className="text-foreground">The March 2026 SWA high-risk biohazard profiling has fundamentally ended that era.</strong>
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                In this new regulatory environment, a childcare centre cutting cleaning hours or hiring uncertified labor is the legal equivalent of a <strong className="text-foreground">builder expecting workers to operate at heights without a harness.</strong> It is no longer just &quot;budgeting&quot;—it is a catastrophic breach of safety standards.
+              </p>
+
+              <div className="mt-10 rounded-xl border border-accent/30 bg-card p-8">
+                <h3 className="text-xl font-bold text-foreground">The Opportunity: Transition from Vendor to Essential Partner</h3>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  The NCCS gives cleaning companies the leverage to reset the market and move from a disposable expense to a <strong className="text-foreground">statutory necessity.</strong>
+                </p>
+                <ul className="mt-6 space-y-4">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                    <div>
+                      <p className="font-semibold text-foreground">From &quot;Low Cost&quot; to &quot;Life Safety&quot;</p>
+                      <p className="mt-1 text-sm text-muted-foreground">Under the <strong>Paramount Consideration</strong>, infection prevention is now a safety-critical function. This provides you with the authority to quote for the actual labor hours required to satisfy WorkSafe and NQF inspectors.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                    <div>
+                      <p className="font-semibold text-foreground">Non-Negotiable Compliance</p>
+                      <p className="mt-1 text-sm text-muted-foreground">Just as a site manager cannot &quot;opt-out&quot; of scaffolding, childcare directors can no longer &quot;opt-out&quot; of validated biohazard suppression. The NCCS provides the turn-key system to deliver this mandatory service.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                    <div>
+                      <p className="font-semibold text-foreground">Increased Contract Value &amp; Security</p>
+                      <p className="mt-1 text-sm text-muted-foreground">By providing a certified, risk-mitigating service, you secure your contracts. When the risk is high, providers shift their spend away from &quot;cheap&quot; and toward &quot;certified&quot; to protect their license to operate.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mt-8 rounded-xl border-l-4 border-accent bg-accent/5 p-6">
+                <p className="text-lg font-semibold text-foreground italic">
+                  &quot;In a biohazardous environment, &apos;budget cleaning&apos; is a reportable safety violation.&quot;
+                </p>
+                <p className="mt-4 text-muted-foreground">
+                  We provide the certification and framework you need to stop competing on price and start leading on protection. This is a premium service opportunity to capture a market that is actively looking for help to comply with a new, high-stakes reality.
+                </p>
+              </div>
+
+              <div className="mt-8">
+                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Link href="/contact">
+                    Become an NCCS-Certified Provider Today
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* What's Changed Section */}
         <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
