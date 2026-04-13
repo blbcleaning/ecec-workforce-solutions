@@ -176,9 +176,6 @@ export default function ForCleaningCompaniesPage() {
                   </div>
                 </div>
               </div>
-              <p className="mt-6 text-muted-foreground leading-relaxed">
-                At <strong className="text-foreground">ECEC Workforce Solutions</strong>, we work with your preferred provider���or help you source a new one—to ensure they incorporate the NCCS as their standard operating procedure. This alignment ensures that your external partners act as a shield against regulatory scrutiny, rather than a point of vulnerability.
-              </p>
             </div>
           </div>
         </section>
