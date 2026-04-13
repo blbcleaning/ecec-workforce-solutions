@@ -227,7 +227,7 @@ export default function ForCleaningCompaniesPage() {
                 </div>
               </div>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                At <strong className="text-foreground">ECEC Workforce Solutions</strong>, we work with your preferred provider—or help you source a new one—to ensure they incorporate the NCCS as their standard operating procedure. This alignment ensures that your external partners act as a shield against regulatory scrutiny, rather than a point of vulnerability.
+                At <strong className="text-foreground">ECEC Workforce Solutions</strong>, we work with your preferred provider���or help you source a new one—to ensure they incorporate the NCCS as their standard operating procedure. This alignment ensures that your external partners act as a shield against regulatory scrutiny, rather than a point of vulnerability.
               </p>
             </div>
           </div>
@@ -308,7 +308,7 @@ export default function ForCleaningCompaniesPage() {
                   Why This Is a Commercial Opportunity
                 </h2>
                 <p className="mt-4 text-lg text-primary-foreground/80">
-                  The companies that certify first will secure the contracts. The rest will lose them.
+                  The NCCS certification has transformed from a "value-add" into a mandatory prerequisite for market entry. As childcare centers face high-risk biohazard classifications and tripled fines, general commercial cleaners who fail to certify will be viewed as a significant legal liability. This shift presents a decisive commercial crossroads: companies that certify early will secure the market, while those who don't will face an inevitable loss of contracts as providers are forced to shift their spend toward certified, risk-mitigating partners to protect their licenses.
                 </p>
               </div>
               <div className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/5 p-6">
