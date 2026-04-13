@@ -3,6 +3,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { HeroSection } from "@/components/home/hero-section"
 import { ComplianceChallenge } from "@/components/home/compliance-challenge"
 import { ComplianceRiskCalculatorSection } from "@/components/home/compliance-risk-calculator-section"
+import { BiohazardInfographicSection } from "@/components/home/biohazard-infographic-section"
 import { ServicesSection } from "@/components/home/services-section"
 import { DocumentationSection } from "@/components/home/documentation-section"
 import { SafeWorkSystems } from "@/components/home/safe-work-systems"
@@ -22,6 +23,7 @@ export default function HomePage() {
         <HeroSection />
         <ComplianceChallenge />
         <ComplianceRiskCalculatorSection />
+        <BiohazardInfographicSection />
         <ServicesSection />
         <DocumentationSection />
         <SafeWorkSystems />
