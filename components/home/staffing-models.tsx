@@ -27,7 +27,10 @@ export function StaffingModels() {
             Staffing Models — Choose Your Model
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            We train and certify your infection prevention workforce regardless of which model you choose.
+            As the ECEC risk classification shifts to a high-risk biohazardous rating, the requirements for external cleaning providers have changed fundamentally. A general commercial cleaning approach is no longer legally sufficient to meet your PCBU obligations.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+            As part of our workforce solution, we bridge this gap by aligning your facility&apos;s maintenance with the SWA March 2026 Code. We will work directly with your preferred service provider to transition their operations to NCCS standards, or actively help you source a specialized cleaning company willing to incorporate the National Childcare Cleaning Standard as their baseline practice. By ensuring your external partners are NCCS-certified, we guarantee that your entire supply chain is equipped to manage safety-critical functions, providing you with a unified, defensible compliance framework that stands up to the highest level of regulatory scrutiny.
           </p>
         </div>
 
@@ -44,6 +47,25 @@ export function StaffingModels() {
               <p className="mt-3 text-muted-foreground leading-relaxed">{model.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* NCCS Provider Guarantee */}
+        <div className="mt-16 rounded-xl border border-accent/30 bg-accent/5 p-8">
+          <h3 className="text-xl font-bold text-foreground">The NCCS Provider Guarantee</h3>
+          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div>
+              <h4 className="font-semibold text-foreground">Provider Integration</h4>
+              <p className="mt-2 text-muted-foreground">We audit and upskill your current contractors to ensure they meet the new high-risk biohazard benchmarks.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-foreground">Strategic Sourcing</h4>
+              <p className="mt-2 text-muted-foreground">We connect you with a network of providers who recognize childcare as a specialized, high-stakes environment rather than a standard commercial office.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-foreground">Standardized Excellence</h4>
+              <p className="mt-2 text-muted-foreground">Regardless of who performs the work, the NCCS ensures the methodology, chemicals, and verification systems remain consistent across your centre.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
