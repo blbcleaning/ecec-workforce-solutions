@@ -11,8 +11,7 @@ export const metadata: Metadata = {
 }
 
 export default function BookPage() {
-  // Replace this with your Calendly link once you have one
-  const calendlyUrl = "https://calendly.com/ececworkforcesolutions"
+  const calendlyUrl = "https://calendly.com/ececworkforcesolutions/30min"
   
   return (
     <div className="flex min-h-screen flex-col bg-background">
