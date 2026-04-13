@@ -3,8 +3,8 @@ import { Building2, Users, GitMerge } from "lucide-react"
 const models = [
   {
     icon: Building2,
-    title: "Model A: Managed Service",
-    description: "Your centre engages a commercial cleaning company to manage all infection prevention operations — day cleans, after-hours cleans, NCCS-certified Infection Prevention Specialists, and on-site NCCS Supervisors. The cleaning company delivers and manages the full operational program. Your centre retains governance oversight and ultimate compliance responsibility. ECEC Workforce Solutions trains and certifies all personnel to NCCS standards.",
+    title: "Model A: Managed Service | Strategic Risk & Training Mitigation",
+    description: "Under the Managed Service model, your centre transfers the operational and administrative burden of high-risk biohazard management to an NCCS-accredited partner. This eliminates the statutory requirement to provide formal infection control training to every new educator—your partner manages all onboarding and competency assessments. All mandatory reporting, chemical safety data sheets, and verification logs required under the SWA March 2026 Code are managed by the service provider, removing the compliance paperwork from your Director's desk. By deploying a dedicated, NCCS-supervised workforce, you demonstrate a 'Higher-Order Control' that exceeds regulator expectations and provides a defensible compliance framework protecting your leadership from tripled fines and increased enforcement powers.",
   },
   {
     icon: Users,
