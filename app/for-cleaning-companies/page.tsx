@@ -193,6 +193,43 @@ export default function ForCleaningCompaniesPage() {
                 </div>
               </div>
             </div>
+
+            {/* The New Standard of Care */}
+            <div className="mt-16 rounded-xl border border-border bg-card p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-card-foreground">The New Standard of Care: Mandatory Requirements for ECEC Service Partners</h3>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                The <strong className="text-foreground">Paramount Consideration</strong>—the legal principle that the safety, health, and wellbeing of children must be the primary concern—has fundamentally redefined cleaning governance. Under the <strong className="text-foreground">SWA March 2026 Biological Hazards Code</strong>, childcare is no longer a general commercial site; it is a <strong className="text-foreground">high-risk biohazardous environment</strong>.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                To remain viable partners in the ECEC sector, cleaning providers must now move beyond aesthetic cleaning and meet these three mandatory pillars of compliance:
+              </p>
+              <div className="mt-6 space-y-4">
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
+                  <div>
+                    <p className="font-semibold text-card-foreground">Verified Competency</p>
+                    <p className="mt-1 text-sm text-muted-foreground">General cleaners are no longer sufficient. Anyone performing infection control must be a <strong className="text-foreground">&quot;competent person&quot;</strong> with documented, specialized training and verified NCCS competencies in biohazard suppression.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
+                  <div>
+                    <p className="font-semibold text-card-foreground">Safety-Critical Documentation</p>
+                    <p className="mt-1 text-sm text-muted-foreground">Providers must deliver a robust evidence trail, including <strong className="text-foreground">Safe Work Method Statements (SWMS)</strong> and verification logs that satisfy both NCCS governance and <strong className="text-foreground">PCBU statutory obligations</strong>.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
+                  <div>
+                    <p className="font-semibold text-card-foreground">Operational Alignment</p>
+                    <p className="mt-1 text-sm text-muted-foreground">Cleaning schedules must be treated as safety-critical functions, with dedicated time and specialized equipment that reflects the site's high-risk classification.</p>
+                  </div>
+                </div>
+              </div>
+              <p className="mt-6 text-muted-foreground leading-relaxed">
+                At <strong className="text-foreground">ECEC Workforce Solutions</strong>, we work with your preferred provider—or help you source a new one—to ensure they incorporate the NCCS as their standard operating procedure. This alignment ensures that your external partners act as a shield against regulatory scrutiny, rather than a point of vulnerability.
+              </p>
+            </div>
           </div>
         </section>
 
