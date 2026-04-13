@@ -10,7 +10,7 @@ import { ROICalculator } from "@/components/calculators/roi-calculator"
 import { WhyChooseUsSection } from "@/components/home/why-choose-us-centre-section"
 
 export const metadata: Metadata = {
-  title: "For Centres | ECEC Workforce Solutions",
+  title: "For Centres",
   description: "NCCS certification and compliance solutions for childcare centre directors and approved providers. Protect your licence and meet your WHS obligations.",
 }
 

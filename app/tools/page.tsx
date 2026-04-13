@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Calculator, Clock, TrendingUp, AlertTriangle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Tools | ECEC Workforce Solutions",
+  title: "Calculators",
   description: "Free compliance calculators for childcare centres. Calculate your compliance risk, infection prevention hours, and ROI on NCCS certification.",
 }
 

@@ -19,7 +19,7 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "For Cleaning Companies | ECEC Workforce Solutions",
+  title: "For Cleaning Companies",
   description: "New regulatory requirements mean every person cleaning in childcare needs NCCS certification. Get your team certified and win ECEC contracts.",
 }
 

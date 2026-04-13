@@ -11,7 +11,7 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Contact | ECEC Workforce Solutions",
+  title: "Contact",
   description: "Get in touch with ECEC Workforce Solutions. Book a call or submit an enquiry about NCCS certification and compliance services.",
 }
 

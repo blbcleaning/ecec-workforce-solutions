@@ -17,7 +17,7 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "About | ECEC Workforce Solutions",
+  title: "About",
   description: "Learn about ECEC Workforce Solutions and the National Childcare Cleaning Standard (NCCS) - Australia's first evidence-based infection prevention framework for ECEC.",
 }
 

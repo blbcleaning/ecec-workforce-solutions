@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Phone, Mail, Calendar, Clock, CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Book a Call | ECEC Workforce Solutions",
+  title: "Book a Call",
   description: "Schedule a free consultation to discuss NCCS certification and compliance solutions for your childcare centre or cleaning company.",
 }
 
