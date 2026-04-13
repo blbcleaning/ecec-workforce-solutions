@@ -1,9 +1,15 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(request: Request) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      return Response.json(
+        { error: 'Email service not configured. Please contact support.' },
+        { status: 503 }
+      )
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY)
     const data = await request.json()
     const { name, email, phone, organisation, role, centres, message } = data
 
