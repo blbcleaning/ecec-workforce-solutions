@@ -16,7 +16,12 @@ export function WhyUs() {
           <h2 className="text-center text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
             Why Us
           </h2>
-          <div className="mt-10 space-y-4">
+          <div className="mt-10 rounded-xl border border-accent/30 bg-accent/5 p-8 mb-10">
+            <p className="text-lg leading-relaxed text-foreground">
+              The NCCS is Australia&apos;s first published, evidence-based infection prevention governance framework, engineered specifically to transition childcare centers from general hygiene to high-risk biohazard compliance. It provides the rigorous clinical and legal evidence required to satisfy PCBU obligations, offering a defensible safety standard that protects both your vulnerable population and your license to operate.
+            </p>
+          </div>
+          <div className="space-y-4">
             {reasons.map((reason) => (
               <div
                 key={reason}
