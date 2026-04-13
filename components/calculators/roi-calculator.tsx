@@ -314,7 +314,7 @@ export function ROICalculator() {
             Get a personalised quote and implementation timeline.
           </p>
           <Button asChild className="mt-4 bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="/contact">
+            <Link href="/book">
               <Phone className="mr-2 h-4 w-4" />
               Book a Call
             </Link>

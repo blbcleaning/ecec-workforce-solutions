@@ -67,7 +67,7 @@ export default function ForCentresPage() {
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
-                  <Link href="/contact">
+                  <Link href="/book">
                     Book a Call
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -283,7 +283,7 @@ export default function ForCentresPage() {
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
-                  <Link href="/contact">
+                  <Link href="/book">
                     Book a Call
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

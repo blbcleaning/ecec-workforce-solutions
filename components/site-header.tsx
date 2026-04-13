@@ -59,7 +59,7 @@ export function SiteHeader() {
             <Link href="/contact">Enquire Now</Link>
           </Button>
           <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="/contact">Book a Call</Link>
+            <Link href="/book">Book a Call</Link>
           </Button>
         </div>
       </nav>
@@ -107,7 +107,7 @@ export function SiteHeader() {
                     <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Enquire Now</Link>
                   </Button>
                   <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Book a Call</Link>
+                    <Link href="/book" onClick={() => setMobileMenuOpen(false)}>Book a Call</Link>
                   </Button>
                 </div>
               </div>
