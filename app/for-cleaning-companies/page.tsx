@@ -142,60 +142,10 @@ export default function ForCleaningCompaniesPage() {
           </div>
         </section>
 
-        {/* Paramount Consideration Section */}
+        {/* The New Standard of Care */}
         <section className="bg-muted py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-                  <Shield className="h-4 w-4" />
-                  Understanding the Law
-                </div>
-                <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                  The Paramount Consideration and the New Biological Hazards Code
-                </h2>
-                <div className="mt-6 space-y-4 text-muted-foreground">
-                  <p>
-                    <strong className="text-foreground">The paramount consideration</strong> — the principle that the safety, health, and wellbeing of children is the primary concern — now extends to infection prevention and cleaning governance.
-                  </p>
-                  <p>
-                    The updated <strong className="text-foreground">Safe Work Australia Model Code of Practice: Managing the risks of hazardous chemicals in the workplace</strong> and the <strong className="text-foreground">Biological Hazards Code</strong> require that anyone performing infection-control work be a &quot;competent person&quot; with documented training and verified competencies.
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                      <Clock className="h-5 w-5 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-card-foreground">Throughout the day</h3>
-                      <p className="mt-1 text-sm text-muted-foreground">Centres must prove sufficient cleaning hours while children are present — performed by certified staff</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                      <Clock className="h-5 w-5 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-card-foreground">After hours</h3>
-                      <p className="mt-1 text-sm text-muted-foreground">After-hours cleaners must also be certified — there is no exemption based on timing</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="rounded-xl border border-accent bg-accent/10 p-6">
-                  <p className="font-medium text-foreground">
-                    NCCS certification provides documented evidence of competence in ECEC-specific infection prevention — making it easier for centres to demonstrate compliance to regulators, auditors, and WHS inspectors. NCCS is a voluntary, standards-based certification — not a legislative requirement. It is the strongest evidence of competence your staff can hold when working in childcare.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* The New Standard of Care */}
-            <div className="mt-16 rounded-xl border border-border bg-card p-8 shadow-sm">
+            <div className="rounded-xl border border-border bg-card p-8 shadow-sm">
               <h3 className="text-2xl font-bold text-card-foreground">The New Standard of Care: Mandatory Requirements for ECEC Service Partners</h3>
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 The <strong className="text-foreground">Paramount Consideration</strong>—the legal principle that the safety, health, and wellbeing of children must be the primary concern—has fundamentally redefined cleaning governance. Under the <strong className="text-foreground">SWA March 2026 Biological Hazards Code</strong>, childcare is no longer a general commercial site; it is a <strong className="text-foreground">high-risk biohazardous environment</strong>.
