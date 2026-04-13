@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { AlertTriangle, Shield, ArrowRight, CheckCircle, Building } from "lucide-react"
 import { InfectionPreventionHoursCalculator } from "@/components/calculators/infection-prevention-hours-calculator"
 import { ROICalculator } from "@/components/calculators/roi-calculator"
+import { WhyChooseUsSection } from "@/components/home/why-choose-us-centre-section"
 
 export const metadata: Metadata = {
   title: "For Centres | ECEC Workforce Solutions",
@@ -236,6 +237,33 @@ export default function ForCentresPage() {
             </div>
           </div>
         </section>
+
+        {/* NCCS Framework Infographic */}
+        <section className="bg-muted py-16 sm:py-20">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Understanding the NCCS Framework
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                A comprehensive approach to infection prevention in childcare environments
+              </p>
+            </div>
+            <div className="mt-10">
+              <Image
+                src="/images/nccs-infographic.png"
+                alt="National Childcare Cleaning Standard (NCCS) Framework - showing systematic cleaning protocols, approved materials and safety, trained and competent staff, and regular monitoring and compliance"
+                width={1200}
+                height={900}
+                className="w-full rounded-xl shadow-lg"
+                priority
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <WhyChooseUsSection />
 
         {/* Multi-site Section */}
         <section className="bg-primary py-16">
