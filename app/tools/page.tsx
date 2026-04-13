@@ -61,6 +61,28 @@ export default function ToolsPage() {
           </div>
         </section>
 
+        {/* Safety Compliance Section */}
+        <section className="py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                From &quot;General Cleaning&quot; to &quot;High-Risk Hazard&quot;: The New Era of ECEC Safety Compliance
+              </h2>
+              <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  High risk demands high expectations. Cleaning is now a safety-critical function that must be performed by qualified persons, with dedicated time and a budget that reflects this high-risk rating. Compliance is no longer optional or flexible; it must be delivered daily, regardless of staff shortages or educator ratios.
+                </p>
+                <p>
+                  With $226 million in new safety reform funding, increased powers granted to the National Early Childhood Worker Register, and over 300 targeted inspections already underway, the risk of prosecution has never been higher.
+                </p>
+                <p>
+                  Failing to meet these standards—such as relying on overstretched educators or inadequate night-cleaning contracts—now exposes providers to tripled penalties reaching millions of dollars and the very real threat of jail time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Tools Grid */}
         <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
