@@ -77,10 +77,18 @@ export function SiteFooter() {
           </div>
         </div>
         
-        <div className="mt-12 border-t border-primary-foreground/20 pt-8">
-          <p className="text-center text-sm text-primary-foreground/70">
+        <div className="mt-12 border-t border-primary-foreground/20 pt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
+          <p className="text-sm text-primary-foreground/70">
             &copy; 2026 ECEC Workforce Solutions. All rights reserved.
           </p>
+          <div className="flex items-center gap-6">
+            <Link href="/privacy-policy" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
