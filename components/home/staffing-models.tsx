@@ -13,8 +13,8 @@ const models = [
   },
   {
     icon: GitMerge,
-    title: "Model C: Hybrid",
-    description: "Your centre employs its own daytime cleaner and engages an outsourced cleaning company for after-hours cleaning. ECEC Workforce Solutions trains and certifies both your internal staff and external contractors — so your centre has a fully certified NCCS infection prevention workforce across all shifts. Your centre retains governance oversight and compliance responsibility.",
+    title: "Model C: Hybrid Compliance Framework",
+    description: "Your centre utilizes a dual-workforce strategy: employing a dedicated internal daytime cleaner while engaging an accredited external partner for after-hours operations. ECEC Workforce Solutions trains and certifies both internal personnel and external contractors, creating a unified, NCCS-certified Infection Prevention workforce across all shifts. Strict Role Separation: Cleaning personnel must be dedicated specialists and cannot be Educators—this separation is a functional requirement of the NCCS to meet high-risk biohazard standards. Unified Safety Standards: Both in-house staff and contract cleaners operate under a single, cohesive NCCS framework, eliminating compliance gaps between day and night shifts. Operational Flexibility: This model provides the high-visibility protection of an on-site day cleaner with the specialized, deep-cleaning capabilities of an outsourced night crew, all while maintaining full governance oversight. Regulatory Resilience: By certifying your entire cleaning chain, you fulfill your PCBU obligations under the SWA March 2026 Code.",
   },
 ]
 
