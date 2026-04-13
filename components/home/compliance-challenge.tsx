@@ -1,94 +1,27 @@
-import { AlertTriangle, DollarSign, User, Scale } from "lucide-react"
+import { AlertTriangle } from "lucide-react"
 
 export function ComplianceChallenge() {
   return (
     <section className="py-20 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
-            The Compliance Challenge
+            The New Era of ECEC Compliance: From Education to Biohazard Management
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            Childcare centres must now interpret and implement overlapping regulatory obligations across the National Quality Framework (NQF) and Work Health and Safety (WHS) legislation simultaneously — and demonstrate compliance with both.
-          </p>
-        </div>
-
-        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {/* Financial Penalties Card */}
-          <div className="rounded-xl border border-border bg-card p-8 shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10">
-                <DollarSign className="h-6 w-6 text-destructive" />
-              </div>
-              <h3 className="text-xl font-semibold text-card-foreground">Financial Penalties</h3>
-            </div>
-            <div className="mt-6 space-y-4 text-muted-foreground">
-              <p>
-                Fines and penalties across ECEC, WHS, and worker registration obligations have now <strong className="text-foreground">tripled</strong>.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <AlertTriangle className="mt-0.5 h-5 w-5 flex-shrink-0 text-destructive" />
-                  <span>Up to <strong className="text-foreground">$34,200</strong> for failure to comply with National Early Childhood Worker Register requirements</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <AlertTriangle className="mt-0.5 h-5 w-5 flex-shrink-0 text-destructive" />
-                  <span>WHS breaches carry penalties up to <strong className="text-foreground">$50,000</strong> for individuals</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <AlertTriangle className="mt-0.5 h-5 w-5 flex-shrink-0 text-destructive" />
-                  <span>Potential loss of service approval, suspension of CCS, and cancellation of operating licences</span>
-                </li>
-              </ul>
-            </div>
+          <div className="mt-8 space-y-6 text-left text-muted-foreground leading-relaxed">
+            <p>
+              The landscape of childcare changed forever on <strong className="text-foreground">March 1st, 2026</strong>. With the <strong className="text-foreground">SWA Biohazard Code</strong> now live, childcare is explicitly classified as a <strong className="text-foreground">high-risk biohazardous environment</strong> because you care for a vulnerable population. This isn&apos;t just a label; it&apos;s a legal shift that elevates infection control to the same safety-critical category as &quot;working at heights&quot; in construction.
+            </p>
+            <p>
+              Under <strong className="text-foreground">WHS and NQF laws</strong>, your PCBU obligations are now absolute: cleaning is no longer a chore to be squeezed in—it is a mandatory safety function that must be performed by qualified personnel with dedicated time allowances.
+            </p>
+            <p>
+              The era of &quot;soft&quot; compliance is over. With the <strong className="text-foreground">Paramount Consideration</strong> initiative, the new <strong className="text-foreground">National Worker Register</strong>, and a massive surge in funded inspections, regulators now have the data and the power to <strong className="text-foreground">close centers on the spot</strong>. Fines have tripled, and because <strong className="text-foreground">Professional Indemnity insurance for penalties has been removed</strong>, directors are now personally and financially exposed to millions of dollars in liability.
+            </p>
+            <p className="rounded-lg border border-accent/30 bg-accent/5 p-6 text-foreground">
+              The <strong>National Childcare Cleaning Standard (NCCS)</strong>, published <strong>December 30, 2025</strong>, provides the only viable solution to this crisis. By adopting the NCCS, you mitigate your compliance risk through <strong>role separation</strong>—removing the cleaning burden from educators to restore their professional dignity. This doesn&apos;t just protect you from prosecution; it fixes educator burnout, improves retention, and ensures your center meets the highest safety standards in the new regulatory reality.
+            </p>
           </div>
-
-          {/* Personal Liability Card */}
-          <div className="rounded-xl border border-border bg-card p-8 shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10">
-                <User className="h-6 w-6 text-destructive" />
-              </div>
-              <h3 className="text-xl font-semibold text-card-foreground">Personal Liability</h3>
-            </div>
-            <div className="mt-6 space-y-4 text-muted-foreground">
-              <p>
-                Under WHS legislation, Directors, Approved Providers, and Nominated Supervisors are classified as <strong className="text-foreground">Officers of a PCBU</strong>. This means they carry personal, non-delegable due diligence obligations.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <Scale className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span><strong className="text-foreground">Due diligence duty (WHS Act s.27):</strong> Officers must take reasonable steps to acquire knowledge of WHS matters</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Scale className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span><strong className="text-foreground">Criminal prosecution:</strong> Personal fines exceeding $600,000 and up to 5 years imprisonment</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Scale className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span><strong className="text-foreground">Cannot be delegated:</strong> Personal liability cannot be transferred, outsourced, or insured away</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-12 rounded-xl border border-accent/30 bg-accent/10 p-6 sm:p-8">
-          <h3 className="text-lg font-semibold text-foreground mb-4">The 2026 Enforcement Landscape Has Changed</h3>
-          <div className="space-y-4 text-muted-foreground">
-            <p><strong className="text-foreground">Paramountcy Principle</strong> — child safety now overrides cost in every operational decision</p>
-            <p><strong className="text-foreground">Biological Hazards Code (March 2026)</strong> — explicitly covers childcare; classifies biological hazards as high risk</p>
-            <p><strong className="text-foreground">Worker Register</strong> — every person entering a centre must be registered, including cleaners</p>
-            <p><strong className="text-foreground">Fines tripled</strong> — new penalty framework in force</p>
-            <p><strong className="text-foreground">160,000 additional site checks</strong> — unannounced inspections commenced</p>
-            <p><strong className="text-foreground">Personal liability</strong> — insurance protections removed; directors personally exposed</p>
-          </div>
-          <p className="mt-6 text-foreground leading-relaxed">
-            Combined, these changes significantly increase expectations for PCBUs under WHS. Infection-control cleaning in childcare now carries the same risk classification and safety expectations as working at heights in construction — structured controls, documented competency, verified supervision, and auditable compliance are not optional.
-          </p>
-          <p className="mt-4 font-semibold text-foreground">
-            Centres must now prove compliance — not just claim it.
-          </p>
         </div>
       </div>
     </section>
