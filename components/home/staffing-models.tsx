@@ -8,8 +8,8 @@ const models = [
   },
   {
     icon: Users,
-    title: "Model B: Internal Team",
-    description: "Your centre hires its own cleaners and supervisors directly. ECEC Workforce Solutions provides NCCS training and certification for your team — the outcome is a fully internal team of NCCS-certified Infection Prevention Specialists and Supervisors. Your centre holds full operational and compliance responsibility.",
+    title: "Model B: Internal Specialized Workforce",
+    description: "Your centre recruits and employs its own cleaning and supervisory personnel directly. ECEC Workforce Solutions provides the specialized NCCS training and certification required to transform these employees into a high-performance team of Infection Prevention Specialists. Strict Role Separation: Cleaning staff cannot be educators—the NCCS framework requires a dedicated workforce to eliminate cross-contamination risks and ensure safety-critical tasks are never sidelined by classroom ratios. Direct PCBU Oversight: Your leadership retains full operational and statutory compliance responsibility. Internalized Expertise: You build a permanent, in-house culture of high-level WHS compliance that meets the SWA March 2026 Code. Educator Retention: By removing the biohazard management burden from teaching staff, you restore their professional focus. Compliance Warning: Using educators to perform high-risk cleaning functions breaks the NCCS safety system and exposes the centre to significant regulatory liability.",
   },
   {
     icon: GitMerge,
