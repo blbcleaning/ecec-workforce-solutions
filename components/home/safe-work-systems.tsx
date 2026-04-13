@@ -33,10 +33,10 @@ export function SafeWorkSystems() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl lg:text-4xl">
-            Safe Work Systems and Hierarchy of Control
+            Statutory Safe Work Systems & The Hierarchy of Control
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80">
-            All NCCS infection prevention procedures are built on the WHS hierarchy of control — the legally mandated framework for eliminating or minimising workplace risks. We develop centre-specific safe work systems that include:
+            All NCCS infection prevention protocols are engineered in strict alignment with the WHS Hierarchy of Control—the legally mandated framework for the elimination or minimisation of workplace risk. Under the new SWA Biohazard Code, &quot;administrative controls&quot; (like staff training alone) are no longer sufficient for high-risk environments. Our systems implement higher-order Engineering and Substitution controls to ensure your centre meets the highest legal standard of care.
           </p>
         </div>
 
