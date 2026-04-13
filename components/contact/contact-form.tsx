@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -11,21 +11,53 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { CheckCircle, Loader2 } from "lucide-react"
+import { CheckCircle, Loader2, AlertCircle } from "lucide-react"
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const formRef = useRef<HTMLFormElement>(null)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    setError(null)
+
+    try {
+      const formData = new FormData(e.currentTarget)
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        organisation: formData.get('organisation'),
+        role: formData.get('role'),
+        centres: formData.get('centres'),
+        message: formData.get('message'),
+      }
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send enquiry')
+      }
+
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+      if (formRef.current) {
+        formRef.current.reset()
+      }
+    } catch (err) {
+      console.error('Error:', err)
+      setError(err instanceof Error ? err.message : 'An error occurred. Please try again.')
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -36,14 +68,35 @@ export function ContactForm() {
         </div>
         <h3 className="mt-4 text-lg font-semibold text-foreground">Thank you for your enquiry</h3>
         <p className="mt-2 text-muted-foreground">
-          We&apos;ll be in touch within 3–5 business days.
+          We&apos;ve sent a confirmation email and will be in touch within 3–5 business days.
         </p>
       </div>
     )
   }
 
+  if (error) {
+    return (
+      <div className="mt-8 flex flex-col items-center justify-center rounded-lg border border-destructive/30 bg-destructive/10 p-8 text-center">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-destructive/20">
+          <AlertCircle className="h-8 w-8 text-destructive" />
+        </div>
+        <h3 className="mt-4 text-lg font-semibold text-foreground">Something went wrong</h3>
+        <p className="mt-2 text-muted-foreground">{error}</p>
+        <button
+          onClick={() => {
+            setError(null)
+            formRef.current?.reset()
+          }}
+          className="mt-4 inline-flex items-center justify-center rounded-md bg-accent px-6 py-2 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent/90"
+        >
+          Try Again
+        </button>
+      </div>
+    )
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="mt-6 space-y-6">
+    <form ref={formRef} onSubmit={handleSubmit} className="mt-6 space-y-6">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium text-foreground">
