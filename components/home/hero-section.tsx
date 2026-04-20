@@ -6,6 +6,27 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-primary py-20 sm:py-28 lg:py-32">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      
+      {/* Big Block Headings - Top Left */}
+      <div className="absolute top-6 left-4 sm:left-6 lg:left-8 flex flex-col gap-2 z-10">
+        <Link 
+          href="/for-centres" 
+          className="group block bg-accent px-4 py-2 sm:px-6 sm:py-3 transition-transform hover:translate-x-1"
+        >
+          <span className="text-sm sm:text-base lg:text-lg font-bold tracking-wide text-accent-foreground uppercase">
+            For Centres
+          </span>
+        </Link>
+        <Link 
+          href="/for-cleaning-companies" 
+          className="group block bg-primary-foreground px-4 py-2 sm:px-6 sm:py-3 transition-transform hover:translate-x-1"
+        >
+          <span className="text-sm sm:text-base lg:text-lg font-bold tracking-wide text-primary uppercase">
+            For Cleaning Companies
+          </span>
+        </Link>
+      </div>
+      
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl xl:text-6xl">
