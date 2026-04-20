@@ -22,8 +22,8 @@ export function HeroSection() {
         href="/for-cleaning-companies" 
         className="absolute top-6 right-4 sm:right-6 lg:right-8 z-10 block bg-primary-foreground px-4 py-2 sm:px-6 sm:py-3 transition-transform hover:-translate-x-1"
       >
-        <span className="text-sm sm:text-base lg:text-lg font-bold tracking-wide text-primary uppercase">
-          For Cleaning Companies
+        <span className="text-sm sm:text-base lg:text-lg font-bold tracking-wide text-orange-500 uppercase">
+          For Cleaning Company
         </span>
       </Link>
       
