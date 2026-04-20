@@ -3,23 +3,19 @@ import { CheckCircle, Clock, Users, Shield } from "lucide-react"
 const outcomes = [
   {
     icon: CheckCircle,
-    title: "Remove cleaning from educators",
-    description: "Educators return to their core role—educating children, not managing biohazards.",
+    text: "Educators no longer perform cleaning",
   },
   {
     icon: Clock,
-    title: "Reduce workload by 16–24 hours per week",
-    description: "Reclaim time currently lost to cleaning tasks that should never have been assigned to educators.",
+    text: "Workload is reduced across the service",
   },
   {
     icon: Users,
-    title: "Improve retention and workforce stability",
-    description: "When educators do what they trained for, they stay. Reduce burnout and turnover.",
+    text: "Retention and workforce stability improve",
   },
   {
     icon: Shield,
-    title: "Achieve audit-ready, defensible compliance",
-    description: "Documentation, role separation, and governance that withstands regulatory scrutiny.",
+    text: "Compliance becomes structured, measurable, and auditable",
   },
 ]
 
@@ -29,28 +25,18 @@ export function OutcomesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
-            What Changes
+            What This Changes
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            This shift requires a new operating model—one that separates roles, reduces educator workload, and delivers measurable, audit-ready compliance.
-          </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
           {outcomes.map((outcome) => (
             <div
-              key={outcome.title}
-              className="relative rounded-xl border border-accent/20 bg-accent/5 p-6 transition-all hover:border-accent/40 hover:bg-accent/10"
+              key={outcome.text}
+              className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
-                <outcome.icon className="h-6 w-6 text-accent" />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-foreground">
-                {outcome.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {outcome.description}
-              </p>
+              <outcome.icon className="h-5 w-5 text-accent shrink-0" />
+              <span className="text-sm font-medium text-foreground">{outcome.text}</span>
             </div>
           ))}
         </div>

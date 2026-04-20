@@ -12,11 +12,11 @@ export function HeroSection() {
             <span className="block">Educators Educate. Cleaners Clean.</span>
             <span className="block mt-2">We Train And Certify The Workforce That Makes It Possible.</span>
           </h1>
-          <p className="mt-6 text-pretty text-xl leading-relaxed text-primary-foreground/90 sm:text-2xl font-medium">
-            A compliance-based operating system that removes cleaning from educators, improves retention, and makes your centre audit-ready.
+          <p className="mt-6 text-pretty text-xl leading-relaxed text-primary-foreground/90 sm:text-2xl font-semibold">
+            Reduce educator workload. Improve retention. Achieve audit-ready compliance.
           </p>
-          <p className="mt-4 text-pretty text-lg leading-relaxed italic text-primary-foreground/70 sm:text-xl font-normal">
-            Australia&apos;s First Infection Prevention Standard For Childcare. For Centres. For Cleaning Companies.
+          <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/70 sm:text-xl font-normal">
+            A compliance-based operating system for childcare—implemented through workforce training, certification, and verification.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">

@@ -8,11 +8,14 @@ export function CTASection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl bg-primary px-6 py-16 sm:px-12 sm:py-20 lg:px-16">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl lg:text-4xl">
+            <p className="text-lg text-primary-foreground/80">
+              If you&apos;re looking to reduce workload, strengthen compliance, and stabilise your workforce—this is where to start.
+            </p>
+            <h2 className="mt-4 text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl lg:text-4xl">
               Start With a Baseline Assessment
             </h2>
             <p className="mt-4 text-lg text-primary-foreground/80">
-              Understand your centre&apos;s current compliance position, identify risk areas, and get a clear roadmap to audit-ready operations.
+              Understand your centre&apos;s current risk, compliance position, and workload distribution.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
