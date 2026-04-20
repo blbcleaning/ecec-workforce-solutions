@@ -6,14 +6,38 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-primary py-20 sm:py-28 lg:py-32">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      
+      {/* Big Block Heading - Top Left */}
+      <Link 
+        href="/for-centres" 
+        className="absolute top-6 left-4 sm:left-6 lg:left-8 z-10 block bg-accent px-4 py-2 sm:px-6 sm:py-3 transition-transform hover:translate-x-1"
+      >
+        <span className="text-sm sm:text-base lg:text-lg font-bold tracking-wide text-accent-foreground uppercase">
+          For Centres
+        </span>
+      </Link>
+      
+      {/* Big Block Heading - Top Right */}
+      <Link 
+        href="/for-cleaning-companies" 
+        className="absolute top-6 right-4 sm:right-6 lg:right-8 z-10 block bg-primary-foreground px-4 py-2 sm:px-6 sm:py-3 transition-transform hover:-translate-x-1"
+      >
+        <span className="text-sm sm:text-base lg:text-lg font-bold tracking-wide text-orange-500 uppercase">
+          For Cleaning Company
+        </span>
+      </Link>
+      
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl xl:text-6xl">
             <span className="block">Educators Educate. Cleaners Clean.</span>
             <span className="block mt-2">We Train And Certify The Workforce That Makes It Possible.</span>
           </h1>
-          <p className="mt-6 text-pretty text-lg leading-relaxed italic text-primary-foreground/80 sm:text-xl font-normal">
-            Australia&apos;s First Infection Prevention Standard For Childcare. For Centres. For Cleaning Companies.
+          <p className="mt-6 text-pretty text-xl leading-relaxed text-primary-foreground/90 sm:text-2xl font-semibold">
+            Reduce educator workload. Improve retention. Achieve audit-ready compliance.
+          </p>
+          <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/70 sm:text-xl font-normal">
+            A compliance-based operating system for childcare—implemented through workforce training, certification, and verification.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
