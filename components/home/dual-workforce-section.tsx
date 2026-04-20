@@ -1,14 +1,26 @@
-import { Building2, BadgeCheck } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { Building2, BadgeCheck, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export function DualWorkforceSection() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-muted">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
-            Two Workforces. One Standard.
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+        {/* Hero Image */}
+        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl shadow-xl">
+          <Image
+            src="/images/two-workforces.png"
+            alt="Two Workforces One Standard - An educator reading with children on the left, and a professional cleaner sanitizing on the right"
+            width={1200}
+            height={800}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
+
+        <div className="mx-auto max-w-3xl text-center mt-12">
+          <p className="text-lg text-muted-foreground">
             We serve both sides of the compliance equation.
           </p>
         </div>
@@ -38,6 +50,14 @@ export function DualWorkforceSection() {
                 Educator awareness training
               </li>
             </ul>
+            <div className="mt-6">
+              <Button asChild variant="outline">
+                <Link href="/for-centres">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
@@ -64,6 +84,14 @@ export function DualWorkforceSection() {
                 Company accreditation program
               </li>
             </ul>
+            <div className="mt-6">
+              <Button asChild variant="outline">
+                <Link href="/for-cleaning-companies">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
