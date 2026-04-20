@@ -4,7 +4,7 @@ import Image from "next/image"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
-import { AlertTriangle, Shield, ArrowRight, CheckCircle, Building } from "lucide-react"
+import { AlertTriangle, Shield, ArrowRight, CheckCircle, Building, Clock, Users, FileCheck, TrendingUp } from "lucide-react"
 import { InfectionPreventionHoursCalculator } from "@/components/calculators/infection-prevention-hours-calculator"
 import { ROICalculator } from "@/components/calculators/roi-calculator"
 import { WhyChooseUsSection } from "@/components/home/why-choose-us-centre-section"
@@ -13,6 +13,77 @@ export const metadata: Metadata = {
   title: "For Centres",
   description: "NCCS certification and compliance solutions for childcare centre directors and approved providers. Protect your licence and meet your WHS obligations.",
 }
+
+const whatChanges = [
+  "Educators no longer perform cleaning",
+  "Workload is reduced across the service",
+  "Retention and workforce stability improve",
+  "Compliance becomes structured, measurable, and auditable",
+]
+
+const howItWorks = [
+  {
+    step: "1",
+    title: "Baseline Assessment",
+    description: "We assess your current risk, compliance gaps, and workload distribution.",
+  },
+  {
+    step: "2",
+    title: "Operating Model Implementation",
+    description: "We implement the CCS/NCCS operating model across your service.",
+  },
+  {
+    step: "3",
+    title: "Workforce Training & Certification",
+    description: "Your team is trained, certified, and documented to NCCS standards.",
+  },
+  {
+    step: "4",
+    title: "Ongoing Monitoring & Verification",
+    description: "Continuous compliance tracking and audit-ready documentation.",
+  },
+]
+
+const whatWeDeliver = [
+  {
+    icon: FileCheck,
+    title: "Competent Persons",
+    description: "Certified under WHS legislation",
+  },
+  {
+    icon: Shield,
+    title: "Governance Separation",
+    description: "Documented and defensible",
+  },
+  {
+    icon: CheckCircle,
+    title: "Audit-Ready Records",
+    description: "QA2, QA3, QA7 evidence",
+  },
+  {
+    icon: TrendingUp,
+    title: "Measurable Outcomes",
+    description: "Track and report compliance",
+  },
+]
+
+const provenOutcomes = [
+  {
+    stat: "16-24",
+    unit: "hours/week",
+    description: "Reclaimed educator time",
+  },
+  {
+    stat: "Improved",
+    unit: "retention",
+    description: "Educators stay longer when focused on education",
+  },
+  {
+    stat: "Audit-ready",
+    unit: "compliance",
+    description: "Documentation that withstands scrutiny",
+  },
+]
 
 const services = [
   "NCCS Infection Prevention Specialist Certification",
@@ -62,13 +133,16 @@ export default function ForCentresPage() {
               <h1 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl">
                 Compliance Has Tripled. Penalties Are Personal. Your Infection Prevention Workforce Needs To Be Certified, Documented, And Defensible.
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80">
+              <p className="mt-6 text-xl leading-relaxed text-primary-foreground/90 font-medium">
+                Reduce educator workload. Improve retention. Achieve audit-ready compliance.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-primary-foreground/70">
                 Build the infection prevention infrastructure your centre is missing — NCCS certification, governance systems, and documented compliance embedded directly into your operations.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
                   <Link href="/book">
-                    Book a Call
+                    Start With a Baseline Assessment
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -80,14 +154,160 @@ export default function ForCentresPage() {
           </div>
         </section>
 
-        {/* Compliance Risk Section */}
-        <section className="py-20 sm:py-24">
+        {/* What This Changes Section */}
+        <section className="py-16 sm:py-20 bg-background">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                What This Changes
+              </h2>
+            </div>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
+              {whatChanges.map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3"
+                >
+                  <CheckCircle className="h-5 w-5 text-accent shrink-0" />
+                  <span className="text-sm font-medium text-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* The Problem Section */}
+        <section className="py-16 sm:py-20 bg-muted">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                The Problem
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Most centres are operating without the systems this standard requires.
+              </p>
+            </div>
+            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+              <div className="rounded-xl border border-border bg-card p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10">
+                  <Users className="h-6 w-6 text-destructive" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-foreground">Educators are still cleaning</h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Biohazard, infection prevention, and non-educational duties are still being allocated to educators — reducing capacity and increasing risk.
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10">
+                  <AlertTriangle className="h-6 w-6 text-destructive" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-foreground">Cleaning is inconsistent</h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  There is no defined, competent cleaning function — leaving compliance unverified and undocumented.
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10">
+                  <Shield className="h-6 w-6 text-destructive" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-foreground">Compliance is invisible</h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  There is no structured governance, no audit trail, and no way to prove your position in an audit or investigation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Solution Section */}
+        <section className="py-16 sm:py-20 bg-background">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                The Solution
+              </h2>
+              <p className="mt-4 text-xl text-foreground font-medium">
+                A complete system — implemented, verified, and sustained.
+              </p>
+              <p className="mt-4 text-lg text-muted-foreground">
+                We don&apos;t just train your team. We install an operating model that separates roles, certifies your workforce, and documents every element of your compliance — built to withstand regulatory scrutiny.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section className="py-16 sm:py-20 bg-muted">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                How It Works
+              </h2>
+            </div>
+            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {howItWorks.map((item) => (
+                <div key={item.step} className="relative rounded-xl border border-border bg-card p-6">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-accent-foreground font-bold">
+                    {item.step}
+                  </div>
+                  <h3 className="mt-4 text-lg font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* What We Deliver Section */}
+        <section className="py-16 sm:py-20 bg-background">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                What We Deliver
+              </h2>
+            </div>
+            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {whatWeDeliver.map((item) => (
+                <div key={item.title} className="flex flex-col items-center text-center rounded-xl border border-accent/20 bg-accent/5 p-6">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-accent/20">
+                    <item.icon className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="mt-4 text-lg font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Proven Outcomes Section */}
+        <section className="py-16 sm:py-20 bg-primary">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl">
+                Proven Outcomes
+              </h2>
+            </div>
+            <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
+              {provenOutcomes.map((item) => (
+                <div key={item.description} className="text-center">
+                  <div className="text-4xl font-bold text-accent sm:text-5xl">{item.stat}</div>
+                  <div className="mt-1 text-lg font-medium text-primary-foreground/80">{item.unit}</div>
+                  <p className="mt-2 text-sm text-primary-foreground/70">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Compliance Risk Section - Moved Lower */}
+        <section className="py-20 sm:py-24 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-destructive/10 px-4 py-2 text-sm font-medium text-destructive">
                   <AlertTriangle className="h-4 w-4" />
-                  Compliance Risk
+                  Why This Matters Now
                 </div>
                 <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
                   The risks have never been higher
@@ -112,7 +332,7 @@ export default function ForCentresPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent">
                     <Shield className="h-6 w-6 text-accent-foreground" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">The Solution</h3>
+                  <h3 className="text-xl font-semibold text-foreground">The Protection</h3>
                 </div>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
                   NCCS certification gets your infection prevention workforce trained, certified, and documented — so you can defend your compliance position in any audit, inspection, or WHS investigation.
@@ -163,7 +383,7 @@ export default function ForCentresPage() {
         </section>
 
         {/* Hours Calculator Section */}
-        <section id="hours-calculator" className="py-16 sm:py-20">
+        <section id="hours-calculator" className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <InfectionPreventionHoursCalculator />
           </div>
@@ -182,7 +402,7 @@ export default function ForCentresPage() {
         </section>
 
         {/* Bundles Section */}
-        <section className="py-20 sm:py-24">
+        <section className="py-20 sm:py-24 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
@@ -272,14 +492,14 @@ export default function ForCentresPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 sm:py-24">
+        <section className="py-20 sm:py-24 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Ready to protect your centre?
+                Start With a Baseline Assessment
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Get your infection prevention team certified and your compliance documented.
+                Understand your centre&apos;s current compliance position, identify risk areas, and get a clear roadmap to audit-ready operations.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
