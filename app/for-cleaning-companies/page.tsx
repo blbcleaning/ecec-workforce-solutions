@@ -95,7 +95,10 @@ export default function ForCleaningCompaniesPage() {
               <h1 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl">
                 New Requirements For Cleaning In Childcare Are Now In Effect
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80">
+              <p className="mt-6 text-xl leading-relaxed text-primary-foreground/90 font-medium">
+                Certify your workforce. Enter a new market. Win contracts that require NCCS compliance.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80">
                 New regulatory requirements mean every person performing cleaning in ECEC must have proof of certification in infection-control cleaning. NCCS goes one better — it offers industry-specific infection-control training that includes biological hazard workplace management, providing a structured pathway to demonstrate competence and meet your clients&apos; compliance expectations.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -108,6 +111,35 @@ export default function ForCleaningCompaniesPage() {
                 <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 px-8">
                   <Link href="/contact">Enquire About Licensing</Link>
                 </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What This Changes Section */}
+        <section className="py-12 sm:py-16 bg-background">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                What This Changes
+              </h2>
+            </div>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
+              <div className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3">
+                <CheckCircle className="h-5 w-5 text-accent shrink-0" />
+                <span className="text-sm font-medium text-foreground">Cleaning in childcare is now a regulated, high-risk function</span>
+              </div>
+              <div className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3">
+                <CheckCircle className="h-5 w-5 text-accent shrink-0" />
+                <span className="text-sm font-medium text-foreground">Centres need certified infection prevention partners</span>
+              </div>
+              <div className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3">
+                <CheckCircle className="h-5 w-5 text-accent shrink-0" />
+                <span className="text-sm font-medium text-foreground">NCCS certification is the pathway to market entry</span>
+              </div>
+              <div className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3">
+                <CheckCircle className="h-5 w-5 text-accent shrink-0" />
+                <span className="text-sm font-medium text-foreground">Daytime infection prevention is a new revenue stream</span>
               </div>
             </div>
           </div>
@@ -173,6 +205,50 @@ export default function ForCleaningCompaniesPage() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
+</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Centres Are Looking for You Section */}
+        <section className="py-16 sm:py-20 bg-background">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Why Centres Are Looking for You
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Childcare centres are actively seeking cleaning providers who can meet the new compliance requirements
+              </p>
+            </div>
+            <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+              <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
+                  <Users className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="mt-4 font-semibold text-foreground">Educators must stop cleaning</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  Cleaning biohazards is no longer within their scope. Centres need external partners to fill this gap.
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
+                  <Clock className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="mt-4 font-semibold text-foreground">Daytime cleans are mandatory</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  Infection prevention during operating hours requires scheduled, certified coverage.
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
+                  <Shield className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="mt-4 font-semibold text-foreground">Compliance must be documented</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  Centres need verified records of competent cleaning to satisfy audits and inspections.
+                </p>
               </div>
             </div>
           </div>
