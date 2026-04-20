@@ -98,7 +98,10 @@ export default function ForCleaningCompaniesPage() {
               <p className="mt-6 text-xl leading-relaxed text-primary-foreground/90 font-medium">
                 Certify your workforce. Enter a new market. Win contracts that require NCCS compliance.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80">
+              <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80 font-medium">
+                This is how cleaning companies move from commodity services to certified, compliance-aligned providers in the childcare sector.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-primary-foreground/70">
                 New regulatory requirements mean every person performing cleaning in ECEC must have proof of certification in infection-control cleaning. NCCS goes one better — it offers industry-specific infection-control training that includes biological hazard workplace management, providing a structured pathway to demonstrate competence and meet your clients&apos; compliance expectations.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -116,30 +119,34 @@ export default function ForCleaningCompaniesPage() {
           </div>
         </section>
 
-        {/* What This Changes Section */}
+        {/* What This Means for Your Business Section */}
         <section className="py-12 sm:py-16 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                What This Changes
+                What This Means for Your Business
               </h2>
             </div>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
               <div className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3">
                 <CheckCircle className="h-5 w-5 text-accent shrink-0" />
-                <span className="text-sm font-medium text-foreground">Cleaning in childcare is now a regulated, high-risk function</span>
+                <span className="text-sm font-medium text-foreground">Access childcare sector contracts</span>
               </div>
               <div className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3">
                 <CheckCircle className="h-5 w-5 text-accent shrink-0" />
-                <span className="text-sm font-medium text-foreground">Centres need certified infection prevention partners</span>
+                <span className="text-sm font-medium text-foreground">Move beyond price-based competition</span>
               </div>
               <div className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3">
                 <CheckCircle className="h-5 w-5 text-accent shrink-0" />
-                <span className="text-sm font-medium text-foreground">NCCS certification is the pathway to market entry</span>
+                <span className="text-sm font-medium text-foreground">Deliver certified infection prevention services</span>
               </div>
               <div className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3">
                 <CheckCircle className="h-5 w-5 text-accent shrink-0" />
-                <span className="text-sm font-medium text-foreground">Daytime infection prevention is a new revenue stream</span>
+                <span className="text-sm font-medium text-foreground">Increase contract value and stability</span>
+              </div>
+              <div className="flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3">
+                <CheckCircle className="h-5 w-5 text-accent shrink-0" />
+                <span className="text-sm font-medium text-foreground">Differentiate from non-certified providers</span>
               </div>
             </div>
           </div>
@@ -163,6 +170,9 @@ export default function ForCleaningCompaniesPage() {
                 <h3 className="text-xl font-bold text-foreground">The Opportunity: Transition from Vendor to Essential Partner</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
                   The NCCS gives cleaning companies the leverage to reset the market and move from a disposable expense to a <strong className="text-foreground">statutory necessity.</strong>
+                </p>
+                <p className="mt-4 text-foreground font-semibold leading-relaxed">
+                  Childcare centres implementing the CCS/NCCS model require certified cleaning providers—this certification positions your business to meet that demand.
                 </p>
                 <ul className="mt-6 space-y-4">
                   <li className="flex items-start gap-3">
@@ -193,19 +203,69 @@ export default function ForCleaningCompaniesPage() {
                 <p className="text-lg font-semibold text-foreground italic">
                   &quot;In a biohazardous environment, &apos;budget cleaning&apos; is a reportable safety violation.&quot;
                 </p>
-                <p className="mt-4 text-muted-foreground">
-                  We provide the certification and framework you need to stop competing on price and start leading on protection. This is a premium service opportunity to capture a market that is actively looking for help to comply with a new, high-stakes reality.
+                <div className="mt-6">
+                  <p className="font-semibold text-foreground mb-3">What This Enables:</p>
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-2 text-muted-foreground">
+                      <CheckCircle className="h-4 w-4 text-accent shrink-0" />
+                      Win higher-value childcare contracts
+                    </li>
+                    <li className="flex items-center gap-2 text-muted-foreground">
+                      <CheckCircle className="h-4 w-4 text-accent shrink-0" />
+                      Quote based on compliance, not price
+                    </li>
+                    <li className="flex items-center gap-2 text-muted-foreground">
+                      <CheckCircle className="h-4 w-4 text-accent shrink-0" />
+                      Secure longer-term agreements
+                    </li>
+                    <li className="flex items-center gap-2 text-muted-foreground">
+                      <CheckCircle className="h-4 w-4 text-accent shrink-0" />
+                      Operate as a specialist, not a commodity
+                    </li>
+                  </ul>
+                </div>
+                <p className="mt-6 text-muted-foreground">
+                  We don&apos;t provide general cleaning training—we certify your workforce to operate in compliant childcare environments. This positions your business to move from low-cost cleaning to a certified, compliance-aligned service that centres now require.
                 </p>
               </div>
 
               <div className="mt-8">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                   <Link href="/contact">
-                    Become an NCCS-Certified Provider Today
+                    Position Your Business for Childcare Contracts
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What We Provide Section */}
+        <section className="py-12 sm:py-16 bg-muted">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                What We Provide
+              </h2>
+            </div>
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-xl border border-border bg-card p-5 text-center">
+                <GraduationCap className="mx-auto h-8 w-8 text-accent" />
+                <p className="mt-3 font-medium text-foreground">Childcare-specific infection prevention training</p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-5 text-center">
+                <Shield className="mx-auto h-8 w-8 text-accent" />
+                <p className="mt-3 font-medium text-foreground">NCCS-aligned certification</p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-5 text-center">
+                <UserCheck className="mx-auto h-8 w-8 text-accent" />
+                <p className="mt-3 font-medium text-foreground">Workforce capability verification</p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-5 text-center">
+                <Building2 className="mx-auto h-8 w-8 text-accent" />
+                <p className="mt-3 font-medium text-foreground">Alignment to CCS-compliant centres</p>
               </div>
             </div>
           </div>
@@ -250,6 +310,23 @@ export default function ForCleaningCompaniesPage() {
                   Centres need verified records of competent cleaning to satisfy audits and inspections.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why This Matters Section */}
+        <section className="py-12 sm:py-16 bg-accent/5">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Why This Matters
+              </h2>
+              <p className="mt-6 text-lg text-muted-foreground">
+                Cleaning in childcare is no longer general cleaning—it is a regulated, compliance-driven function.
+              </p>
+              <p className="mt-4 text-lg font-semibold text-foreground">
+                Certification is becoming the requirement—not the advantage.
+              </p>
             </div>
           </div>
         </section>
@@ -460,12 +537,33 @@ export default function ForCleaningCompaniesPage() {
           </div>
         </section>
 
+        {/* Two Workforces Section */}
+        <section className="py-16 sm:py-20 bg-primary">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl">
+                Two Workforces. One Standard.
+              </h2>
+              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <div className="rounded-xl bg-primary-foreground/10 p-6">
+                  <Building2 className="mx-auto h-10 w-10 text-accent" />
+                  <p className="mt-4 text-lg font-medium text-primary-foreground">Centres implement the CCS/NCCS system</p>
+                </div>
+                <div className="rounded-xl bg-primary-foreground/10 p-6">
+                  <Users className="mx-auto h-10 w-10 text-accent" />
+                  <p className="mt-4 text-lg font-medium text-primary-foreground">Cleaning providers are certified to meet it</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="bg-muted py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Ready to certify your team?
+                Position Your Business for Childcare Contracts
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 Get your staff NCCS certified and start winning ECEC contracts. The regulatory requirements are in effect now — the time to act is today.
