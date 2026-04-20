@@ -14,7 +14,7 @@ const tools = [
   {
     icon: AlertTriangle,
     title: "Compliance Risk Calculator",
-    description: "Answer 5 questions to assess your centre's financial exposure under current ECEC and WHS regulations. See your estimated penalty risk and personal liability gaps.",
+    description: "Answer 10 questions to assess your centre's financial exposure under current ECEC and WHS regulations. See your estimated penalty risk and personal liability gaps.",
     href: "/#compliance-calculator",
     page: "Home Page",
     buttonText: "Check Your Risk",
