@@ -236,7 +236,6 @@ export default function ForCleaningCompaniesPage() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-</div>
               </div>
             </div>
           </div>
