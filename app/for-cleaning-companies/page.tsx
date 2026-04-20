@@ -272,7 +272,7 @@ export default function ForCleaningCompaniesPage() {
               </div>
               <div className="rounded-xl border border-border bg-card p-5 text-center">
                 <Building2 className="mx-auto h-8 w-8 text-accent" />
-                <p className="mt-3 font-medium text-foreground">Alignment to CCS-compliant centres</p>
+                <p className="mt-3 font-medium text-foreground">Alignment to NCCS-compliant centres</p>
               </div>
             </div>
           </div>
