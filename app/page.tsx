@@ -12,6 +12,7 @@ import { DualWorkforceSection } from "@/components/home/dual-workforce-section"
 import { WhyNowSection } from "@/components/home/why-now-section"
 import { ResultSection } from "@/components/home/result-section"
 import { CTASection } from "@/components/home/cta-section"
+import { ComplianceRiskCalculatorSection } from "@/components/home/compliance-risk-calculator-section"
 
 export default function HomePage() {
   return (
@@ -47,6 +48,9 @@ export default function HomePage() {
         
         {/* WHY THIS MATTERS NOW */}
         <WhyNowSection />
+        
+        {/* COMPLIANCE RISK CALCULATOR */}
+        <ComplianceRiskCalculatorSection />
         
         {/* THE RESULT */}
         <ResultSection />
