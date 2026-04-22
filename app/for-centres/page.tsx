@@ -8,6 +8,7 @@ import { AlertTriangle, Shield, ArrowRight, CheckCircle, Building, Clock, Users,
 import { InfectionPreventionHoursCalculator } from "@/components/calculators/infection-prevention-hours-calculator"
 import { ROICalculator } from "@/components/calculators/roi-calculator"
 import { WhyChooseUsSection } from "@/components/home/why-choose-us-centre-section"
+import { DiscountPopupWrapper } from "@/components/for-centres/discount-popup-wrapper"
 
 export const metadata: Metadata = {
   title: "For Centres",
@@ -124,6 +125,7 @@ export default function ForCentresPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
+      <DiscountPopupWrapper />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-primary py-20 sm:py-28">

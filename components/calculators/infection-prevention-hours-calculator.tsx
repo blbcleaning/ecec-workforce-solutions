@@ -5,6 +5,7 @@ import { Clock, Phone, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { CalculatorWizard, WizardStep } from "./calculator-wizard"
+import type { EmailResultsConfig } from "./email-results-form"
 import Link from "next/link"
 
 export function InfectionPreventionHoursCalculator() {
@@ -76,6 +77,25 @@ export function InfectionPreventionHoursCalculator() {
     setNappyChangeAreas(2)
     setHoursPerDay(11)
     setDaysPerWeek(5)
+  }
+
+  const emailResultsConfig: EmailResultsConfig = {
+    calculatorType: "Infection Prevention Hours Calculator",
+    resultsData: {
+      licensedCapacity,
+      nurseryRooms,
+      toddlerRooms,
+      preschoolRooms,
+      bathrooms,
+      nappyChangeAreas,
+      operatingHoursPerDay: hoursPerDay,
+      operatingDaysPerWeek: daysPerWeek,
+      estimatedWeeklyHours: results.weeklyHours,
+      estimatedDailyHours: results.dailyHours,
+      recommendedStaffing: results.staffingLevel,
+      typicalAllocation: `${results.typicalMin}–${results.typicalMax} hours/week`,
+    },
+    resultsSummary: `Estimated ${results.weeklyHours} hours/week needed (${results.dailyHours} hours/day) | Recommended: ${results.staffingLevel}`,
   }
 
   const NumberInput = ({ 
@@ -285,6 +305,7 @@ export function InfectionPreventionHoursCalculator() {
       steps={steps}
       resultsPanel={resultsPanel}
       onReset={handleReset}
+      emailResultsConfig={emailResultsConfig}
     />
   )
 }
