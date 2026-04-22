@@ -20,8 +20,9 @@ export function SiteHeader() {
 
   return (
     <header className="w-full border-b border-border bg-background">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <div className="flex lg:flex-1">
+      <nav className="mx-auto flex max-w-7xl flex-col items-center px-4 py-4 sm:px-6 lg:px-8">
+        {/* Logo centered at top */}
+        <div className="flex w-full items-center justify-between lg:justify-center">
           <Link href="/" className="-m-1.5 p-1.5">
             <Image 
               src="/images/logo.png" 
@@ -32,35 +33,38 @@ export function SiteHeader() {
               priority
             />
           </Link>
-        </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Menu className="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="hidden lg:flex lg:gap-x-8">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
+              onClick={() => setMobileMenuOpen(true)}
             >
-              {item.name}
-            </Link>
-          ))}
+              <span className="sr-only">Open main menu</span>
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-3">
-          <Button asChild variant="outline">
-            <Link href="/contact">Enquire Now</Link>
-          </Button>
-          <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="/book">Book a Call</Link>
-          </Button>
+        {/* Navigation and buttons below logo on desktop */}
+        <div className="hidden w-full lg:mt-4 lg:flex lg:items-center lg:justify-between">
+          <div className="flex gap-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+          <div className="flex gap-x-3">
+            <Button asChild variant="outline">
+              <Link href="/contact">Enquire Now</Link>
+            </Button>
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Link href="/book">Book a Call</Link>
+            </Button>
+          </div>
         </div>
       </nav>
 
