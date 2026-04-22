@@ -4,6 +4,7 @@ import { useState, useCallback, ReactNode } from "react"
 import { ChevronRight, ChevronDown, Edit3, RotateCcw } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { EmailResultsForm, type EmailResultsConfig } from "./email-results-form"
 
 export interface WizardStep {
   id: string
@@ -20,6 +21,7 @@ interface CalculatorWizardProps {
   steps: WizardStep[]
   resultsPanel: ReactNode
   onReset?: () => void
+  emailResultsConfig?: EmailResultsConfig
 }
 
 export function CalculatorWizard({
@@ -29,6 +31,7 @@ export function CalculatorWizard({
   steps,
   resultsPanel,
   onReset,
+  emailResultsConfig,
 }: CalculatorWizardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [currentStep, setCurrentStep] = useState(0)
@@ -197,6 +200,9 @@ export function CalculatorWizard({
             <h4 className="font-semibold text-foreground">Your Results</h4>
           </div>
           {resultsPanel}
+          {emailResultsConfig && (
+            <EmailResultsForm config={emailResultsConfig} />
+          )}
         </div>
       )}
     </div>

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { CalculatorWizard, WizardStep } from "./calculator-wizard"
+import type { EmailResultsConfig } from "./email-results-form"
 import Link from "next/link"
 
 type YesNo = "yes" | "no" | ""
@@ -158,6 +159,37 @@ export function ComplianceRiskCalculator() {
     setUsesTGAProducts("")
     setHasChemicalControls("")
   }
+
+  const getRiskLabel = (level: RiskLevel) => {
+    switch (level) {
+      case "compliant": return "COMPLIANT"
+      case "partial": return "PARTIALLY COMPLIANT"
+      case "significant": return "SIGNIFICANT GAPS"
+      case "noncompliant": return "NON-COMPLIANT"
+    }
+  }
+
+  const emailResultsConfig: EmailResultsConfig | undefined = results ? {
+    calculatorType: "Compliance Risk Calculator",
+    resultsData: {
+      riskLevel: getRiskLabel(results.riskLevel),
+      passingAreas: `${results.passes}/10`,
+      complianceGaps: results.gaps,
+      financialExposure: `${formatCurrency(results.financialExposure.min)} – ${formatCurrency(results.financialExposure.max)}`,
+      personalLiabilityRisk: results.personalLiabilityRisk,
+      workerRegister: hasWorkerRegister === "yes" ? "Compliant" : "Gap",
+      infectionTraining: hasInfectionTraining === "yes" ? "Compliant" : "Gap",
+      documentation: hasDocumentation === "yes" ? "Compliant" : "Gap",
+      biohazardProcedures: hasBiohazardProcedure === "yes" ? "Compliant" : "Gap",
+      ratioConflict: hasRatioConflict === "no" ? "Compliant" : "Gap",
+      napTimeCleaning: hasNapTimeCleaning === "no" ? "Compliant" : "Gap",
+      afterHoursQuals: hasAfterHoursQuals === "yes" ? "Compliant" : "Gap",
+      verificationLogs: hasVerificationLogs === "yes" ? "Compliant" : "Gap",
+      tgaProducts: usesTGAProducts === "yes" ? "Compliant" : "Gap",
+      chemicalControls: hasChemicalControls === "yes" ? "Compliant" : "Gap",
+    },
+    resultsSummary: `Risk Level: ${getRiskLabel(results.riskLevel)} | Passing: ${results.passes}/10 | Financial Exposure: ${formatCurrency(results.financialExposure.min)} – ${formatCurrency(results.financialExposure.max)}`,
+  } : undefined
 
   const YesNoRadio = ({
     value,
@@ -543,6 +575,7 @@ export function ComplianceRiskCalculator() {
       steps={steps}
       resultsPanel={resultsPanel}
       onReset={handleReset}
+      emailResultsConfig={emailResultsConfig}
     />
   )
 }

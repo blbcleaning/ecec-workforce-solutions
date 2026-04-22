@@ -5,6 +5,7 @@ import { TrendingUp, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { CalculatorWizard, WizardStep } from "./calculator-wizard"
+import type { EmailResultsConfig } from "./email-results-form"
 import Link from "next/link"
 
 export function ROICalculator() {
@@ -52,6 +53,25 @@ export function ROICalculator() {
       currency: "AUD",
       maximumFractionDigits: 0,
     }).format(value)
+  }
+
+  const emailResultsConfig: EmailResultsConfig = {
+    calculatorType: "ROI Calculator",
+    resultsData: {
+      educatorsLostPerYear,
+      replacementCost: formatCurrency(replacementCost),
+      currentCleaningCost: formatCurrency(currentCleaningCost),
+      nccsCleaningCost: formatCurrency(nccsCleaningCost),
+      implementationCost: formatCurrency(implementationCost),
+      annualComplianceCost: formatCurrency(annualComplianceCost),
+      educatorsRetained: results.educatorsRetained,
+      annualTurnoverCost: formatCurrency(results.annualTurnoverCost),
+      totalYear1Cost: formatCurrency(results.totalYear1Cost),
+      turnoverSavings: formatCurrency(results.turnoverSavings),
+      netSavings: formatCurrency(results.netSavings),
+      roi: `${results.roi}%`,
+    },
+    resultsSummary: `Net Savings: ${formatCurrency(results.netSavings)} | ROI: ${results.roi}% | By retaining ${results.educatorsRetained} educator${results.educatorsRetained !== 1 ? "s" : ""}`,
   }
 
   const handleReset = () => {
@@ -337,6 +357,7 @@ export function ROICalculator() {
       steps={steps}
       resultsPanel={resultsPanel}
       onReset={handleReset}
+      emailResultsConfig={emailResultsConfig}
     />
   )
 }
