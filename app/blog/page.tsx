@@ -3,7 +3,8 @@ import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, ExternalLink, BookOpen, Newspaper, FileText } from "lucide-react"
+import { ArrowRight, ExternalLink, BookOpen, Newspaper, FileText, Bell } from "lucide-react"
+import { SubscribeForm } from "@/components/blog/subscribe-form"
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -65,8 +66,28 @@ export default function BlogPage() {
           </div>
         </section>
 
+        {/* Subscribe Section */}
+        <section className="bg-muted py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-xl text-center">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                <Bell className="h-6 w-6 text-primary" />
+              </div>
+              <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Stay Updated
+              </h2>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Subscribe to receive notifications when we publish new research, guidance, or industry updates.
+              </p>
+              <div className="mt-8">
+                <SubscribeForm />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Blog Link Section */}
-        <section className="bg-muted py-20 sm:py-24">
+        <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
