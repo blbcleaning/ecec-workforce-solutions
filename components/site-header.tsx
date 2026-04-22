@@ -11,6 +11,7 @@ const navigation = [
   { name: "For Centres", href: "/for-centres" },
   { name: "For Cleaning Companies", href: "/for-cleaning-companies" },
   { name: "Calculators", href: "/tools" },
+  { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ]
