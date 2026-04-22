@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, Facebook } from "lucide-react"
 
 export function SiteFooter() {
   return (
@@ -74,6 +74,26 @@ export function SiteFooter() {
                 <span>Western Sydney, NSW, Australia</span>
               </li>
             </ul>
+            <div className="mt-6 flex items-center gap-4">
+              <a 
+                href="https://www.linkedin.com/in/lindsay-smith-50956235b/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://www.facebook.com/profile.php?id=61583035394013" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
         
