@@ -70,7 +70,7 @@ const whatWeDeliver = [
 
 const provenOutcomes = [
   {
-    stat: "16-24",
+    stat: "7-9",
     unit: "hours/week",
     description: "Reclaimed educator time",
   },
