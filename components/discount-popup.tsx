@@ -127,7 +127,7 @@ export function DiscountPopup() {
                   Cross-regulatory blitzes are already underway.
                 </p>
                 <p className="text-sm">
-                  Inspectors are now checking WHS paperwork, biohazard controls, and director due-diligence — not just NQF practice.
+                  Your safe system of work and hierarchy of controls must be updated to ensure controls are adequate for a biohazardous workplace.
                 </p>
                 <p className="font-medium text-foreground">The consequences are real:</p>
                 <ul className="text-sm list-disc list-inside space-y-1">
@@ -146,13 +146,6 @@ export function DiscountPopup() {
               <p className="text-sm text-center text-muted-foreground mt-1">
                 Valued at $500 — free until 30 May
               </p>
-              <ul className="text-xs text-muted-foreground mt-3 space-y-1">
-                <li>• WHS policies, procedures, and risk registers</li>
-                <li>• Biohazard & infection-control documentation</li>
-                <li>• Staff training evidence</li>
-                <li>• Daily practices vs legal obligations</li>
-                <li>• Director liability exposure under the 2026 Code</li>
-              </ul>
             </div>
 
             <form onSubmit={handleSubmit} className="mt-4 space-y-4">
