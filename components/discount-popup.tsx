@@ -58,11 +58,6 @@ export function DiscountPopup() {
 
       setIsSuccess(true)
       localStorage.setItem("whs-popup-seen", "true")
-      
-      // Close dialog after showing success for 3 seconds
-      setTimeout(() => {
-        setIsOpen(false)
-      }, 3000)
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong")
     } finally {
@@ -74,14 +69,43 @@ export function DiscountPopup() {
     <Dialog open={isOpen} onOpenChange={(open) => !open && handleClose()}>
       <DialogContent className="sm:max-w-lg">
         {isSuccess ? (
-          <div className="flex flex-col items-center text-center py-4">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/20">
-              <CheckCircle className="h-8 w-8 text-accent" />
+          <div className="flex flex-col py-4 max-h-[70vh] overflow-y-auto">
+            <div className="flex justify-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/20">
+                <CheckCircle className="h-8 w-8 text-accent" />
+              </div>
             </div>
-            <h3 className="mt-4 text-xl font-semibold text-foreground">Check Your Inbox</h3>
-            <p className="mt-2 text-muted-foreground">
-              {"We'll be in touch shortly to book your personalised WHS compliance check."}
-            </p>
+            <h3 className="mt-4 text-xl font-semibold text-foreground text-center">
+              Thanks — your WHS Compliance Health Check is now booked.
+            </h3>
+            <div className="mt-4 text-sm text-muted-foreground space-y-3">
+              <p>
+                Over the next few days, I&apos;ll review your centre&apos;s current WHS paperwork, risk registers, biohazard controls, training evidence, and day-to-day practices against the 2026 WHS Code and cross-regulatory requirements.
+              </p>
+              <p>
+                Because this is a <strong className="text-foreground">personalised $500 assessment</strong>, I&apos;ll be in touch shortly to confirm a few details so your report is accurate to your service&apos;s size, layout, and operating model.
+              </p>
+              <p className="font-medium text-foreground">Directors are using this check to:</p>
+              <ul className="list-disc list-inside space-y-1 ml-1">
+                <li>identify gaps they didn&apos;t know existed</li>
+                <li>understand the difference between NQF and WHS obligations</li>
+                <li>prepare for cross-regulatory inspections</li>
+                <li>reduce personal liability exposure</li>
+              </ul>
+              <p>
+                You&apos;ll receive your tailored findings before 30 May while the offer is still free.
+              </p>
+              <p className="text-xs text-muted-foreground/80">
+                If you need anything urgently, just reply to the confirmation email.
+              </p>
+            </div>
+            <Button
+              type="button"
+              onClick={handleClose}
+              className="mt-6 w-full bg-accent text-accent-foreground hover:bg-accent/90"
+            >
+              Close
+            </Button>
           </div>
         ) : (
           <>
