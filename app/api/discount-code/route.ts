@@ -41,7 +41,7 @@ export async function POST(request: Request) {
 
     // Send discount code to user
     await resend.emails.send({
-      from: "ECEC Workforce Solutions <noreply@ececworkforcesolutions.com>",
+      from: "ECEC Workforce Solutions <noreply@ececworkforcesolutons.au>",
       to: email,
       subject: "Your 10% Discount Code from ECEC Workforce Solutions",
       html: `
@@ -79,7 +79,7 @@ export async function POST(request: Request) {
           </ul>
           
           <div style="margin: 30px 0; text-align: center;">
-            <a href="https://ececworkforcesolutions.com/book" style="display: inline-block; background-color: #c6a052; color: #1a365d; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600;">Book a Call to Get Started</a>
+            <a href="https://ececworkforcesolutons.au/book" style="display: inline-block; background-color: #c6a052; color: #1a365d; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600;">Book a Call to Get Started</a>
           </div>
           
           <p>If you have any questions, feel free to reply to this email or call us on <a href="tel:0432355396" style="color: #1a365d;">0432 355 396</a>.</p>
@@ -90,7 +90,7 @@ export async function POST(request: Request) {
           
           <p style="font-size: 12px; color: #666; text-align: center;">
             ECEC Workforce Solutions | Western Sydney, NSW, Australia<br>
-            <a href="https://ececworkforcesolutions.com" style="color: #1a365d;">ececworkforcesolutions.com</a>
+            <a href="https://ececworkforcesolutons.au" style="color: #1a365d;">ececworkforcesolutons.au</a>
           </p>
         </body>
         </html>
@@ -99,7 +99,7 @@ export async function POST(request: Request) {
 
     // Send notification to admin
     await resend.emails.send({
-      from: "ECEC Workforce Solutions <noreply@ececworkforcesolutions.com>",
+      from: "ECEC Workforce Solutions <noreply@ececworkforcesolutons.au>",
       to: "ececworkforcesolutions@outlook.com",
       subject: `New Discount Code Request: ${name}`,
       html: `

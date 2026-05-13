@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
     // Send notification to admin
     await resend.emails.send({
-      from: "ECEC Workforce Solutions <noreply@ececworkforcesolutions.com>",
+      from: "ECEC Workforce Solutions <noreply@ececworkforcesolutons.au>",
       to: "ececworkforcesolutions@outlook.com",
       subject: "New Blog Subscriber",
       html: `
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
 
     // Send confirmation to subscriber
     await resend.emails.send({
-      from: "ECEC Workforce Solutions <noreply@ececworkforcesolutions.com>",
+      from: "ECEC Workforce Solutions <noreply@ececworkforcesolutons.au>",
       to: email,
       subject: "You're Subscribed to ECEC Workforce Solutions Updates",
       html: `

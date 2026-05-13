@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
     // Send lead notification email to admin
     await resend.emails.send({
-      from: 'noreply@ececworkforcesolutions.com',
+      from: 'noreply@ececworkforcesolutons.au',
       to: 'ececworkforcesolutions@outlook.com',
       replyTo: email,
       subject: `New Lead from ${calculatorType} - ${name}`,
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
 
     // Send results email to user
     await resend.emails.send({
-      from: 'noreply@ececworkforcesolutions.com',
+      from: 'noreply@ececworkforcesolutons.au',
       to: email,
       subject: `Your ${calculatorType} Results - ECEC Workforce Solutions`,
       html: `
@@ -85,7 +85,7 @@ export async function POST(request: Request) {
               <p style="margin-bottom: 15px; color: #78350f;">
                 Our team can help you understand what these results mean for your centre and develop a tailored compliance strategy.
               </p>
-              <a href="https://ececworkforcesolutions.com/book" 
+              <a href="https://ececworkforcesolutons.au/book" 
                  style="display: inline-block; background: #10b981; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">
                 Book a Call
               </a>
