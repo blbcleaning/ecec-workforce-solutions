@@ -9,7 +9,7 @@ export async function POST(request: Request) {
 
     // Send email to admin
     const response = await resend.emails.send({
-      from: 'noreply@ececworkforcesolutions.com.au',
+      from: 'noreply@ececworkforcesolutions.au',
       to: 'ececworkforcesolutions@outlook.com',
       replyTo: email,
       subject: `New Enquiry from ${name} - ${role}`,
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
 
     // Send confirmation email to user
     await resend.emails.send({
-      from: 'noreply@ececworkforcesolutions.com.au',
+      from: 'noreply@ececworkforcesolutions.au',
       to: email,
       subject: 'We received your enquiry - ECEC Workforce Solutions',
       html: `
