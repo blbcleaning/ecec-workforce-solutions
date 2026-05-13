@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   description: 'Australia\'s first evidence-based infection prevention governance framework for ECEC. NCCS certification, compliance tools, and consulting for childcare centres and cleaning companies.',
   generator: 'v0.app',
-  metadataBase: new URL('https://ececworkforcesolutions.au'),
+  metadataBase: new URL('https://ececworkforcesolutons.au'),
   keywords: [
     'NCCS certification',
     'childcare cleaning',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_AU',
-    url: 'https://ececworkforcesolutions.au',
+    url: 'https://ececworkforcesolutons.au',
     siteName: 'ECEC Workforce Solutions',
     title: 'ECEC Workforce Solutions | NCCS Certification & Compliance',
     description: 'Australia\'s first evidence-based infection prevention governance framework for ECEC. NCCS certification, compliance tools, and consulting for childcare centres and cleaning companies.',
