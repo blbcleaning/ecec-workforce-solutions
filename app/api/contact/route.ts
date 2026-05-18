@@ -32,7 +32,7 @@ export async function POST(request: Request) {
       // Send email to admin
       await resend.emails.send({
         from: 'noreply@ececworkforcesolutions.au',
-        to: 'lindzzz41@gmail.com',
+        to: 'ececworkforcesolutions@outlook.com',
         replyTo: email,
         subject: `New Enquiry from ${name} - ${role}`,
         html: `
