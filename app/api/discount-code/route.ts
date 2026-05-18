@@ -100,7 +100,7 @@ export async function POST(request: Request) {
     // Send notification to admin
     await resend.emails.send({
       from: "ECEC Workforce Solutions <noreply@ececworkforcesolutions.au>",
-      to: "ececworkforcesolutions@outlook.com",
+      to: "lindzzz41@gmail.com",
       subject: `New Discount Code Request: ${name}`,
       html: `
         <!DOCTYPE html>
