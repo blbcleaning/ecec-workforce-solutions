@@ -36,7 +36,7 @@ const outcomes = [
 const whatsIncluded = [
   { icon: BookOpen, text: "15 modules" },
   { icon: Clock, text: "Self-paced" },
-  { icon: Users, text: "Designed for ECEC context" },
+  { icon: Users, text: "WHS Compliance built for the realities of ECEC" },
 ]
 
 const modules = [
@@ -58,11 +58,11 @@ const modules = [
 ]
 
 const pricing = [
-  { type: "Individual enrolment", price: "$100 USD" },
-  { type: "Group booking (5)", price: "$70 USD per person" },
-  { type: "Group booking (8)", price: "$62.50 USD per person" },
-  { type: "Group booking (10)", price: "$60 USD per person" },
-  { type: "Group booking (20+)", price: "$45 USD per person" },
+  { type: "Individual enrolment", price: "$100" },
+  { type: "Group booking (5)", price: "$70 per person" },
+  { type: "Group booking (8)", price: "$62.50 per person" },
+  { type: "Group booking (10)", price: "$60 per person" },
+  { type: "Group booking (20+)", price: "$45 per person" },
 ]
 
 const faqs = [
@@ -92,13 +92,6 @@ export default function InfectionControlCoursePage() {
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-primary py-20 sm:py-28">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-          
-          {/* Big Block Heading - Top Left */}
-          <div className="absolute top-6 left-4 sm:left-6 lg:left-8 z-10 bg-accent px-4 py-2 sm:px-6 sm:py-3">
-            <span className="text-sm sm:text-base lg:text-lg font-bold tracking-wide text-accent-foreground uppercase">
-              Training
-            </span>
-          </div>
           
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
