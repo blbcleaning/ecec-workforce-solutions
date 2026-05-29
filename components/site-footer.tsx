@@ -42,6 +42,11 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/training/infection-control" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Training
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   About
                 </Link>
