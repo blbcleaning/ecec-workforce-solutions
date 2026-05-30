@@ -3,7 +3,7 @@ import { Clock, TrendingDown, UserCheck, Shield, CheckCircle } from "lucide-reac
 const outcomes = [
   {
     icon: Clock,
-    stat: "16–24 hours",
+    stat: "7–9 hours",
     text: "per week returned to educators",
   },
   {
