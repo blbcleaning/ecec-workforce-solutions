@@ -61,6 +61,11 @@ export const metadata: Metadata = {
     description: 'Australia\'s first evidence-based infection prevention governance framework for ECEC.',
     images: ['/images/og-image.jpg'],
   },
+  verification: {
+    other: {
+      'facebook-domain-verification': '2wsngc70zn03vigdu0ynbye8wv4s4i',
+    },
+  },
   robots: {
     index: true,
     follow: true,
