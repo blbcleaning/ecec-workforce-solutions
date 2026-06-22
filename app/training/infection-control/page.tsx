@@ -10,7 +10,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { EnrolButton } from "@/components/training/enrol-button"
-import { CheckCircle, Users, BookOpen, Clock } from "lucide-react"
+import { CourseCheckout } from "@/components/training/course-checkout"
+import { getCourseProducts } from "@/app/actions/stripe"
+import { CheckCircle, Users, BookOpen, Clock, CheckCircle2 } from "lucide-react"
+
+// Render at request time so live Stripe course prices are always current.
+export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
   title: "Educator Infection Control & Biohazard Management (15 modules)",
@@ -84,11 +89,29 @@ const faqs = [
   },
 ]
 
-export default function InfectionControlCoursePage() {
+export default async function InfectionControlCoursePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ checkout?: string }>
+}) {
+  const { checkout } = await searchParams
+  const courseProducts = await getCourseProducts()
+
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
+        {checkout === "success" ? (
+          <div className="bg-accent/10 px-4 py-3 text-center text-sm font-medium text-accent">
+            <CheckCircle2 className="mr-2 inline h-4 w-4" />
+            Enrolment successful — thank you. Check your email for course access details.
+          </div>
+        ) : null}
+        {checkout === "cancelled" ? (
+          <div className="bg-muted px-4 py-3 text-center text-sm font-medium text-muted-foreground">
+            Enrolment cancelled — your card was not charged.
+          </div>
+        ) : null}
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-primary py-20 sm:py-28">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -212,7 +235,7 @@ export default function InfectionControlCoursePage() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-16 sm:py-20 bg-primary">
+        <section id="pricing" className="scroll-mt-24 py-16 sm:py-20 bg-primary">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl">
@@ -222,23 +245,34 @@ export default function InfectionControlCoursePage() {
                 Flexible options for individuals and teams
               </p>
             </div>
-            <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
-              {pricing.map((item) => (
-                <div
-                  key={item.type}
-                  className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 text-center"
-                >
-                  <h3 className="text-lg font-semibold text-primary-foreground">{item.type}</h3>
-                  <p className="mt-2 text-2xl font-bold text-accent">{item.price}</p>
+            {courseProducts.length > 0 ? (
+              <>
+                <CourseCheckout products={courseProducts} />
+                <p className="mt-8 text-center text-primary-foreground/70">
+                  Secure checkout via Stripe. Group rates apply automatically at checkout.
+                </p>
+              </>
+            ) : (
+              <>
+                <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
+                  {pricing.map((item) => (
+                    <div
+                      key={item.type}
+                      className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 text-center"
+                    >
+                      <h3 className="text-lg font-semibold text-primary-foreground">{item.type}</h3>
+                      <p className="mt-2 text-2xl font-bold text-accent">{item.price}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <p className="mt-8 text-center text-primary-foreground/70">
-              Choose your group size at checkout (5, 8, 10, 20+).
-            </p>
-            <div className="mt-8 flex justify-center">
-              <EnrolButton variant="secondary" />
-            </div>
+                <p className="mt-8 text-center text-primary-foreground/70">
+                  Choose your group size at checkout (5, 8, 10, 20+).
+                </p>
+                <div className="mt-8 flex justify-center">
+                  <EnrolButton variant="secondary" />
+                </div>
+              </>
+            )}
           </div>
         </section>
 

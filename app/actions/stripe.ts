@@ -18,14 +18,17 @@ export interface SsowProduct {
   currency: string
   recurring: boolean
   interval: string | null
+  /** Optional fixed checkout quantity, from price metadata (e.g. group seats). */
+  quantity?: number
 }
 
 /**
- * Fetches active products and their prices directly from Stripe at request
- * time. Prefers products tagged as SSOW (by metadata or name); if none match,
- * it returns all active one-off/recurring products so nothing is hidden.
+ * Shared helper: fetches active prices (with expanded products) from Stripe and
+ * maps them to a simplified shape. `match` decides which products to keep.
  */
-export async function getSsowProducts(): Promise<SsowProduct[]> {
+async function fetchProducts(
+  match: (haystack: string) => boolean,
+): Promise<SsowProduct[]> {
   if (!process.env.STRIPE_SECRET_KEY) {
     return []
   }
@@ -39,16 +42,13 @@ export async function getSsowProducts(): Promise<SsowProduct[]> {
       expand: ["data.product"],
     })
   } catch (error) {
-    // Invalid/stale key or Stripe outage: degrade to the enquiry fallback
-    // rather than crashing the page.
     console.log("[v0] Stripe products fetch failed:", (error as Error).message)
     return []
   }
 
-  const all: (SsowProduct & { isSsow: boolean })[] = prices.data
+  const all = prices.data
     .filter((price) => {
       const product = price.product
-      // Skip prices whose product was archived/deleted.
       return typeof product !== "string" && !product.deleted && product.active
     })
     .map((price) => {
@@ -56,6 +56,7 @@ export async function getSsowProducts(): Promise<SsowProduct[]> {
       const haystack = `${product.name} ${product.description ?? ""} ${
         product.metadata?.category ?? ""
       } ${product.metadata?.type ?? ""}`.toLowerCase()
+      const metaQty = Number(price.metadata?.quantity ?? price.metadata?.seats)
       return {
         priceId: price.id,
         name: product.name,
@@ -64,15 +65,39 @@ export async function getSsowProducts(): Promise<SsowProduct[]> {
         currency: price.currency,
         recurring: Boolean(price.recurring),
         interval: price.recurring?.interval ?? null,
-        isSsow: haystack.includes("ssow"),
+        quantity: Number.isFinite(metaQty) && metaQty > 0 ? metaQty : undefined,
+        _haystack: haystack,
       }
     })
 
-  const ssowOnly = all.filter((p) => p.isSsow)
-  const result = (ssowOnly.length > 0 ? ssowOnly : all).map(({ isSsow, ...rest }) => rest)
+  return all.filter((p) => match(p._haystack)).map(({ _haystack, ...rest }) => rest)
+}
 
-  // Sort cheapest first for a sensible package ladder.
+/**
+ * Fetches active products and their prices directly from Stripe at request
+ * time. Prefers products tagged as SSOW (by metadata or name); if none match,
+ * it returns all active one-off/recurring products so nothing is hidden.
+ */
+export async function getSsowProducts(): Promise<SsowProduct[]> {
+  const ssow = await fetchProducts((h) => h.includes("ssow"))
+  // If nothing is explicitly tagged SSOW, fall back to all non-course products
+  // so the catalog is never hidden.
+  const result =
+    ssow.length > 0 ? ssow : await fetchProducts((h) => !isCourse(h))
   return result.sort((a, b) => (a.unitAmount ?? 0) - (b.unitAmount ?? 0))
+}
+
+/** Heuristic: does this product look like the training course? */
+function isCourse(haystack: string) {
+  return /infection|course|training|educator|module|enrol|biohazard/.test(haystack)
+}
+
+/**
+ * Fetches the training course products/prices live from Stripe, cheapest first.
+ */
+export async function getCourseProducts(): Promise<SsowProduct[]> {
+  const courses = await fetchProducts(isCourse)
+  return courses.sort((a, b) => (a.unitAmount ?? 0) - (b.unitAmount ?? 0))
 }
 
 /**
@@ -121,6 +146,50 @@ export async function createSsowCheckout(formData: FormData) {
     ...(mode === "payment"
       ? { payment_intent_data: { metadata } }
       : { subscription_data: { metadata } }),
+  })
+
+  if (!session.url) {
+    throw new Error("Failed to create checkout session")
+  }
+
+  redirect(session.url)
+}
+
+/**
+ * Creates a Stripe Checkout session for a training course price and returns the
+ * customer to the course page. Honours a fixed quantity (e.g. group seats)
+ * passed from the form, validated server-side against price metadata.
+ */
+export async function createCourseCheckout(formData: FormData) {
+  const priceId = formData.get("priceId")
+  if (typeof priceId !== "string" || !priceId) {
+    throw new Error("Missing priceId")
+  }
+
+  const stripe = getStripe()
+
+  // Look up the price server-side; never trust client-sent amounts.
+  const price = await stripe.prices.retrieve(priceId)
+  const mode = price.recurring ? "subscription" : "payment"
+
+  // Quantity is taken from the price's own metadata so it can't be tampered
+  // with by the client. Defaults to 1 (individual enrolment).
+  const metaQty = Number(price.metadata?.quantity ?? price.metadata?.seats)
+  const quantity = Number.isFinite(metaQty) && metaQty > 0 ? metaQty : 1
+
+  const headersList = await headers()
+  const host = headersList.get("host")
+  const protocol = host?.startsWith("localhost") ? "http" : "https"
+  const origin = `${protocol}://${host}`
+  const returnPath = "/training/infection-control"
+
+  const session = await stripe.checkout.sessions.create({
+    mode,
+    line_items: [{ price: priceId, quantity }],
+    success_url: `${origin}${returnPath}?checkout=success`,
+    cancel_url: `${origin}${returnPath}?checkout=cancelled`,
+    billing_address_collection: "auto",
+    allow_promotion_codes: true,
   })
 
   if (!session.url) {
