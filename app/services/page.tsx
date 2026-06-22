@@ -155,7 +155,7 @@ export default async function ServicesPage({
         </section>
 
         {/* Service 1 — Custom-Built SSOW */}
-        <section className="py-16 sm:py-20 bg-muted">
+        <section id="ssow" className="scroll-mt-24 py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl">
               <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
