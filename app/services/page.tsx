@@ -23,9 +23,9 @@ export const metadata: Metadata = {
 }
 
 const ssowPackages = [
-  { name: "Single SSOW (per task/zone)", price: "$585" },
-  { name: "SSOW Starter Pack (3 SSOW)", price: "$1,755" },
-  { name: "SSOW Compliance Pack (5 SSOW)", price: "$2,925" },
+  { name: "Single SSOW (per task/zone)" },
+  { name: "SSOW Starter Pack (3 SSOW)" },
+  { name: "SSOW Compliance Pack (5 SSOW)" },
 ]
 
 const reviewPackages = [
@@ -166,15 +166,12 @@ export default function ServicesPage() {
               <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
                 <div className="flex items-baseline justify-between border-b border-border pb-4">
                   <h3 className="text-lg font-semibold text-card-foreground">Packages</h3>
-                  <span className="text-sm text-muted-foreground">ex GST</span>
                 </div>
                 <ul className="mt-4 divide-y divide-border">
                   {ssowPackages.map((pkg) => (
-                    <li key={pkg.name} className="flex items-center justify-between gap-4 py-4">
+                    <li key={pkg.name} className="flex items-center gap-3 py-4">
+                      <CheckCircle className="h-5 w-5 flex-shrink-0 text-accent" />
                       <span className="text-sm font-medium text-card-foreground">{pkg.name}</span>
-                      <span className="whitespace-nowrap text-right text-sm text-muted-foreground">
-                        From <span className="text-lg font-bold text-foreground">{pkg.price}</span>
-                      </span>
                     </li>
                   ))}
                 </ul>
