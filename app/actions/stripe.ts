@@ -96,6 +96,7 @@ export async function createSsowCheckout(formData: FormData) {
     success_url: `${origin}/services?checkout=success`,
     cancel_url: `${origin}/services?checkout=cancelled`,
     billing_address_collection: "auto",
+    allow_promotion_codes: true,
   })
 
   if (!session.url) {
