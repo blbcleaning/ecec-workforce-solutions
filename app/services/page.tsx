@@ -3,18 +3,24 @@ import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
+import { SsowCheckout } from "@/components/ssow-checkout"
+import { getSsowProducts } from "@/app/actions/stripe"
 import {
   AlertTriangle,
   ArrowRight,
   FileCheck,
   ClipboardCheck,
   CheckCircle,
+  CheckCircle2,
   ShieldAlert,
   Star,
   TrendingDown,
   Users,
   Gauge,
 } from "lucide-react"
+
+// Render at request time so live Stripe products/prices are always current.
+export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -61,11 +67,29 @@ const nccsPayPlan = [
   { label: "Monitoring subscription", amount: "$100/month per centre" },
 ]
 
-export default function ServicesPage() {
+export default async function ServicesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ checkout?: string }>
+}) {
+  const { checkout } = await searchParams
+  const ssowProducts = await getSsowProducts()
+
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
+        {checkout === "success" ? (
+          <div className="bg-accent/10 px-4 py-3 text-center text-sm font-medium text-accent">
+            <CheckCircle2 className="mr-2 inline h-4 w-4" />
+            Payment successful — thank you. We&apos;ll be in touch shortly to begin your SSOW build.
+          </div>
+        ) : null}
+        {checkout === "cancelled" ? (
+          <div className="bg-muted px-4 py-3 text-center text-sm font-medium text-muted-foreground">
+            Checkout cancelled — your card was not charged.
+          </div>
+        ) : null}
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-primary py-20 sm:py-28">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -154,12 +178,14 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
-              <Button asChild className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="/contact">
-                  Enquire about SSOW Builds
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <SsowCheckout products={ssowProducts} />
+              <p className="mt-4 text-sm text-muted-foreground">
+                Prefer to talk first?{" "}
+                <Link href="/contact" className="font-medium text-accent underline underline-offset-4">
+                  Submit an enquiry
+                </Link>{" "}
+                and we&apos;ll scope your build.
+              </p>
             </div>
           </div>
         </section>
