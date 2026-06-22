@@ -18,8 +18,23 @@ export interface SsowProduct {
   currency: string
   recurring: boolean
   interval: string | null
-  /** Optional fixed checkout quantity, from price metadata (e.g. group seats). */
-  quantity?: number
+  /** True when the amount is charged per person (e.g. online enrolments). */
+  perPerson?: boolean
+  /** Minimum purchasable quantity (e.g. 5 for online group bookings). */
+  minQuantity?: number
+}
+
+/**
+ * Decides whether a course price is charged per-person (online enrolments) or
+ * as a flat group total (onsite training). Stripe metadata `pricing_model`
+ * wins; otherwise we fall back to keywords in the product name/description.
+ */
+function resolvePricingModel(haystack: string, model?: string) {
+  if (model === "per_person" || model === "per-person") return true
+  if (model === "flat" || model === "flat_total" || model === "group") return false
+  // Fallback: online courses are per-person; onsite/group bookings are flat.
+  if (/onsite|on-site|in-person|group total|flat/.test(haystack)) return false
+  return /online|per person|per educator|per seat|per learner/.test(haystack)
 }
 
 /**
@@ -56,7 +71,11 @@ async function fetchProducts(
       const haystack = `${product.name} ${product.description ?? ""} ${
         product.metadata?.category ?? ""
       } ${product.metadata?.type ?? ""}`.toLowerCase()
-      const metaQty = Number(price.metadata?.quantity ?? price.metadata?.seats)
+      const model = (price.metadata?.pricing_model ?? product.metadata?.pricing_model)?.toLowerCase()
+      const perPerson = resolvePricingModel(haystack, model)
+      const metaMin = Number(price.metadata?.min_quantity ?? product.metadata?.min_quantity)
+      const minQuantity =
+        Number.isFinite(metaMin) && metaMin > 0 ? metaMin : perPerson ? 5 : 1
       return {
         priceId: price.id,
         name: product.name,
@@ -65,7 +84,8 @@ async function fetchProducts(
         currency: price.currency,
         recurring: Boolean(price.recurring),
         interval: price.recurring?.interval ?? null,
-        quantity: Number.isFinite(metaQty) && metaQty > 0 ? metaQty : undefined,
+        perPerson,
+        minQuantity,
         _haystack: haystack,
       }
     })
@@ -168,14 +188,29 @@ export async function createCourseCheckout(formData: FormData) {
 
   const stripe = getStripe()
 
-  // Look up the price server-side; never trust client-sent amounts.
-  const price = await stripe.prices.retrieve(priceId)
+  // Look up the price (and its product) server-side; never trust client amounts.
+  const price = await stripe.prices.retrieve(priceId, { expand: ["product"] })
   const mode = price.recurring ? "subscription" : "payment"
 
-  // Quantity is taken from the price's own metadata so it can't be tampered
-  // with by the client. Defaults to 1 (individual enrolment).
-  const metaQty = Number(price.metadata?.quantity ?? price.metadata?.seats)
-  const quantity = Number.isFinite(metaQty) && metaQty > 0 ? metaQty : 1
+  // Re-derive the pricing model server-side so it can't be tampered with.
+  const product = price.product as import("stripe").Stripe.Product
+  const haystack = `${product.name ?? ""} ${product.description ?? ""} ${
+    product.metadata?.category ?? ""
+  } ${product.metadata?.type ?? ""}`.toLowerCase()
+  const model = (price.metadata?.pricing_model ?? product.metadata?.pricing_model)?.toLowerCase()
+  const perPerson = resolvePricingModel(haystack, model)
+  const metaMin = Number(price.metadata?.min_quantity ?? product.metadata?.min_quantity)
+  const minQuantity = Number.isFinite(metaMin) && metaMin > 0 ? metaMin : perPerson ? 5 : 1
+
+  // Per-person (online) bookings honour the requested seat count, clamped to the
+  // minimum. Flat (onsite group) bookings are always a single unit.
+  let quantity = minQuantity
+  if (perPerson) {
+    const requested = Number(formData.get("quantity"))
+    quantity = Number.isFinite(requested) ? Math.max(requested, minQuantity) : minQuantity
+  } else {
+    quantity = 1
+  }
 
   const headersList = await headers()
   const host = headersList.get("host")
@@ -185,7 +220,17 @@ export async function createCourseCheckout(formData: FormData) {
 
   const session = await stripe.checkout.sessions.create({
     mode,
-    line_items: [{ price: priceId, quantity }],
+    line_items: [
+      {
+        price: priceId,
+        quantity,
+        // Let online enrolments adjust seats on the Stripe page, never below
+        // the minimum group size.
+        ...(perPerson
+          ? { adjustable_quantity: { enabled: true, minimum: minQuantity, maximum: 200 } }
+          : {}),
+      },
+    ],
     success_url: `${origin}${returnPath}?checkout=success`,
     cancel_url: `${origin}${returnPath}?checkout=cancelled`,
     billing_address_collection: "auto",
