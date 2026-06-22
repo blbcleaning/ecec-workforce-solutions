@@ -22,12 +22,6 @@ export const metadata: Metadata = {
     "Custom-built Safe Systems of Work (SSOW) and WHS Compliance Reviews for ECEC. Meet your WHS Regulation 39 obligations under Safe Work Australia's March 2026 biological hazards code.",
 }
 
-const ssowPackages = [
-  { name: "Single SSOW (per task/zone)", price: "$585" },
-  { name: "SSOW Starter Pack (3 SSOW)", price: "$1,755" },
-  { name: "SSOW Compliance Pack (5 SSOW)", price: "$2,925" },
-]
-
 const reviewPackages = [
   { name: "Health Check (1 hr + written summary)", price: "$450" },
   { name: "Full Compliance Review (gap check + action plan)", price: "$1,350" },
@@ -139,52 +133,33 @@ export default function ServicesPage() {
         {/* Service 1 — Custom-Built SSOW */}
         <section className="py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
-                  <FileCheck className="h-4 w-4" />
-                  Service 1
-                </div>
-                <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                  Custom-Built SSOW
-                </h2>
-                <p className="mt-2 text-lg font-medium text-foreground">Centre-specific. Task-level. Defensible.</p>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Built around your real spaces and real hazards. Written so staff can follow it under pressure and so
-                  you can demonstrate r39 compliance when it matters.
-                </p>
-                <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {ssowIncludes.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
-                      <span className="text-sm text-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div className="mx-auto max-w-3xl">
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
+                <FileCheck className="h-4 w-4" />
+                Service 1
               </div>
-
-              <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
-                <div className="flex items-baseline justify-between border-b border-border pb-4">
-                  <h3 className="text-lg font-semibold text-card-foreground">Packages</h3>
-                  <span className="text-sm text-muted-foreground">ex GST</span>
-                </div>
-                <ul className="mt-4 divide-y divide-border">
-                  {ssowPackages.map((pkg) => (
-                    <li key={pkg.name} className="flex items-center justify-between gap-4 py-4">
-                      <span className="text-sm font-medium text-card-foreground">{pkg.name}</span>
-                      <span className="whitespace-nowrap text-right text-sm text-muted-foreground">
-                        From <span className="text-lg font-bold text-foreground">{pkg.price}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <Button asChild className="mt-6 w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  <Link href="/contact">
-                    Enquire about SSOW Builds
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
+              <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Custom-Built SSOW
+              </h2>
+              <p className="mt-2 text-lg font-medium text-foreground">Centre-specific. Task-level. Defensible.</p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Built around your real spaces and real hazards. Written so staff can follow it under pressure and so
+                you can demonstrate r39 compliance when it matters.
+              </p>
+              <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {ssowIncludes.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                    <span className="text-sm text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button asChild className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
+                <Link href="/contact">
+                  Enquire about SSOW Builds
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
