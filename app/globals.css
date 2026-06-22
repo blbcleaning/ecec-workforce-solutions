@@ -123,3 +123,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Gentle heartbeat pulse for the EOFY promo CTA */
+@keyframes promo-heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.animate-promo-heartbeat {
+  animation: promo-heartbeat 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-promo-heartbeat {
+    animation: none;
+  }
+}

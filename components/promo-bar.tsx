@@ -42,7 +42,7 @@ export function PromoBar() {
           </span>
           <Link
             href={PROMO_CTA_HREF}
-            className="inline-flex items-center rounded-full bg-accent-foreground px-3 py-0.5 font-semibold text-accent transition-opacity hover:opacity-90"
+            className="animate-promo-heartbeat inline-flex items-center rounded-full bg-accent-foreground px-3 py-0.5 font-semibold text-accent transition-opacity hover:opacity-90 hover:[animation-play-state:paused]"
           >
             Claim offer
           </Link>
