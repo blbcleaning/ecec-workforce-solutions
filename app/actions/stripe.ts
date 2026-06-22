@@ -24,12 +24,20 @@ export async function getSsowProducts(): Promise<SsowProduct[]> {
     return []
   }
 
-  const stripe = getStripe()
-  const prices = await stripe.prices.list({
-    active: true,
-    limit: 100,
-    expand: ["data.product"],
-  })
+  let prices: import("stripe").Stripe.ApiList<import("stripe").Stripe.Price>
+  try {
+    const stripe = getStripe()
+    prices = await stripe.prices.list({
+      active: true,
+      limit: 100,
+      expand: ["data.product"],
+    })
+  } catch (error) {
+    // Invalid/stale key or Stripe outage: degrade to the enquiry fallback
+    // rather than crashing the page.
+    console.log("[v0] Stripe products fetch failed:", (error as Error).message)
+    return []
+  }
 
   const all: (SsowProduct & { isSsow: boolean })[] = prices.data
     .filter((price) => {
