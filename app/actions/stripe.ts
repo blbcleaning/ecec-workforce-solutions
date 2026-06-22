@@ -3,6 +3,12 @@
 import { headers } from "next/headers"
 import { redirect } from "next/navigation"
 import { getStripe } from "@/lib/stripe"
+import { getTimeLeft } from "@/lib/promo"
+
+// EOFY workbook lead-magnet tracking code. Stripe cannot create a true $0
+// coupon, so instead of a discount code we tag the checkout session with this
+// identifier. Claimed sessions are then filterable in the Stripe dashboard.
+const PROMO_TRACKING_CODE = "EOFY-WORKBOOK-2026"
 
 export interface SsowProduct {
   priceId: string
@@ -90,6 +96,20 @@ export async function createSsowCheckout(formData: FormData) {
   const protocol = host?.startsWith("localhost") ? "http" : "https"
   const origin = `${protocol}://${host}`
 
+  // Auto-apply the EOFY workbook tracking tag while the promo is live. The
+  // bonus tier depends on the package: the printed $999 SSOW set gets the
+  // printed workbook ($180 value), everything else gets the digital one ($80).
+  const promoActive = !getTimeLeft().expired
+  const metadata: Record<string, string> = {}
+  if (promoActive) {
+    const isPrintedFullSet = (price.unit_amount ?? 0) >= 99900
+    metadata.promo = PROMO_TRACKING_CODE
+    metadata.promo_name = "EOFY Free Cleaning Management Workbook"
+    metadata.workbook_bonus = isPrintedFullSet
+      ? "Printed workbook ($180 value)"
+      : "Digital workbook ($80 value)"
+  }
+
   const session = await stripe.checkout.sessions.create({
     mode,
     line_items: [{ price: priceId, quantity: 1 }],
@@ -97,6 +117,10 @@ export async function createSsowCheckout(formData: FormData) {
     cancel_url: `${origin}/services?checkout=cancelled`,
     billing_address_collection: "auto",
     allow_promotion_codes: true,
+    metadata,
+    ...(mode === "payment"
+      ? { payment_intent_data: { metadata } }
+      : { subscription_data: { metadata } }),
   })
 
   if (!session.url) {
