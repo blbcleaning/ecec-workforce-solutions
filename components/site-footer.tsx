@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, Phone, MapPin, Linkedin, Facebook } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, Facebook, Youtube, ExternalLink } from "lucide-react"
 
 export function SiteFooter() {
   return (
@@ -57,6 +57,32 @@ export function SiteFooter() {
                 </Link>
               </li>
             </ul>
+
+            <h4 className="mt-6 text-sm font-semibold uppercase tracking-wider">Our Other Sites</h4>
+            <ul className="mt-3 space-y-2">
+              <li>
+                <a 
+                  href="https://nccs.ececworkforcesolutions.au" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors inline-flex items-center gap-1"
+                >
+                  CCS Consulting — NCCS Research
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://compliance.ececworkforcesolutions.au" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors inline-flex items-center gap-1"
+                >
+                  Compliance Portal — SSOW Packs &amp; Training
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </li>
+            </ul>
           </div>
           
           <div>
@@ -97,6 +123,15 @@ export function SiteFooter() {
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@ececworkforcesolutions" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>

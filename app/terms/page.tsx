@@ -3,7 +3,7 @@ import { SiteFooter } from "@/components/site-footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Terms of Service | ECEC Workforce Solutions",
+  title: "Terms of Service",
   description: "Terms of Service for ECEC Workforce Solutions — the terms governing use of our website and services.",
 }
 

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   description: 'Australia\'s first evidence-based infection prevention governance framework for ECEC. NCCS certification, compliance tools, and consulting for childcare centres and cleaning companies.',
   generator: 'v0.app',
-  metadataBase: new URL('https://ececworkforcesolutions.au'),
+  metadataBase: new URL('https://www.ececworkforcesolutions.au'),
   keywords: [
     'NCCS certification',
     'childcare cleaning',
@@ -41,10 +41,13 @@ export const metadata: Metadata = {
     icon: '/images/logo.png',
     apple: '/images/logo.png',
   },
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_AU',
-    url: 'https://ececworkforcesolutions.au',
+    url: 'https://www.ececworkforcesolutions.au',
     siteName: 'ECEC Workforce Solutions',
     title: 'ECEC Workforce Solutions | NCCS Certification & Compliance',
     description: 'Australia\'s first evidence-based infection prevention governance framework for ECEC. NCCS certification, compliance tools, and consulting for childcare centres and cleaning companies.',
@@ -81,6 +84,33 @@ export const metadata: Metadata = {
   },
 }
 
+// Structured data (JSON-LD) for Organization
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ECEC Workforce Solutions',
+  url: 'https://www.ececworkforcesolutions.au',
+  logo: 'https://www.ececworkforcesolutions.au/images/logo.png',
+  description: 'Australia\'s first evidence-based infection prevention governance framework for ECEC. NCCS certification, compliance tools, and consulting.',
+  email: 'ececworkforcesolutions@outlook.com',
+  telephone: '+61432355396',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Western Sydney',
+    addressRegion: 'NSW',
+    addressCountry: 'AU',
+  },
+  sameAs: [
+    'https://www.linkedin.com/in/lindsay-smith-50956235b/',
+    'https://www.facebook.com/profile.php?id=61583035394013',
+    'https://www.youtube.com/@ececworkforcesolutions',
+  ],
+  founder: {
+    '@type': 'Person',
+    name: 'Lindsay Smith',
+  },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -88,6 +118,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased">
         <PromoBar />
         {children}
