@@ -75,6 +75,13 @@ const certificationRequirements = [
   "All assignments marked competent before certificates are issued",
 ]
 
+const bundleInclusions = [
+  "Unlimited training seats",
+  "Dedicated online compliance portal access",
+  "SSOW documents",
+  "Digital cleaning management workbook",
+]
+
 const faqs = [
   {
     question: "How long does it take?",
@@ -174,10 +181,21 @@ export default async function InfectionControlCoursePage({
               <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
                 <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 2</span>
                 <h3 className="mt-2 text-xl font-bold text-card-foreground">Training &amp; Compliance Bundle</h3>
-                <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">
+                <p className="mt-3 leading-relaxed text-muted-foreground">
                   Combine this certified training with a complete WHS compliance package for your service.
                   View the full bundle inclusions and pricing on our compliance portal.
                 </p>
+                <div className="mt-5 flex-1 rounded-lg border border-accent/30 bg-accent/10 p-5">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-foreground">Includes</p>
+                  <ul className="mt-3 flex flex-col gap-2.5">
+                    {bundleInclusions.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                        <span className="font-medium text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="mt-6">
                   <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
                     <a href={WHS_BUNDLE_URL}>
