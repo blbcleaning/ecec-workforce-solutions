@@ -68,6 +68,7 @@ const pricing = [
 ]
 
 const WHS_BUNDLE_URL = "https://compliance.ececworkforcesolutions.au/whs-bundle"
+const FREE_WHS_URL = "https://compliance.ececworkforcesolutions.au/free"
 
 const certificationRequirements = [
   "Completion of all quiz modules",
@@ -204,6 +205,33 @@ export default async function InfectionControlCoursePage({
                     </a>
                   </Button>
                 </div>
+              </div>
+            </div>
+
+            {/* Free WHS Session Callout */}
+            <div className="mt-8 mx-auto max-w-4xl rounded-xl border border-accent/40 bg-accent/10 p-6 sm:p-8">
+              <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent-foreground">
+                    Free session
+                  </span>
+                  <h3 className="mt-3 text-xl font-bold text-foreground text-balance">
+                    Free 1-Hour WHS Regulations for Early Childhood Education
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-muted-foreground text-pretty">
+                    For approved service providers, owners, directors and nominated supervisors.
+                  </p>
+                </div>
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full shrink-0 bg-accent text-accent-foreground hover:bg-accent/90 px-8 md:w-auto"
+                >
+                  <a href={FREE_WHS_URL}>
+                    Book your free session
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
