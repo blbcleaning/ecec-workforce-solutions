@@ -111,8 +111,8 @@ export default function BookPage() {
                       <Mail className="h-5 w-5 text-primary" />
                       <div>
                         <p className="text-sm text-muted-foreground">Email</p>
-                        <a href="mailto:ececworkforcesolutions@outlook.com" className="text-lg font-semibold text-foreground hover:text-accent break-all">
-                          ececworkforcesolutions@outlook.com
+                        <a href="mailto:lindsay@ececworkforcesolutions.au" className="text-lg font-semibold text-foreground hover:text-accent break-all">
+                          lindsay@ececworkforcesolutions.au
                         </a>
                       </div>
                     </div>

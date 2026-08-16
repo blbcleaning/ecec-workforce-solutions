@@ -54,7 +54,7 @@ export default function ContactPage() {
                   </p>
                   <div className="mt-6">
                     <a 
-                      href="mailto:ececworkforcesolutions@outlook.com?subject=Book%20a%20Call%20-%20NCCS%20Enquiry"
+                      href="mailto:lindsay@ececworkforcesolutions.au?subject=Book%20a%20Call%20-%20NCCS%20Enquiry"
                       className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent/90"
                     >
                       Request a Call Time
@@ -72,8 +72,8 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Email</p>
-                        <a href="mailto:ececworkforcesolutions@outlook.com" className="font-medium text-foreground hover:text-accent transition-colors">
-                          ececworkforcesolutions@outlook.com
+                        <a href="mailto:lindsay@ececworkforcesolutions.au" className="font-medium text-foreground hover:text-accent transition-colors">
+                          lindsay@ececworkforcesolutions.au
                         </a>
                       </div>
                     </div>

@@ -104,7 +104,7 @@ export default function TermsPage() {
                   For any questions regarding these Terms of Service, please contact us at:
                 </p>
                 <ul className="mt-4 space-y-2 text-muted-foreground">
-                  <li><strong className="text-foreground">Email:</strong> ececworkforcesolutions@outlook.com</li>
+                  <li><strong className="text-foreground">Email:</strong> lindsay@ececworkforcesolutions.au</li>
                   <li><strong className="text-foreground">Phone:</strong> 0432 355 396</li>
                   <li><strong className="text-foreground">Location:</strong> Western Sydney, NSW, Australia</li>
                 </ul>

@@ -64,8 +64,8 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3">
               <li className="flex items-center gap-2 text-sm text-primary-foreground/80">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <a href="mailto:ececworkforcesolutions@outlook.com" className="hover:text-primary-foreground transition-colors">
-                  ececworkforcesolutions@outlook.com
+                <a href="mailto:lindsay@ececworkforcesolutions.au" className="hover:text-primary-foreground transition-colors">
+                  lindsay@ececworkforcesolutions.au
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-primary-foreground/80">

@@ -172,8 +172,8 @@ export default function AboutPage() {
                 <div className="rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-6">
                   <div className="flex items-center justify-center gap-3">
                     <Mail className="h-5 w-5 text-accent" />
-                    <a href="mailto:ececworkforcesolutions@outlook.com" className="text-primary-foreground hover:text-accent transition-colors">
-                      ececworkforcesolutions@outlook.com
+                    <a href="mailto:lindsay@ececworkforcesolutions.au" className="text-primary-foreground hover:text-accent transition-colors">
+                      lindsay@ececworkforcesolutions.au
                     </a>
                   </div>
                 </div>
