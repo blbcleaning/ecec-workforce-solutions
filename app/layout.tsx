@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { PromoBar } from '@/components/promo-bar'
-import { ExitIntentPopup } from '@/components/exit-intent-popup'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -121,7 +120,6 @@ fbq('track', 'PageView');`}
         </noscript>
         <PromoBar />
         {children}
-        <ExitIntentPopup />
         {process.env.NODE_ENV === 'production' && (
           <>
             <Analytics />
