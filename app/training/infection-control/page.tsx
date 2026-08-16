@@ -10,8 +10,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { EnrolButton } from "@/components/training/enrol-button"
-import { CourseCheckout } from "@/components/training/course-checkout"
-import { getCourseProducts } from "@/app/actions/stripe"
 import { CheckCircle, Users, BookOpen, Clock, CheckCircle2 } from "lucide-react"
 
 // Render at request time so live Stripe course prices are always current.
@@ -63,11 +61,10 @@ const modules = [
 ]
 
 const pricing = [
-  { type: "Individual enrolment", price: "$100" },
-  { type: "Group booking (5)", price: "$70 per person" },
-  { type: "Group booking (8)", price: "$62.50 per person" },
-  { type: "Group booking (10)", price: "$60 per person" },
-  { type: "Group booking (20+)", price: "$45 per person" },
+  { type: "Individual enrolment", detail: "Up to 5 people", price: "$180 per person" },
+  { type: "Group booking", detail: "6–10 people", price: "$140 per person" },
+  { type: "Group booking", detail: "11+ people", price: "$100 per person" },
+  { type: "Groups of 15+", detail: "Larger teams", price: "Contact us for pricing" },
 ]
 
 const faqs = [
@@ -81,7 +78,7 @@ const faqs = [
   },
   {
     question: "How do group bookings work?",
-    answer: "Select your group size at checkout (5, 8, 10, or 20+ participants). You will receive individual access for each team member, allowing everyone to complete the course at their own pace while you track overall progress.",
+    answer: "Group rates apply automatically based on your team size: $180 per person for up to 5, $140 per person for 6–10, and $100 per person for 11 or more. For teams of 15+, contact us for tailored pricing. Each team member receives individual access so everyone can complete the course at their own pace.",
   },
   {
     question: "What access do I get after enrolling?",
@@ -95,7 +92,6 @@ export default async function InfectionControlCoursePage({
   searchParams: Promise<{ checkout?: string }>
 }) {
   const { checkout } = await searchParams
-  const courseProducts = await getCourseProducts()
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -245,34 +241,24 @@ export default async function InfectionControlCoursePage({
                 Flexible options for individuals and teams
               </p>
             </div>
-            {courseProducts.length > 0 ? (
-              <>
-                <CourseCheckout products={courseProducts} />
-                <p className="mt-8 text-center text-primary-foreground/70">
-                  Secure checkout via Stripe. Group rates apply automatically at checkout.
-                </p>
-              </>
-            ) : (
-              <>
-                <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
-                  {pricing.map((item) => (
-                    <div
-                      key={item.type}
-                      className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 text-center"
-                    >
-                      <h3 className="text-lg font-semibold text-primary-foreground">{item.type}</h3>
-                      <p className="mt-2 text-2xl font-bold text-accent">{item.price}</p>
-                    </div>
-                  ))}
+            <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
+              {pricing.map((item) => (
+                <div
+                  key={`${item.type}-${item.detail}`}
+                  className="flex flex-col rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 text-center"
+                >
+                  <h3 className="text-lg font-semibold text-primary-foreground">{item.type}</h3>
+                  <p className="mt-1 text-sm text-primary-foreground/70">{item.detail}</p>
+                  <p className="mt-3 text-2xl font-bold text-accent">{item.price}</p>
                 </div>
-                <p className="mt-8 text-center text-primary-foreground/70">
-                  Choose your group size at checkout (5, 8, 10, 20+).
-                </p>
-                <div className="mt-8 flex justify-center">
-                  <EnrolButton variant="secondary" />
-                </div>
-              </>
-            )}
+              ))}
+            </div>
+            <p className="mt-8 text-center text-primary-foreground/70">
+              Individual and group rates available. For teams of 15+, contact us for tailored pricing.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <EnrolButton variant="secondary" />
+            </div>
           </div>
         </section>
 

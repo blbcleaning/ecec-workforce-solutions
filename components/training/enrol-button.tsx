@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
-const PRICING_ANCHOR = "#pricing"
+const ENROL_URL = "https://compliance.ececworkforcesolutions.au/enrol-in-training"
 
 interface EnrolButtonProps {
   variant?: "primary" | "secondary"
@@ -23,7 +23,7 @@ export function EnrolButton({ variant = "primary", className = "" }: EnrolButton
   if (variant === "secondary") {
     return (
       <Button asChild size="lg" variant="outline" className={`border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 px-8 ${className}`}>
-        <a href={PRICING_ANCHOR} onClick={handleClick}>
+        <a href={ENROL_URL} onClick={handleClick}>
           Enrol now
           <ArrowRight className="ml-2 h-4 w-4" />
         </a>
@@ -33,7 +33,7 @@ export function EnrolButton({ variant = "primary", className = "" }: EnrolButton
 
   return (
     <Button asChild size="lg" className={`bg-accent text-accent-foreground hover:bg-accent/90 px-8 ${className}`}>
-      <a href={PRICING_ANCHOR} onClick={handleClick}>
+      <a href={ENROL_URL} onClick={handleClick}>
         Enrol now
         <ArrowRight className="ml-2 h-4 w-4" />
       </a>
