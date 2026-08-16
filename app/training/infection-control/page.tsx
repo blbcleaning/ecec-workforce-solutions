@@ -10,7 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { EnrolButton } from "@/components/training/enrol-button"
-import { CheckCircle, Users, BookOpen, Clock, CheckCircle2 } from "lucide-react"
+import { CheckCircle, Users, BookOpen, Clock, CheckCircle2, ArrowRight } from "lucide-react"
 
 // Render at request time so live Stripe course prices are always current.
 export const dynamic = "force-dynamic"
@@ -65,6 +65,14 @@ const pricing = [
   { type: "Group booking", detail: "6–10 people", price: "$140 per person" },
   { type: "Group booking", detail: "11+ people", price: "$100 per person" },
   { type: "Groups of 15+", detail: "Larger teams", price: "Contact us for pricing" },
+]
+
+const WHS_BUNDLE_URL = "https://compliance.ececworkforcesolutions.au/whs-bundle"
+
+const certificationRequirements = [
+  "Completion of all quiz modules",
+  "Submission of all assignments",
+  "All assignments marked competent before certificates are issued",
 ]
 
 const faqs = [
@@ -132,6 +140,52 @@ export default async function InfectionControlCoursePage({
                 <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 px-8">
                   <Link href="#pricing">See group pricing</Link>
                 </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Options Section */}
+        <section className="py-16 sm:py-20 bg-muted">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Choose Your Option
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Two ways to complete your Infection Control &amp; Biohazard Management training.
+              </p>
+            </div>
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+              {/* Option 1 */}
+              <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
+                <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 1</span>
+                <h3 className="mt-2 text-xl font-bold text-card-foreground">Online Self-Paced Training</h3>
+                <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">
+                  Complete all 15 modules at your own pace. Certification requires completion of every quiz
+                  module and submission of all assignments, marked competent under our Competency-Based
+                  Assessment model.
+                </p>
+                <div className="mt-6">
+                  <EnrolButton />
+                </div>
+              </div>
+              {/* Option 2 */}
+              <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
+                <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 2</span>
+                <h3 className="mt-2 text-xl font-bold text-card-foreground">Training &amp; Compliance Bundle</h3>
+                <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">
+                  Combine this certified training with a complete WHS compliance package for your service.
+                  View the full bundle inclusions and pricing on our compliance portal.
+                </p>
+                <div className="mt-6">
+                  <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
+                    <a href={WHS_BUNDLE_URL}>
+                      View the bundle
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -226,6 +280,39 @@ export default async function InfectionControlCoursePage({
                   </AccordionItem>
                 ))}
               </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Certification & Assessment Section */}
+        <section className="py-16 sm:py-20 bg-background">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Certification &amp; Assessment
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                To earn certification, learners must complete the following:
+              </p>
+            </div>
+            <div className="mt-10 mx-auto max-w-3xl flex flex-col gap-4">
+              {certificationRequirements.map((item) => (
+                <div
+                  key={item}
+                  className="flex items-start gap-3 rounded-lg border border-border bg-card p-5 shadow-sm"
+                >
+                  <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                  <span className="font-medium text-card-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 mx-auto max-w-3xl rounded-xl border border-accent/30 bg-accent/10 p-6 sm:p-8">
+              <p className="leading-relaxed text-foreground">
+                We move beyond simple pass/fail metrics. Our assessment suite utilises a high-standard
+                Competency-Based Assessment (CBA) model, delivering the &ldquo;audit-ready evidence&rdquo;
+                required by ACECQA and WHS regulators. All assignments must be marked competent before
+                certificates are issued.
+              </p>
             </div>
           </div>
         </section>
