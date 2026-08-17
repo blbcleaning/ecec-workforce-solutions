@@ -108,7 +108,7 @@ export default async function ServicesPage({
                 Biological Hazards Code — March 2026
               </div>
               <h1 className="mt-6 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl">
-                Your SSOW may already be non-compliant.
+                We provide WHS Compliance Assistance to Early Childhood Education and Care.
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80">
                 Safe Work Australia&apos;s updated biological hazards code names ECEC as a case study sector. Under{" "}
@@ -144,10 +144,8 @@ export default async function ServicesPage({
                 <ShieldAlert className="h-6 w-6 text-destructive" />
               </div>
               <div className="mt-6 space-y-4 text-lg leading-relaxed text-foreground">
-                <p>A general cleaning policy doesn&apos;t satisfy r39.</p>
-                <p>A training intention isn&apos;t a documented control.</p>
                 <p className="font-semibold">
-                  If an incident or inspection occurs, the gap is your liability.
+                  Child-safe compliance is strong; WHS gaps carry the highest liability.
                 </p>
               </div>
             </div>
@@ -163,12 +161,13 @@ export default async function ServicesPage({
                 Service 1
               </div>
               <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Custom-Built SSOW
+                Documentation Support
               </h2>
               <p className="mt-2 text-lg font-medium text-foreground">Centre-specific. Task-level. Defensible.</p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Built around your real spaces and real hazards. Written so staff can follow it under pressure and so
-                you can demonstrate r39 compliance when it matters.
+                Custom-built SSOW and cleaning management workbooks are customised to your centre — built around your
+                real spaces and real hazards. Written so staff can follow it under pressure and so you can demonstrate
+                r39 compliance when it matters.
               </p>
               <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {ssowIncludes.map((item) => (
