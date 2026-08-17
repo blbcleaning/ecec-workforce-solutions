@@ -70,6 +70,13 @@ const pricing = [
 const WHS_BUNDLE_URL = "https://compliance.ececworkforcesolutions.au/whs-bundle"
 const FREE_WHS_URL = "https://compliance.ececworkforcesolutions.au/free"
 
+const onsiteTrainingFeatures = [
+  "3-hour certified onsite group session",
+  "Available after hours — weeknights or weekends",
+  "Fully catered: lunch or dinner included in your booking price",
+  "Resource-packed and delivered at your centre",
+]
+
 const certificationRequirements = [
   "Completion of all quiz modules",
   "Submission of all assignments",
@@ -154,7 +161,7 @@ export default async function InfectionControlCoursePage({
         </section>
 
         {/* Options Section */}
-        <section className="py-16 sm:py-20 bg-muted">
+        <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
@@ -231,6 +238,52 @@ export default async function InfectionControlCoursePage({
                     Book your free session
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Onsite Group Training Section */}
+        <section className="py-16 sm:py-20 bg-muted">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl rounded-2xl border border-border bg-card p-8 shadow-sm sm:p-10">
+              <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent-foreground">
+                Onsite group training
+              </span>
+              <h2 className="mt-4 text-2xl font-bold tracking-tight text-card-foreground sm:text-3xl text-balance">
+                3-Hour Certified Onsite Group Training
+              </h2>
+              <p className="mt-3 text-lg leading-relaxed text-muted-foreground text-pretty">
+                Certified onsite group training in Infection Control &amp; Biohazard Management, delivered at
+                your centre.
+              </p>
+              <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {onsiteTrainingFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2.5">
+                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                    <span className="font-medium text-card-foreground">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-col gap-6 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+                    Pricing
+                  </p>
+                  <p className="mt-1 text-lg font-semibold text-card-foreground">
+                    From $1,500 for up to 10 participants — up to $2,600 for 20 participants
+                  </p>
+                </div>
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full shrink-0 bg-accent text-accent-foreground hover:bg-accent/90 px-8 sm:w-auto"
+                >
+                  <Link href="/contact">
+                    Contact us to book
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
             </div>
