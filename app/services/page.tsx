@@ -145,7 +145,7 @@ export default async function ServicesPage({
               </div>
               <div className="mt-6 space-y-4 text-lg leading-relaxed text-foreground">
                 <p className="font-semibold">
-                  Child-safe compliance is strong; WHS gaps carry the highest liability.
+                  Childcare compliance is strong, but WHS gaps are significant and carry the highest liability.
                 </p>
               </div>
             </div>
