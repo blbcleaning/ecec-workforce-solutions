@@ -61,6 +61,24 @@ const nccsAudience = [
   },
 ]
 
+const nccsPillars = [
+  {
+    title: "Educator Role Restoration",
+    description:
+      "Removing non-educator duties and returning educators to direct care, curriculum, and meaningful practice.",
+  },
+  {
+    title: "Certified Training for Centre-Hired Cleaning Teams",
+    description:
+      "Ensuring infection control and biohazard management are carried out correctly, consistently, and in full alignment with WHS law.",
+  },
+  {
+    title: "Implementation and Governance Training for Centre Management",
+    description:
+      "Embedding WHS-aligned systems, safe work practices, and governance structures that hold up under regulatory scrutiny.",
+  },
+]
+
 const nccsPayPlan = [
   { label: "Upfront", amount: "$2,000" },
   { label: "Weekly (12 weeks)", amount: "~$500–$667" },
@@ -253,12 +271,36 @@ export default async function ServicesPage({
                 The only ECEC workforce solution that measures what it claims.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80">
-                Most workforce interventions produce a policy document. This produces a measurable operational change —
-                with baseline data collected before we start, and performance monitored against those indicators
-                throughout. The result is{" "}
-                <strong className="text-primary-foreground">NCCS accredited status, embedded into daily operations</strong>{" "}
-                (not filed away), with 12 months of monitoring to prove it&apos;s holding.
+                NCCS re-imagines your centre&apos;s operational structure into one that genuinely supports, protects,
+                and recognises the role of the educator. Through full system integration and 12-month performance
+                monitoring, NCCS builds a workforce model that restores educator professionalism and places a
+                dedicated operational team around them.
               </p>
+              <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80">
+                NCCS delivers a compliant, efficient, and sustainable operational model that strengthens WHS
+                alignment, lifts educator wellbeing, and transforms the way your centre operates day-to-day.
+              </p>
+            </div>
+
+            {/* Three Pillars */}
+            <div className="mx-auto mt-14 max-w-5xl">
+              <h3 className="text-center text-sm font-semibold uppercase tracking-wide text-primary-foreground/60">
+                Built on three pillars
+              </h3>
+              <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+                {nccsPillars.map((pillar, index) => (
+                  <div
+                    key={pillar.title}
+                    className="flex flex-col rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-6"
+                  >
+                    <span className="text-2xl font-bold text-accent">{index + 1}</span>
+                    <h4 className="mt-2 text-lg font-semibold text-primary-foreground text-balance">
+                      {pillar.title}
+                    </h4>
+                    <p className="mt-3 text-sm leading-relaxed text-primary-foreground/80">{pillar.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Who this is for */}
