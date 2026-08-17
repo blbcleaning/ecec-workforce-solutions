@@ -459,12 +459,10 @@ export default async function ServicesPage({
               Close the gap now — not after an incident.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Start with a <strong className="text-foreground">compliance review</strong> to see exactly where you
-              stand. Go straight to a <strong className="text-foreground">custom SSOW build</strong> if you already know
-              what&apos;s missing.
-            </p>
-            <p className="mt-4 text-base text-muted-foreground">
-              The March 2026 update triggered your r39 review obligation. We make it straightforward.
+              Estimated to reduce educator workload by{" "}
+              <strong className="text-foreground">7–9 hours per week</strong>, ensure daily practices meet{" "}
+              <strong className="text-foreground">WHS compliance requirements</strong>, and become{" "}
+              <strong className="text-foreground">ROI-positive</strong> if turnover drops by just two educators.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
