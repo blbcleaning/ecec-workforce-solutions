@@ -168,10 +168,10 @@ export default async function InfectionControlCoursePage({
                 Choose Your Option
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Two ways to complete your Infection Control &amp; Biohazard Management training.
+                Three ways to complete your Infection Control &amp; Biohazard Management training.
               </p>
             </div>
-            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3 max-w-6xl mx-auto">
               {/* Option 1 */}
               <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
                 <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 1</span>
@@ -188,6 +188,36 @@ export default async function InfectionControlCoursePage({
               {/* Option 2 */}
               <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
                 <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 2</span>
+                <h3 className="mt-2 text-xl font-bold text-card-foreground">Onsite Group Training</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">
+                  Instructor-led, 3-hour certified group session delivered at your centre — an in-person
+                  alternative to the online course.
+                </p>
+                <div className="mt-5 flex-1 rounded-lg border border-accent/30 bg-accent/10 p-5">
+                  <ul className="flex flex-col gap-2.5">
+                    {onsiteTrainingFeatures.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2.5">
+                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                        <span className="text-sm font-medium text-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 border-t border-accent/20 pt-3 text-sm font-semibold text-foreground">
+                    From $1,500 (up to 10) — up to $2,600 (20 participants)
+                  </p>
+                </div>
+                <div className="mt-6">
+                  <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
+                    <Link href="/contact">
+                      Contact us to book
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+              {/* Option 3 */}
+              <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
+                <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 3</span>
                 <h3 className="mt-2 text-xl font-bold text-card-foreground">Training &amp; Compliance Bundle</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   Combine this certified training with a complete WHS compliance package for your service.
@@ -199,7 +229,7 @@ export default async function InfectionControlCoursePage({
                     {bundleInclusions.map((item) => (
                       <li key={item} className="flex items-start gap-2.5">
                         <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
-                        <span className="font-medium text-foreground">{item}</span>
+                        <span className="text-sm font-medium text-foreground">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -248,9 +278,16 @@ export default async function InfectionControlCoursePage({
         <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Who It&apos;s For
+              <span className="text-sm font-semibold uppercase tracking-wide text-accent">
+                Online Self-Paced Training
+              </span>
+              <h2 className="mt-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Who It&apos;s For &amp; What You Get
               </h2>
+              <p className="mt-4 text-lg text-muted-foreground text-pretty">
+                Everything below applies to the online self-paced course — who it&apos;s built for and what&apos;s
+                included when you enrol.
+              </p>
             </div>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
               {whoItsFor.map((item) => (
@@ -398,53 +435,6 @@ export default async function InfectionControlCoursePage({
             </p>
             <div className="mt-8 flex justify-center">
               <EnrolButton variant="secondary" />
-            </div>
-          </div>
-        </section>
-
-        {/* Onsite Group Training Section */}
-        <section className="py-16 sm:py-20 bg-muted">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-4xl rounded-2xl border border-border bg-card p-8 shadow-sm sm:p-10">
-              <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent-foreground">
-                Onsite group training
-              </span>
-              <h2 className="mt-4 text-2xl font-bold tracking-tight text-card-foreground sm:text-3xl text-balance">
-                3-Hour Certified Onsite Group Training
-              </h2>
-              <p className="mt-3 text-lg leading-relaxed text-muted-foreground text-pretty">
-                Prefer in-person delivery? This is a separate, instructor-led alternative to the online
-                self-paced course above — certified onsite group training in Infection Control &amp; Biohazard
-                Management, delivered at your centre.
-              </p>
-              <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {onsiteTrainingFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5">
-                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
-                    <span className="font-medium text-card-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 flex flex-col gap-6 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
-                    Pricing
-                  </p>
-                  <p className="mt-1 text-lg font-semibold text-card-foreground">
-                    From $1,500 for up to 10 participants — up to $2,600 for 20 participants
-                  </p>
-                </div>
-                <Button
-                  asChild
-                  size="lg"
-                  className="w-full shrink-0 bg-accent text-accent-foreground hover:bg-accent/90 px-8 sm:w-auto"
-                >
-                  <Link href="/contact">
-                    Contact us to book
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         </section>
