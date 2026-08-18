@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 }
 
 const featuredOutcomes = [
+  "Understand transmission routes, the chain of infection, and the six behaviour-driven pathways",
   "Consistent infection control routines",
   "Safer nappy change workflow",
   "Clean vs contaminated zoning",
