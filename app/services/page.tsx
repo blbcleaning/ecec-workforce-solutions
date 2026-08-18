@@ -70,13 +70,11 @@ export default function ServicesPage() {
                 Biological Hazards Code — March 2026
               </div>
               <h1 className="mt-6 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl">
-                Your SSOW may already be non-compliant.
+                Making WHS compliance clear, practical and achievable for early childhood services.
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80">
-                Safe Work Australia&apos;s updated biological hazards code names ECEC as a case study sector. Under{" "}
-                <strong className="text-primary-foreground">WHS Regulation 39</strong>, you have a legal obligation to
-                maintain a documented Safe System of Work for high-exposure tasks — including biological hazard response
-                and infection-control cleaning.
+                Safe Work Australia&apos;s updated biological hazards code names ECEC as a case study. Our services
+                deliver the training and the supporting compliance documentation your centre needs to meet it.
               </p>
             </div>
           </div>
