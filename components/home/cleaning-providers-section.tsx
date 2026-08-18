@@ -1,9 +1,9 @@
 import { Sparkles, CheckCircle } from "lucide-react"
 
 const benefits = [
-  "Aligned to childcare environments",
-  "Trained in risk-based infection prevention",
-  "Capable of meeting compliance expectations",
+  "Certified in biohazard management",
+  "Trained in risk-based infection control cleaning",
+  "Able to provide competency certification centres can rely on",
 ]
 
 export function CleaningProvidersSection() {
@@ -13,7 +13,7 @@ export function CleaningProvidersSection() {
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
             <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
-              Workforce Certification
+              Childcare cleaning is no longer general commercial cleaning
             </h2>
             <p className="mt-2 text-lg text-muted-foreground">
               For Cleaning Providers
@@ -28,11 +28,12 @@ export function CleaningProvidersSection() {
             </div>
 
             <p className="mt-6 text-center text-lg text-card-foreground leading-relaxed">
-              We don&apos;t replace your cleaning provider—we upgrade them.
+              Under the 2026 Safe Work Australia biohazard code, cleaning a childcare centre now requires{" "}
+              <span className="font-semibold text-foreground">biohazard management and infection control cleaning certification</span>.
             </p>
 
             <p className="mt-4 text-center text-muted-foreground leading-relaxed">
-              Your existing cleaners are upskilled into <span className="font-semibold text-foreground">certified childcare infection prevention specialists</span>, trained to operate within a compliant system.
+              Childcare cleaning can no longer be treated as general commercial cleaning. Centres now need cleaners who can provide competency certification—and we upskill your existing team to meet that standard.
             </p>
 
             <div className="mt-8">
