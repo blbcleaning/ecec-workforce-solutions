@@ -260,6 +260,10 @@ export default function DocumentsPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-6 flex items-center justify-center gap-2 text-center text-sm font-medium text-accent">
+              <CheckCircle className="h-4 w-4 flex-shrink-0" />
+              Digital version included free with every print copy - for both the SSOW and the Workbook.
+            </p>
           </div>
         </section>
 
@@ -291,6 +295,32 @@ export default function DocumentsPage() {
               ))}
             </ul>
             <p className="mt-6 text-sm font-medium text-foreground">Setup guide and print plan included.</p>
+
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div className="rounded-xl border border-border bg-card p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
+                  <Monitor className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-card-foreground">Digital download</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  Delivered as a ready-to-use digital workbook you can print on demand, room by room.
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
+                  <Printer className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-card-foreground">4-pack, printed &amp; bound</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  A pack of 4 ready-to-use, professionally printed and bound workbooks - built to survive daily use in
+                  real cleaning environments.
+                </p>
+              </div>
+            </div>
+            <p className="mt-6 flex items-center gap-2 text-sm font-medium text-accent">
+              <CheckCircle className="h-4 w-4 flex-shrink-0" />
+              Digital version included free with print copies.
+            </p>
           </div>
         </section>
 
