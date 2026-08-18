@@ -13,6 +13,7 @@ import {
   Monitor,
   Printer,
   BookOpen,
+  Gift,
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -273,6 +274,12 @@ export default function DocumentsPage() {
                   </ul>
                 </div>
               ))}
+            </div>
+            <div className="mt-8 flex flex-col items-center gap-3 rounded-xl border border-accent/30 bg-accent/10 p-6 text-center sm:flex-row sm:justify-center sm:text-left">
+              <Gift className="h-6 w-6 flex-shrink-0 text-accent" />
+              <p className="text-base font-semibold text-foreground text-balance">
+                Purchase the full SSOW pack and receive the digital Cleaning Management Workbook free.
+              </p>
             </div>
             <p className="mt-6 flex items-center justify-center gap-2 text-center text-sm font-medium text-accent">
               <CheckCircle className="h-4 w-4 flex-shrink-0" />
