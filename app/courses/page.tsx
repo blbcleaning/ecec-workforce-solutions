@@ -26,6 +26,24 @@ const featuredHighlights = [
   { icon: Users, text: "Built for the realities of ECEC" },
 ]
 
+const courseModules = [
+  "Module 1 - Overview & foundations",
+  "Module 2 - Understanding Biological Hazards in ECEC",
+  "Module 3 - Infection Control Cleaning: Principles and Procedures",
+  "Module 4 - Risk assessment & controls (WHS lens)",
+  "Module 5 - PPE selection, use, and disposal",
+  "Module 6 - Air Quality, Ventilation, and Environmental Controls",
+  "Module 7 - Laundry and linen handling as infection control",
+  "Module 8 - Safe Handling of Cleaning Chemicals",
+  "Module 9 - Cleaning schedules, checklists, and recordkeeping",
+  "Module 10 - Managing incidents, exposures, and notifications",
+  "Module 11 - High-touch surfaces and shared equipment controls",
+  "Module 12 - Clean and Contaminated Zones",
+  "Module 13 - Nappy Changing Procedure as a Biohazard Control",
+  "Module 14 - Waste Stream Management",
+  "Module 15 - Post-Outbreak Terminal Clean and Return to Normal",
+]
+
 const whoItsFor = [
   "Educators",
   "Room leaders",
@@ -148,8 +166,42 @@ export default function CoursesPage() {
           </div>
         </section>
 
-        {/* Who it's for */}
+        {/* Course Modules - What you will learn */}
         <section className="py-16 sm:py-20 bg-muted">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
+                <BookOpen className="h-3.5 w-3.5" />
+                Online, self-paced
+              </span>
+              <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Course modules - what you will learn
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                15 self-paced modules covering infection control and biohazard management from foundations through to
+                outbreak response.
+              </p>
+            </div>
+            <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {courseModules.map((module, index) => (
+                <div
+                  key={module}
+                  className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 shadow-sm"
+                >
+                  <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
+                    {index + 1}
+                  </span>
+                  <span className="text-sm font-medium text-card-foreground">
+                    {module.replace(/^Module \d+ - /, "")}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Who it's for */}
+        <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Who our courses are for</h2>
