@@ -1,9 +1,21 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
-import { GraduationCap, CheckCircle, ArrowRight, BookOpen, Clock, Users, ShieldCheck } from "lucide-react"
+import {
+  GraduationCap,
+  CheckCircle,
+  ArrowRight,
+  BookOpen,
+  Clock,
+  Users,
+  ShieldCheck,
+  ClipboardCheck,
+  AlertTriangle,
+  Quote,
+} from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Our Courses - Infection Control & Biohazard Training for ECEC",
@@ -204,8 +216,130 @@ export default function CoursesPage() {
           </div>
         </section>
 
+        {/* Lead Assessor */}
+        <section className="bg-background py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid overflow-hidden rounded-2xl border border-border bg-card lg:grid-cols-[0.8fr_1.2fr]">
+              <div className="relative min-h-80 lg:min-h-full">
+                <Image
+                  src="/team/lindsay-smith.png"
+                  alt="Lindsay Smith, lead assessor and founder of ECEC Workforce Solutions"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="p-6 sm:p-10 lg:p-12">
+                <p className="text-sm font-bold uppercase tracking-wide text-accent">Meet Your Lead Assessor</p>
+                <h2 className="mt-3 text-balance text-2xl font-bold tracking-tight text-card-foreground sm:text-3xl">
+                  Real ECEC Expertise. Rigorous WHS Accountability.
+                </h2>
+                <div className="mt-6 flex flex-col gap-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    When you enrol your educators in our training, their 15 competency assignments aren&apos;t graded by
+                    an automated system or a generic corporate checklist. They are personally marked by Lindsay Smith,
+                    an independent ECEC policy analyst, safety consultant, and founder of ECEC Workforce Solutions.
+                  </p>
+                  <p>
+                    Lindsay counsels providers on modern WHS and biohazard protocols, including the Safe Work Australia
+                    codes governing biological hazards in childcare spaces. She is the author of the Childcare Cleaning
+                    Standard (CCS), Australia&apos;s first published governance framework for ECEC cleaning environments,
+                    and publishes industry analysis in The Sector.
+                  </p>
+                  <p>
+                    This rare combination of hands-on sector experience and published policy expertise ensures the
+                    guidance your staff receives is both practically viable and academically rigorous.
+                  </p>
+                </div>
+                <blockquote className="mt-8 border-l-4 border-accent bg-muted p-5">
+                  <Quote className="h-5 w-5 text-accent" />
+                  <p className="mt-3 text-sm italic leading-relaxed text-foreground">
+                    &ldquo;My goal isn&apos;t to hand out easy pass marks; it&apos;s to ensure your staff genuinely master
+                    biohazard management. Every assignment submission receives detailed, constructive feedback, giving
+                    your centre the verified competency logs required to confidently approach your next WHS or ACECQA
+                    audit.&rdquo;
+                  </p>
+                  <footer className="mt-3 text-sm font-semibold text-foreground">Lindsay Smith</footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Competency assessment */}
+        <section className="bg-muted py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-sm font-bold uppercase tracking-wide text-accent">Competency-Based Assessment</p>
+              <h2 className="mt-3 text-balance text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                How Assessment Works
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                Move beyond pass or fail. Every assignment is personally marked by Lindsay Smith, founder of ECEC
+                Workforce Solutions and author of the National Child Care System. Your staff receive detailed feedback,
+                not just a score. Every completed module builds the verified competency logs you need for WHS and
+                ACECQA audits.
+              </p>
+            </div>
+            <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
+                  <ClipboardCheck className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-card-foreground">Feedback, revision and resubmission</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  If an assignment does not meet competency, the participant is marked Partially Competent (PC) or Not
+                  Yet Competent (NYC) for that task. Feedback identifies what needs to be corrected or strengthened,
+                  and the participant can revise and resubmit before final completion or certificate issue.
+                </p>
+              </div>
+              <div className="rounded-xl border border-accent/30 bg-accent/10 p-6 sm:p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-background">
+                  <AlertTriangle className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-foreground">Competency requirements</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Participants who complete the course but do not resubmit outstanding assignments to achieve the
+                  required competency standard will not receive a competency certificate. They may instead receive a
+                  Certificate of Attendance, confirming participation but not competency, certification, or successful
+                  assessment completion.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Option 1 pricing */}
+        <section className="bg-background py-16 sm:py-20">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <p className="text-sm font-bold uppercase tracking-wide text-accent">Option 1 - Team enrolment</p>
+              <h2 className="mt-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Choose your team size</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Online, self-paced training with personal assessment and competency feedback for every participant.
+              </p>
+            </div>
+            <div className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
+              {[
+                { staff: "5 staff", price: "$400" },
+                { staff: "10 staff", price: "$700" },
+              ].map((option) => (
+                <div key={option.staff} className="rounded-xl border border-border bg-card p-6 text-center shadow-sm sm:p-8">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-accent">Online team pack</p>
+                  <h3 className="mt-3 text-xl font-bold text-card-foreground">{option.staff}</h3>
+                  <p className="mt-4 text-3xl font-bold tracking-tight text-foreground">{option.price}</p>
+                  <p className="mt-3 text-sm text-muted-foreground">Includes all 15 modules and personal assessment.</p>
+                  <Button asChild className="mt-6 w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Link href="/contact">Enquire About This Pack</Link>
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Option 2 - Group onsite training */}
-        <section className="py-16 sm:py-20 bg-background">
+        <section className="py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="rounded-2xl border border-border bg-card p-6 sm:p-10">
               <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
@@ -270,7 +404,7 @@ export default function CoursesPage() {
         </section>
 
         {/* Who it's for */}
-        <section className="py-16 sm:py-20 bg-muted">
+        <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Who our courses are for</h2>
@@ -290,7 +424,7 @@ export default function CoursesPage() {
         </section>
 
         {/* Certification Pathway */}
-        <section className="py-16 sm:py-20 bg-background">
+        <section className="py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Certification Pathway</h2>
