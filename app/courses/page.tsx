@@ -95,14 +95,16 @@ export default function CoursesPage() {
               <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
                 <div>
                   <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
-                    Featured Course
+                    <ShieldCheck className="h-3.5 w-3.5" />
+                    Required under the 2026 Biohazard Code
                   </span>
                   <h2 className="mt-4 text-2xl font-bold tracking-tight text-card-foreground sm:text-3xl">
-                    Educator Infection Control &amp; Biohazard Management
+                    Certified Infection Control &amp; Biohazard Management
                   </h2>
                   <p className="mt-4 leading-relaxed text-muted-foreground">
-                    Practical, educator-facing procedures across 15 modules to lift standards and reduce biohazard risk
-                    in early childhood education and care settings.
+                    The certification early childhood teams and cleaning contractors now need under Safe Work
+                    Australia&apos;s 2026 biohazard code. Practical, educator-facing procedures across 15 modules that
+                    lift standards, reduce biohazard risk, and give every staff member evidenced competency.
                   </p>
                   <div className="mt-6 flex flex-wrap gap-3">
                     {featuredHighlights.map((h) => (

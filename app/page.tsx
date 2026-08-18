@@ -6,6 +6,7 @@ import { ProblemSection } from "@/components/home/problem-section"
 import { SolutionSection } from "@/components/home/solution-section"
 import { HowWeHelpSection } from "@/components/home/how-we-help-section"
 import { WhatWeDeliverSection } from "@/components/home/what-we-deliver-section"
+import { CoursesSection } from "@/components/home/courses-section"
 import { ProvenOutcomesSection } from "@/components/home/proven-outcomes-section"
 import { CleaningProvidersSection } from "@/components/home/cleaning-providers-section"
 import { DualWorkforceSection } from "@/components/home/dual-workforce-section"
@@ -35,6 +36,9 @@ export default function HomePage() {
         
         {/* WHAT WE DELIVER */}
         <WhatWeDeliverSection />
+
+        {/* OUR COURSES - Certified training required under 2026 code */}
+        <CoursesSection />
         
         {/* PROVEN OUTCOMES - Stats */}
         <ProvenOutcomesSection />
