@@ -29,6 +29,17 @@ const ssowIncludes = [
   "Verification records",
 ]
 
+const workbookIncludes = [
+  "Routine cleaning records",
+  "Equipment records",
+  "Linen records",
+  "Chemicals and stock",
+  "After-hours contractor scope and review",
+  "Biohazard and outbreak response",
+  "Weekly supervisor verification",
+  "Corrective actions log",
+]
+
 const nccsAudience = [
   {
     icon: Users,
@@ -150,6 +161,18 @@ export default function ServicesPage() {
                 <p className="mt-4 text-sm font-medium text-foreground">
                   Designed as 1 book per room, covering a 12 month period.
                 </p>
+                <p className="mt-6 text-muted-foreground leading-relaxed">
+                  Every cleaning record your centre needs, in one printable book per room:
+                </p>
+                <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {workbookIncludes.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                      <span className="text-sm text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-sm font-medium text-foreground">Setup guide and print plan included.</p>
               </div>
             </div>
           </div>
