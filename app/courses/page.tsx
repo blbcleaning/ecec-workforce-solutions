@@ -55,6 +55,7 @@ const whoItsFor = [
 const certifications = [
   {
     icon: GraduationCap,
+    audience: "For cleaners",
     title: "Infection Prevention Specialist",
     description:
       "Core certification covering infection control, biohazard handling, and ECEC-specific protocols. Individual certificates issued on completion.",
@@ -240,7 +241,12 @@ export default function CoursesPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
                     <cert.icon className="h-6 w-6 text-accent" />
                   </div>
-                  <h3 className="mt-4 font-semibold text-card-foreground">{cert.title}</h3>
+                  {cert.audience ? (
+                    <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-accent">{cert.audience}</p>
+                  ) : null}
+                  <h3 className={`${cert.audience ? "mt-1" : "mt-4"} font-semibold text-card-foreground`}>
+                    {cert.title}
+                  </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{cert.description}</p>
                 </div>
               ))}
