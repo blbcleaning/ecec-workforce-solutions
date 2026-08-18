@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer"
 import {
   AlertTriangle,
   FileCheck,
+  GraduationCap,
   ClipboardCheck,
   CheckCircle,
   ShieldAlert,
@@ -105,7 +106,7 @@ export default function ServicesPage() {
             <div className="mx-auto max-w-3xl">
               <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
                 <FileCheck className="h-4 w-4" />
-                Service 1
+                Documentation
               </div>
               <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
                 Custom-Built SSOW
@@ -127,13 +128,36 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Service 2 — WHS Compliance Review */}
+        {/* Service 2 — Training */}
         <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
+                <GraduationCap className="h-4 w-4" />
+                Training
+              </div>
+              <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Our Courses
+              </h2>
+              <p className="mt-2 text-lg font-medium text-foreground">
+                Practical training your staff can apply on the floor.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Courses built for ECEC teams — covering infection control, biological hazard response, and the safe
+                work practices your documented SSOW relies on. Delivered so training becomes an evidenced control, not
+                just an intention.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Service 3 — Consultancy Services */}
+        <section className="py-16 sm:py-20 bg-muted">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
                 <ClipboardCheck className="h-4 w-4" />
-                Service 2
+                Consultancy Services
               </div>
               <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
                 WHS Compliance Review
