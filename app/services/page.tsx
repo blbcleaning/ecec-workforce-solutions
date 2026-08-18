@@ -5,7 +5,6 @@ import {
   AlertTriangle,
   FileCheck,
   GraduationCap,
-  BookOpen,
   ClipboardCheck,
   CheckCircle,
   ShieldAlert,
@@ -109,31 +108,38 @@ export default function ServicesPage() {
                 <FileCheck className="h-4 w-4" />
                 Documentation
               </div>
-              <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Custom-Built Safe Systems of Work
-              </h2>
-              <p className="mt-2 text-lg font-medium text-foreground">Centre-specific. Task-level. Defensible.</p>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
-                Built around your real spaces and real hazards. Written so staff can follow it under pressure and so
-                you can demonstrate r39 compliance when it matters. Built in compliance with the hierarchy of control
-                and biohazard management, ensuring your documents are up to date and reflect what the law in 2026
-                requires.
+              <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+                Two compliance document products, available standalone or together.
               </p>
-              <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {ssowIncludes.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
-                    <span className="text-sm text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
 
-              <div className="mt-8 rounded-xl border border-border bg-card p-6 sm:p-8">
-                <div className="flex items-center gap-3">
-                  <BookOpen className="h-5 w-5 flex-shrink-0 text-accent" />
-                  <h3 className="text-lg font-semibold text-card-foreground">Cleaning Management Workbook</h3>
-                </div>
+              {/* Product 1 - Safe Systems of Work */}
+              <div className="mt-8 border-t border-border pt-8">
+                <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                  Custom-Built Safe Systems of Work
+                </h2>
+                <p className="mt-2 text-lg font-medium text-foreground">Centre-specific. Task-level. Defensible.</p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Built around your real spaces and real hazards. Written so staff can follow it under pressure and so
+                  you can demonstrate r39 compliance when it matters. Built in compliance with the hierarchy of control
+                  and biohazard management, ensuring your documents are up to date and reflect what the law in 2026
+                  requires.
+                </p>
+                <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {ssowIncludes.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                      <span className="text-sm text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Product 2 - Cleaning Management Workbook */}
+              <div className="mt-8 border-t border-border pt-8">
+                <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                  Cleaning Management Workbook
+                </h2>
+                <p className="mt-2 text-lg font-medium text-foreground">
                   A single point of truth for cleaning, infection control, biohazards, and outbreak response in ECEC.
                 </p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
