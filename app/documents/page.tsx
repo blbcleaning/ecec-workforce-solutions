@@ -87,29 +87,29 @@ const ssowCategories = [
     count: "5 SSOW available",
     items: [
       {
-        name: "Blood & Bodily Fluid Spill Response",
+        name: "Urine & Faeces Spill Clean-Up",
         description:
-          "The safe, step-by-step method for isolating, cleaning and disinfecting blood, vomit and other bodily-fluid spills to contain exposure fast.",
+          "A containment-and-disinfection routine for urine and faeces incidents, with correct PPE, contact times and safe disposal.",
       },
       {
-        name: "Nappy Change & Toileting Biohazard Control",
+        name: "Blood Spill Clean-Up",
         description:
-          "Nappy change and toileting handled as a controlled biohazard task, protecting children and staff at your most frequent point of exposure.",
+          "A defensible response that treats all blood as potentially infectious, with safe containment, disinfection and disposal against blood-borne risks.",
+      },
+      {
+        name: "Vomit Spill Clean-Up",
+        description:
+          "A rapid isolate-contain-disinfect method for vomit, which spreads illness fast, covering correct products, contact times and disposal.",
+      },
+      {
+        name: "Nappy Change & Sanitation",
+        description:
+          "A hygienic nappy-change routine protecting against faecal-oral transmission, with correct PPE, surface disinfection between changes and proper waste handling.",
       },
       {
         name: "Outbreak Response & Enhanced Cleaning",
         description:
-          "Escalated cleaning and disinfection during a gastro or respiratory outbreak, with clear triggers for when to step up and step down.",
-      },
-      {
-        name: "Waste Stream Handling & Disposal",
-        description:
-          "How contaminated waste is segregated, bagged, stored and disposed of so hazardous material never re-enters shared spaces.",
-      },
-      {
-        name: "Post-Outbreak Terminal Clean",
-        description:
-          "The full reset clean that returns a room to normal use after an outbreak, with verification the space is safe for children again.",
+          "Steps your centre up to enhanced cleaning during a suspected or confirmed outbreak, with increased frequency, stronger disinfection, isolation and recording.",
       },
     ],
   },
