@@ -597,7 +597,7 @@ export default function CoursesPage() {
                   {[
                     "Lifetime Infection Control & Biohazard Management course licence from $1,200",
                     "One licence with unlimited certified training seats and competency assessment",
-                    "Add new centres to the licence at no additional cost",
+                    "Adding extra existing group centres to a licence incurs additional charges",
                     "Add and remove employees as your workforce changes",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
