@@ -83,16 +83,17 @@ export default function ServicesPage() {
         {/* The r39 Gap Section */}
         <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="rounded-xl border border-destructive/30 bg-destructive/5 p-8 sm:p-10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10">
+            <div className="flex flex-col gap-6 rounded-xl border border-destructive/30 bg-destructive/5 p-8 sm:flex-row sm:p-10">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-destructive/10">
                 <ShieldAlert className="h-6 w-6 text-destructive" />
               </div>
-              <div className="mt-6 space-y-4 text-lg leading-relaxed text-foreground">
+              <div className="space-y-4 text-lg leading-relaxed text-foreground">
                 <p>A general cleaning policy doesn&apos;t satisfy r39.</p>
                 <p>A training intention isn&apos;t a documented control.</p>
                 <p className="font-semibold">
                   If an incident or inspection occurs, the gap is your liability.
                 </p>
+                <p>We deliver the training and the documentation required for compliance.</p>
               </div>
             </div>
           </div>
