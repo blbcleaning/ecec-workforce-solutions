@@ -5,6 +5,7 @@ import {
   AlertTriangle,
   FileCheck,
   GraduationCap,
+  BookOpen,
   ClipboardCheck,
   CheckCircle,
   ShieldAlert,
@@ -126,6 +127,24 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-8 rounded-xl border border-border bg-card p-6 sm:p-8">
+                <div className="flex items-center gap-3">
+                  <BookOpen className="h-5 w-5 flex-shrink-0 text-accent" />
+                  <h3 className="text-lg font-semibold text-card-foreground">Cleaning Management Workbook</h3>
+                </div>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  A single point of truth for cleaning, infection control, biohazards, and outbreak response in ECEC.
+                </p>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Built for shared use by centre staff and after-hours cleaning contractors. It standardises
+                  expectations, records completion and verification, and keeps evidence in one place{" "}
+                  <span className="text-foreground">(standalone or integrated with the SSOW Pack)</span>.
+                </p>
+                <p className="mt-4 text-sm font-medium text-foreground">
+                  Designed as 1 book per room, covering a 12 month period.
+                </p>
+              </div>
             </div>
           </div>
         </section>
