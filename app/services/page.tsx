@@ -1,8 +1,11 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { Button } from "@/components/ui/button"
 import {
   AlertTriangle,
+  ArrowRight,
   FileCheck,
   GraduationCap,
   ClipboardCheck,
@@ -174,6 +177,15 @@ export default function ServicesPage() {
                 </ul>
                 <p className="mt-4 text-sm font-medium text-foreground">Setup guide and print plan included.</p>
               </div>
+
+              <div className="mt-8 border-t border-border pt-8">
+                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
+                  <Link href="/documents">
+                    Explore Our Documents
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -197,6 +209,14 @@ export default function ServicesPage() {
                 work practices your documented SSOW relies on. Delivered so training becomes an evidenced control, not
                 just an intention.
               </p>
+              <div className="mt-8">
+                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
+                  <Link href="/courses">
+                    Explore Our Courses
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
