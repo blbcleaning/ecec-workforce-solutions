@@ -1,4 +1,6 @@
-import { Sparkles, CheckCircle } from "lucide-react"
+import Link from "next/link"
+import { Sparkles, CheckCircle, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const benefits = [
   "Certified in biohazard management",
@@ -48,6 +50,21 @@ export function CleaningProvidersSection() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div className="mt-8 flex flex-col items-center gap-4">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
+                <Link href="/for-cleaning-companies">
+                  For Cleaning Companies
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Link
+                href="/for-cleaning-companies"
+                className="text-sm font-medium text-accent underline underline-offset-4 hover:text-accent/80"
+              >
+                Learn how we certify your cleaning workforce
+              </Link>
             </div>
           </div>
         </div>
