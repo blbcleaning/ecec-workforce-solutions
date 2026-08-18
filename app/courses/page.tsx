@@ -217,19 +217,19 @@ export default function CoursesPage() {
         </section>
 
         {/* Lead Assessor */}
-        <section className="bg-background py-16 sm:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid overflow-hidden rounded-2xl border border-border bg-card lg:grid-cols-[0.8fr_1.2fr]">
-              <div className="relative min-h-80 lg:min-h-full">
+        <section className="bg-background py-12 sm:py-16">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="grid overflow-hidden rounded-2xl border border-border bg-card md:grid-cols-[14rem_1fr]">
+              <div className="relative min-h-64 md:min-h-full">
                 <Image
                   src="/team/lindsay-smith.png"
                   alt="Lindsay Smith, lead assessor and founder of ECEC Workforce Solutions"
                   fill
-                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  sizes="(min-width: 768px) 224px, 100vw"
                   className="object-cover object-center"
                 />
               </div>
-              <div className="p-6 sm:p-10 lg:p-12">
+              <div className="p-6 sm:p-8">
                 <p className="text-sm font-bold uppercase tracking-wide text-accent">Meet Your Lead Assessor</p>
                 <h2 className="mt-3 text-balance text-2xl font-bold tracking-tight text-card-foreground sm:text-3xl">
                   Real ECEC Expertise. Rigorous WHS Accountability.
@@ -311,7 +311,7 @@ export default function CoursesPage() {
 
         {/* Option 1 pricing */}
         <section className="bg-background py-16 sm:py-20">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <p className="text-sm font-bold uppercase tracking-wide text-accent">Option 1 - Team enrolment</p>
               <h2 className="mt-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Choose your team size</h2>
@@ -319,10 +319,12 @@ export default function CoursesPage() {
                 Online, self-paced training with personal assessment and competency feedback for every participant.
               </p>
             </div>
-            <div className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="mx-auto mt-10 grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { staff: "5 staff", price: "$400" },
-                { staff: "10 staff", price: "$700" },
+                { staff: "Up to 5 staff", price: "$400" },
+                { staff: "Up to 10 staff", price: "$700" },
+                { staff: "Up to 20 staff", price: "$1,150" },
+                { staff: "Up to 30 staff", price: "$1,600" },
               ].map((option) => (
                 <div key={option.staff} className="rounded-xl border border-border bg-card p-6 text-center shadow-sm sm:p-8">
                   <p className="text-sm font-semibold uppercase tracking-wide text-accent">Online team pack</p>
