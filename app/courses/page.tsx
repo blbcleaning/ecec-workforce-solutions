@@ -219,17 +219,18 @@ export default function CoursesPage() {
         {/* Lead Assessor */}
         <section className="bg-background py-12 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <div className="grid overflow-hidden rounded-2xl border border-border bg-card md:grid-cols-[14rem_1fr]">
-              <div className="relative min-h-64 md:min-h-full">
+            <div className="flex flex-col gap-6 rounded-2xl border border-border bg-card p-6 sm:p-8 md:flex-row md:items-start">
+              <div className="h-36 w-36 flex-shrink-0 overflow-hidden rounded-xl border border-border bg-muted sm:h-40 sm:w-40">
                 <Image
                   src="/team/lindsay-smith.png"
                   alt="Lindsay Smith, lead assessor and founder of ECEC Workforce Solutions"
-                  fill
-                  sizes="(min-width: 768px) 224px, 100vw"
-                  className="object-cover object-center"
+                  width={160}
+                  height={160}
+                  sizes="160px"
+                  className="h-full w-full object-contain"
                 />
               </div>
-              <div className="p-6 sm:p-8">
+              <div className="min-w-0 flex-1">
                 <p className="text-sm font-bold uppercase tracking-wide text-accent">Meet Your Lead Assessor</p>
                 <h2 className="mt-3 text-balance text-2xl font-bold tracking-tight text-card-foreground sm:text-3xl">
                   Real ECEC Expertise. Rigorous WHS Accountability.
