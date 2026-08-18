@@ -109,12 +109,14 @@ export default function ServicesPage() {
                 Documentation
               </div>
               <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Custom-Built SSOW
+                Custom-Built Safe Systems of Work
               </h2>
               <p className="mt-2 text-lg font-medium text-foreground">Centre-specific. Task-level. Defensible.</p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 Built around your real spaces and real hazards. Written so staff can follow it under pressure and so
-                you can demonstrate r39 compliance when it matters.
+                you can demonstrate r39 compliance when it matters. Built in compliance with the hierarchy of control
+                and biohazard management, ensuring your documents are up to date and reflect what the law in 2026
+                requires.
               </p>
               <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {ssowIncludes.map((item) => (
