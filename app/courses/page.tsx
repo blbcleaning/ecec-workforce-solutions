@@ -491,8 +491,106 @@ export default function CoursesPage() {
           </div>
         </section>
 
+        {/* Option 3 - WHS Compliance Bundle */}
+        <section className="bg-background py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-sm font-bold uppercase tracking-wide text-accent">Option 3 - Complete centre system</p>
+              <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                The ECEC WHS Compliance Bundle
+              </h2>
+              <p className="mt-3 text-xl font-semibold text-accent">Three Pillars. One Complete System.</p>
+              <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+                Bring training, operational WHS systems and audit readiness together in one secure compliance workspace
+                designed specifically for ECEC providers.
+              </p>
+            </div>
+
+            <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+              {[
+                {
+                  number: "Pillar 1",
+                  title: "Certified WHS Training for Your Whole Team",
+                  points: [
+                    "Unlimited staff enrolments, with an individual certificate for every educator, room leader and coordinator who demonstrates competency",
+                    "WHS Act obligations, hazard identification, incident response and the 2026 Biohazard Code of Practice",
+                    "Self-paced modules accessible on any device without disrupting your roster",
+                    "Training records stored and exportable for regulatory inspection",
+                    "Feedback and explanations on every competency assignment for every new participant",
+                    "Annual refresher training included so your team stays competent year after year",
+                  ],
+                },
+                {
+                  number: "Pillar 2",
+                  title: "Operational WHS Systems Built for ECEC",
+                  points: [
+                    "Complete WHS policy and procedure suite aligned with the WHS Act 2011 and National Regulations",
+                    "Pre-populated hazard register, risk assessment templates and incident reporting forms for common ECEC scenarios",
+                    "Staff noticeboard resources, toolbox-talk guides and a WHS induction checklist",
+                    "14 childcare-specific Safe Systems of Work templates",
+                    "Digital Cleaning Management Workbook with verification templates",
+                    "Documentation library updated as regulations and codes of practice change",
+                  ],
+                },
+                {
+                  number: "Pillar 3",
+                  title: "Audit Readiness & NQS Rating Support",
+                  points: [
+                    "Pre-assessment WHS audit checklist mapped to NQS Quality Areas 2, 3 and 7",
+                    "Evidence portfolio guidance so you know what to prepare before an authorised officer visits",
+                    "Direct support from Lindsay during your rating and assessment period",
+                    "Post-visit debrief and improvement planning following an improvement notice or rating below Meeting NQS",
+                    "Community Compliance & Audit-Preparedness Hub",
+                    "Dedicated account support manager who knows your centre",
+                  ],
+                },
+              ].map((pillar) => (
+                <article key={pillar.number} className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
+                  <p className="text-xs font-bold uppercase tracking-wide text-accent">{pillar.number}</p>
+                  <h3 className="mt-3 text-xl font-bold text-card-foreground">{pillar.title}</h3>
+                  <ul className="mt-6 flex flex-col gap-4">
+                    {pillar.points.map((point) => (
+                      <li key={point} className="flex items-start gap-3">
+                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                        <span className="text-sm leading-relaxed text-muted-foreground">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-10 grid grid-cols-1 gap-6 rounded-2xl border border-accent/30 bg-accent/10 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-wide text-accent">Unlimited training seats</p>
+                <h3 className="mt-2 text-balance text-2xl font-bold text-foreground sm:text-3xl">
+                  Pay once. Enrol as you need. Manage compliance with confidence.
+                </h3>
+                <p className="mt-4 leading-relaxed text-muted-foreground">
+                  Your organisation receives a secure online workspace, a manager self-service dashboard for enrolling
+                  staff and tracking progress, and ongoing access to your training records and compliance library.
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-6">
+                <p className="text-xs font-bold uppercase tracking-wide text-accent">Price-lock guarantee</p>
+                <p className="mt-2 text-xl font-bold text-card-foreground">Your rate will not increase or change.</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  As the platform develops, entry pricing for new centres will rise. Existing centres keep the price
+                  they joined at, without regular increases to access and manage their training and compliance system.
+                </p>
+                <Button asChild size="lg" className="mt-6 w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Link href="/contact">
+                    Enquire About the Compliance Bundle
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Who it's for */}
-        <section className="py-16 sm:py-20 bg-background">
+        <section className="py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Who our courses are for</h2>
@@ -512,7 +610,7 @@ export default function CoursesPage() {
         </section>
 
         {/* Certification Pathway */}
-        <section className="py-16 sm:py-20 bg-muted">
+        <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Certification Pathway</h2>
