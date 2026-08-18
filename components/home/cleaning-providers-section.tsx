@@ -33,7 +33,7 @@ export function CleaningProvidersSection() {
             </p>
 
             <p className="mt-4 text-center text-muted-foreground leading-relaxed">
-              Childcare cleaning can no longer be treated as general commercial cleaning. Centres now need cleaners who can provide competency certification—and we upskill your existing team to meet that standard.
+              Childcare cleaning can no longer be treated as general commercial cleaning. Centres now need cleaners who can provide competency certification - and we upskill your existing team to meet that standard.
             </p>
 
             <div className="mt-8">

@@ -67,25 +67,25 @@ export function ComplianceRiskCalculator() {
       riskLevel = "compliant"
       riskScore = 10
       financialExposure = { min: 0, max: 5000 }
-      personalLiabilityRisk = "Minimal — Strong compliance position"
+      personalLiabilityRisk = "Minimal - Strong compliance position"
       riskDescription = "Your centre appears to meet current compliance requirements. Consider NCCS certification to formalise and document your position."
     } else if (passes >= 5) {
       riskLevel = "partial"
       riskScore = 50
       financialExposure = { min: 20000, max: 75000 }
-      personalLiabilityRisk = "Moderate — Documentation gaps present"
+      personalLiabilityRisk = "Moderate - Documentation gaps present"
       riskDescription = "Your centre has compliance gaps that expose you to regulatory action. Address these before your next audit or inspection."
     } else if (passes >= 3) {
       riskLevel = "significant"
       riskScore = 75
       financialExposure = { min: 50000, max: 150000 }
-      personalLiabilityRisk = "High — Significant due diligence gaps"
+      personalLiabilityRisk = "High - Significant due diligence gaps"
       riskDescription = "Your centre has significant compliance gaps across multiple areas. Directors and Approved Providers are personally exposed. Immediate action recommended."
     } else {
       riskLevel = "noncompliant"
       riskScore = 95
       financialExposure = { min: 100000, max: 700000 }
-      personalLiabilityRisk = "Extreme — Directors face personal prosecution risk"
+      personalLiabilityRisk = "Extreme - Directors face personal prosecution risk"
       riskDescription = "Your centre is substantially non-compliant. The risk of regulatory enforcement, personal prosecution, and financial penalty is high. Contact us immediately."
     }
 
@@ -309,11 +309,11 @@ export function ComplianceRiskCalculator() {
             noId="worker-no"
           />
           <HelperText>
-            Since February 2026, all staff — including cleaners — must be registered. Failure to register carries fines up to $34,200.
+            Since February 2026, all staff - including cleaners - must be registered. Failure to register carries fines up to $34,200.
           </HelperText>
         </div>
       ),
-      getSummary: () => hasWorkerRegister === "yes" ? "Yes — Staff registered" : "No — Staff not registered",
+      getSummary: () => hasWorkerRegister === "yes" ? "Yes - Staff registered" : "No - Staff not registered",
     },
     {
       id: "infection-training",
@@ -328,11 +328,11 @@ export function ComplianceRiskCalculator() {
             noId="training-no"
           />
           <HelperText>
-            This means training specific to infection prevention in ECEC — not general education qualifications or commercial cleaning certificates. Under WHS legislation, staff performing infection-control cleaning must be demonstrably competent in the specific hazards of childcare environments. NCCS certification is one structured pathway to demonstrate this.
+            This means training specific to infection prevention in ECEC - not general education qualifications or commercial cleaning certificates. Under WHS legislation, staff performing infection-control cleaning must be demonstrably competent in the specific hazards of childcare environments. NCCS certification is one structured pathway to demonstrate this.
           </HelperText>
         </div>
       ),
-      getSummary: () => hasInfectionTraining === "yes" ? "Yes — ECEC-specific training documented" : "No — No ECEC-specific training",
+      getSummary: () => hasInfectionTraining === "yes" ? "Yes - ECEC-specific training documented" : "No - No ECEC-specific training",
     },
     {
       id: "documentation",
@@ -347,15 +347,15 @@ export function ComplianceRiskCalculator() {
             noId="docs-no"
           />
           <HelperText>
-            A basic cleaning roster or a tick-and-flick checklist is not a safe system of work. To satisfy WHS requirements, your records must show exactly what was done, when, by whom, with what products, and who verified it. If any of these elements are missing, vague, or unsigned — your documentation would not constitute evidence of a safe system of work in a WHS investigation.
+            A basic cleaning roster or a tick-and-flick checklist is not a safe system of work. To satisfy WHS requirements, your records must show exactly what was done, when, by whom, with what products, and who verified it. If any of these elements are missing, vague, or unsigned - your documentation would not constitute evidence of a safe system of work in a WHS investigation.
           </HelperText>
         </div>
       ),
-      getSummary: () => hasDocumentation === "yes" ? "Yes — Full documentation available" : "No — Documentation incomplete",
+      getSummary: () => hasDocumentation === "yes" ? "Yes - Full documentation available" : "No - Documentation incomplete",
     },
     {
       id: "biohazard",
-      question: "Does your centre have a documented biohazard incident response procedure — including bodily fluid spills, gastro or infectious disease outbreaks, and contaminated waste disposal — with designated staff trained to carry it out?",
+      question: "Does your centre have a documented biohazard incident response procedure - including bodily fluid spills, gastro or infectious disease outbreaks, and contaminated waste disposal - with designated staff trained to carry it out?",
       helper: "Biohazard procedures",
       component: (
         <div>
@@ -366,11 +366,11 @@ export function ComplianceRiskCalculator() {
             noId="biohazard-no"
           />
           <HelperText>
-            Under the Biological Hazards Code of Practice, centres must have documented controls for managing biological hazard incidents. This includes who responds, how they respond, what PPE they use, how contaminated materials are disposed of, and how the incident is recorded. If your centre relies on educators to handle these incidents without documented procedures or specific training — that is a WHS compliance gap.
+            Under the Biological Hazards Code of Practice, centres must have documented controls for managing biological hazard incidents. This includes who responds, how they respond, what PPE they use, how contaminated materials are disposed of, and how the incident is recorded. If your centre relies on educators to handle these incidents without documented procedures or specific training - that is a WHS compliance gap.
           </HelperText>
         </div>
       ),
-      getSummary: () => hasBiohazardProcedure === "yes" ? "Yes — Biohazard procedures documented" : "No — No biohazard procedures",
+      getSummary: () => hasBiohazardProcedure === "yes" ? "Yes - Biohazard procedures documented" : "No - No biohazard procedures",
     },
     {
       id: "ratio-conflict",
@@ -389,7 +389,7 @@ export function ComplianceRiskCalculator() {
           </HelperText>
         </div>
       ),
-      getSummary: () => hasRatioConflict === "yes" ? "Yes — Ratio conflict exists" : "No — No ratio conflict",
+      getSummary: () => hasRatioConflict === "yes" ? "Yes - Ratio conflict exists" : "No - No ratio conflict",
     },
     {
       id: "nap-time",
@@ -404,11 +404,11 @@ export function ComplianceRiskCalculator() {
             noId="nap-no"
           />
           <HelperText>
-            If the majority of cleaning happens during nap time, your centre is relying on a narrow window to manage biological hazards that accumulate throughout the entire day. Nappy changes, mouthed toys, bodily fluid spills, and high-touch surface contamination occur continuously during operating hours — not just at nap time. A compliant infection prevention schedule is risk-based and distributed across the full operating day.
+            If the majority of cleaning happens during nap time, your centre is relying on a narrow window to manage biological hazards that accumulate throughout the entire day. Nappy changes, mouthed toys, bodily fluid spills, and high-touch surface contamination occur continuously during operating hours - not just at nap time. A compliant infection prevention schedule is risk-based and distributed across the full operating day.
           </HelperText>
         </div>
       ),
-      getSummary: () => hasNapTimeCleaning === "yes" ? "Yes — Bulk cleaning during nap time only" : "No — Distributed throughout day",
+      getSummary: () => hasNapTimeCleaning === "yes" ? "Yes - Bulk cleaning during nap time only" : "No - Distributed throughout day",
     },
     {
       id: "after-hours-quals",
@@ -425,11 +425,11 @@ export function ComplianceRiskCalculator() {
             onMaybeSelect={() => {}}
           />
           <HelperText>
-            A Cert III in Cleaning Operations or general commercial cleaning experience does not cover childcare-specific biological hazards, TGA-approved child-safe products, or ECEC infection-control protocols. If you&apos;re unsure whether your cleaner holds childcare-specific IPC qualifications — they almost certainly don&apos;t. &apos;Maybe&apos; is not evidence of competency.
+            A Cert III in Cleaning Operations or general commercial cleaning experience does not cover childcare-specific biological hazards, TGA-approved child-safe products, or ECEC infection-control protocols. If you&apos;re unsure whether your cleaner holds childcare-specific IPC qualifications - they almost certainly don&apos;t. &apos;Maybe&apos; is not evidence of competency.
           </HelperText>
         </div>
       ),
-      getSummary: () => hasAfterHoursQuals === "yes" ? "Yes — Certified in ECEC infection control" : hasAfterHoursQuals === "maybe" ? "Maybe — Unclear" : "No — No ECEC-specific qualifications",
+      getSummary: () => hasAfterHoursQuals === "yes" ? "Yes - Certified in ECEC infection control" : hasAfterHoursQuals === "maybe" ? "Maybe - Unclear" : "No - No ECEC-specific qualifications",
     },
     {
       id: "verification-logs",
@@ -444,11 +444,11 @@ export function ComplianceRiskCalculator() {
             noId="logs-no"
           />
           <HelperText>
-            Verification logs must show what was cleaned, when, by whom, with what products, and whether the work was completed to schedule. A signature on a generic sign-off sheet is not a verification log. If your cleaner does not provide nightly documentation — you have no evidence the work was done to any standard.
+            Verification logs must show what was cleaned, when, by whom, with what products, and whether the work was completed to schedule. A signature on a generic sign-off sheet is not a verification log. If your cleaner does not provide nightly documentation - you have no evidence the work was done to any standard.
           </HelperText>
         </div>
       ),
-      getSummary: () => hasVerificationLogs === "yes" ? "Yes — Nightly logs provided" : "No — No verification logs",
+      getSummary: () => hasVerificationLogs === "yes" ? "Yes - Nightly logs provided" : "No - No verification logs",
     },
     {
       id: "tga-products",
@@ -463,11 +463,11 @@ export function ComplianceRiskCalculator() {
             noId="tga-no"
           />
           <HelperText>
-            All disinfectants used in high-risk zones (nursery, bathrooms, nappy change areas) should be TGA-listed (ARTG registered) as hospital-grade or appropriate for the surface type. Products used on surfaces children mouth must be safe for mucous membrane contact. If you don&apos;t know whether your products are TGA-approved — check. The ARTG register is searchable at tga.gov.au.
+            All disinfectants used in high-risk zones (nursery, bathrooms, nappy change areas) should be TGA-listed (ARTG registered) as hospital-grade or appropriate for the surface type. Products used on surfaces children mouth must be safe for mucous membrane contact. If you don&apos;t know whether your products are TGA-approved - check. The ARTG register is searchable at tga.gov.au.
           </HelperText>
         </div>
       ),
-      getSummary: () => usesTGAProducts === "yes" ? "Yes — TGA products only" : "No — Non-approved products in use",
+      getSummary: () => usesTGAProducts === "yes" ? "Yes - TGA products only" : "No - Non-approved products in use",
     },
     {
       id: "chemical-controls",
@@ -482,11 +482,11 @@ export function ComplianceRiskCalculator() {
             noId="controls-no"
           />
           <HelperText>
-            This means: a current Chemical Register listing every product in use with ARTG numbers, SDS currency dates, and expiry tracking. Plus documented dilution ratios recorded per shift — not just the label instructions, but evidence that the correct ratio was actually used. If your chemical management consists of a bottle of spray under the sink with no register, no SDS folder, and no dilution records — that is a WHS compliance gap.
+            This means: a current Chemical Register listing every product in use with ARTG numbers, SDS currency dates, and expiry tracking. Plus documented dilution ratios recorded per shift - not just the label instructions, but evidence that the correct ratio was actually used. If your chemical management consists of a bottle of spray under the sink with no register, no SDS folder, and no dilution records - that is a WHS compliance gap.
           </HelperText>
         </div>
       ),
-      getSummary: () => hasChemicalControls === "yes" ? "Yes — Chemical controls documented" : "No — No chemical documentation",
+      getSummary: () => hasChemicalControls === "yes" ? "Yes - Chemical controls documented" : "No - No chemical documentation",
     },
   ]
 

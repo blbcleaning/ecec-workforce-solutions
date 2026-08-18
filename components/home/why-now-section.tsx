@@ -38,7 +38,7 @@ export function WhyNowSection() {
         </div>
 
         <p className="mt-10 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
-          Centres relying on educators to perform cleaning are under increasing pressure. This is no longer an operational preference—it requires a structured solution.
+          Centres relying on educators to perform cleaning are under increasing pressure. This is no longer an operational preference - it requires a structured solution.
         </p>
       </div>
     </section>

@@ -16,7 +16,7 @@ export function CertificateSection() {
             />
           </div>
           <p className="mt-6 text-center text-sm text-muted-foreground">
-            NCCS Certificate of Compliance — issued to centres assessed as compliant with the National Childcare Cleaning Standard.
+            NCCS Certificate of Compliance - issued to centres assessed as compliant with the National Childcare Cleaning Standard.
           </p>
         </div>
       </div>

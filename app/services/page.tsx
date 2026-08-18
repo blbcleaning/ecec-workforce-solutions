@@ -44,7 +44,7 @@ const nccsAudience = [
   },
   {
     icon: FileCheck,
-    text: "Approved Providers who want accreditation with ongoing monitoring — not a one-off deliverable",
+    text: "Approved Providers who want accreditation with ongoing monitoring - not a one-off deliverable",
   },
 ]
 
@@ -68,7 +68,7 @@ export default function ServicesPage() {
             <div className="mx-auto max-w-3xl text-center">
               <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-2 text-sm font-medium text-accent">
                 <AlertTriangle className="h-4 w-4" />
-                Biological Hazards Code — March 2026
+                Biological Hazards Code - March 2026
               </div>
               <h1 className="mt-6 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl">
                 Making WHS compliance clear, practical and achievable for early childhood services.
@@ -100,7 +100,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Service 1 — Custom-Built SSOW */}
+        {/* Service 1 - Custom-Built SSOW */}
         <section id="ssow" className="scroll-mt-24 py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl">
@@ -130,7 +130,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Service 2 — Training */}
+        {/* Service 2 - Training */}
         <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <div>
@@ -145,7 +145,7 @@ export default function ServicesPage() {
                 Practical training your staff can apply on the floor.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Courses built for ECEC teams — covering infection control, biological hazard response, and the safe
+                Courses built for ECEC teams - covering infection control, biological hazard response, and the safe
                 work practices your documented SSOW relies on. Delivered so training becomes an evidenced control, not
                 just an intention.
               </p>
@@ -153,7 +153,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Service 3 — Consultancy Services */}
+        {/* Service 3 - Consultancy Services */}
         <section className="py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <div>
@@ -169,14 +169,14 @@ export default function ServicesPage() {
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 A structured review of your current SSOW, training records, and documentation against the March 2026
-                biohazard standard. You leave with a clear gap list, priority fixes, and implementation steps — not
+                biohazard standard. You leave with a clear gap list, priority fixes, and implementation steps - not
                 just a report.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Flagship — NCCS Integration Program */}
+        {/* Flagship - NCCS Integration Program */}
         <section className="relative overflow-hidden bg-primary py-16 sm:py-20">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -192,7 +192,7 @@ export default function ServicesPage() {
                 The only ECEC workforce solution that measures what it claims.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80">
-                Most workforce interventions produce a policy document. This produces a measurable operational change —
+                Most workforce interventions produce a policy document. This produces a measurable operational change -
                 with baseline data collected before we start, and performance monitored against those indicators
                 throughout. The result is{" "}
                 <strong className="text-primary-foreground">NCCS accredited status, embedded into daily operations</strong>{" "}
@@ -220,7 +220,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            {/* What's included — Phases */}
+            {/* What's included - Phases */}
             <div className="mx-auto mt-14 max-w-5xl">
               <h3 className="text-center text-sm font-semibold uppercase tracking-wide text-primary-foreground/60">
                 What&apos;s included
@@ -236,7 +236,7 @@ export default function ServicesPage() {
                     {[
                       "Pre-NCCS baseline metrics collection",
                       "Onsite implementation to NCCS accredited status",
-                      "Full operational embedding — not policy-only",
+                      "Full operational embedding - not policy-only",
                     ].map((point) => (
                       <li key={point} className="flex items-start gap-3">
                         <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
@@ -277,12 +277,12 @@ export default function ServicesPage() {
                       <TrendingDown className="h-5 w-5 text-accent" />
                     </div>
                     <h4 className="text-base font-semibold text-primary-foreground">
-                      R&amp;D Tax Incentive — reduce your net cost
+                      R&amp;D Tax Incentive - reduce your net cost
                     </h4>
                   </div>
                   <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
                     Depending on your eligibility, a portion of program costs may be claimable under the R&amp;D Tax
-                    Incentive — commonly cited at up to{" "}
+                    Incentive - commonly cited at up to{" "}
                     <strong className="text-primary-foreground">43.5% of eligible expenditure</strong>.
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
@@ -292,7 +292,7 @@ export default function ServicesPage() {
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
                     Where staff wage time is spent on eligible NCCS-related R&amp;D activities, that time may also be
-                    includable in your claim — which can materially increase the total offset.
+                    includable in your claim - which can materially increase the total offset.
                   </p>
                   <p className="mt-4 text-xs leading-relaxed text-primary-foreground/50">
                     Eligibility must be confirmed with your accountant or tax advisor. We can provide supporting
@@ -308,7 +308,7 @@ export default function ServicesPage() {
         <section className="py-20 sm:py-24 bg-background">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
             <h2 className="text-balance text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              Close the gap now — not after an incident.
+              Close the gap now - not after an incident.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               Start with a <strong className="text-foreground">compliance review</strong> to see exactly where you

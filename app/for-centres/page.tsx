@@ -147,7 +147,7 @@ export default function ForCentresPage() {
                 Reduce educator workload. Improve retention. Achieve audit-ready compliance.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-primary-foreground/70">
-                Build the infection prevention infrastructure your centre is missing — NCCS certification, governance systems, and documented compliance embedded directly into your operations.
+                Build the infection prevention infrastructure your centre is missing - NCCS certification, governance systems, and documented compliance embedded directly into your operations.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
@@ -204,7 +204,7 @@ export default function ForCentresPage() {
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-foreground">Educators are still cleaning</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Biohazard, infection prevention, and non-educational duties are still being allocated to educators — reducing capacity and increasing risk.
+                  Biohazard, infection prevention, and non-educational duties are still being allocated to educators - reducing capacity and increasing risk.
                 </p>
               </div>
               <div className="rounded-xl border border-border bg-card p-6">
@@ -213,7 +213,7 @@ export default function ForCentresPage() {
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-foreground">Cleaning is inconsistent</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  There is no defined, competent cleaning function — leaving compliance unverified and undocumented.
+                  There is no defined, competent cleaning function - leaving compliance unverified and undocumented.
                 </p>
               </div>
               <div className="rounded-xl border border-border bg-card p-6">
@@ -237,10 +237,10 @@ export default function ForCentresPage() {
                 The Solution
               </h2>
               <p className="mt-4 text-xl text-foreground font-medium">
-                A complete system — implemented, verified, and sustained.
+                A complete system - implemented, verified, and sustained.
               </p>
               <p className="mt-4 text-lg text-muted-foreground">
-                We don&apos;t just train your team. We install an operating model that separates roles, certifies your workforce, and documents every element of your compliance — built to withstand regulatory scrutiny.
+                We don&apos;t just train your team. We install an operating model that separates roles, certifies your workforce, and documents every element of your compliance - built to withstand regulatory scrutiny.
               </p>
             </div>
           </div>
@@ -327,7 +327,7 @@ export default function ForCentresPage() {
                     <strong className="text-foreground">Register obligations:</strong> National Early Childhood Worker Register requirements now carry penalties up to $34,200.
                   </p>
                   <p>
-                    <strong className="text-foreground">Director and Officer personal liability:</strong> Under WHS PCBU duties, Directors and Approved Providers carry personal, non-delegable due diligence obligations — with potential fines exceeding $600,000 and up to 5 years imprisonment.
+                    <strong className="text-foreground">Director and Officer personal liability:</strong> Under WHS PCBU duties, Directors and Approved Providers carry personal, non-delegable due diligence obligations - with potential fines exceeding $600,000 and up to 5 years imprisonment.
                   </p>
                   <p>
                     <strong className="text-foreground">Fines have tripled:</strong> Combined penalties across ECEC, WHS, and worker registration are now at their highest levels ever.
@@ -345,7 +345,7 @@ export default function ForCentresPage() {
                   <h3 className="text-xl font-semibold text-foreground">The Protection</h3>
                 </div>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  NCCS certification gets your infection prevention workforce trained, certified, and documented — so you can defend your compliance position in any audit, inspection, or WHS investigation.
+                  NCCS certification gets your infection prevention workforce trained, certified, and documented - so you can defend your compliance position in any audit, inspection, or WHS investigation.
                 </p>
                 <ul className="mt-6 space-y-3">
                   <li className="flex items-start gap-3">
@@ -405,7 +405,7 @@ export default function ForCentresPage() {
             <div className="flex items-start gap-4 rounded-xl bg-primary/5 p-6">
               <Shield className="mt-1 h-6 w-6 flex-shrink-0 text-primary" />
               <p className="text-foreground leading-relaxed">
-                <strong>Regardless of your staffing model</strong> — managed service, internal team, or hybrid — your centre retains governance oversight and ultimate compliance responsibility. ECEC Workforce Solutions trains and certifies your infection prevention workforce to NCCS standards.
+                <strong>Regardless of your staffing model</strong> - managed service, internal team, or hybrid - your centre retains governance oversight and ultimate compliance responsibility. ECEC Workforce Solutions trains and certifies your infection prevention workforce to NCCS standards.
               </p>
             </div>
           </div>

@@ -19,10 +19,10 @@ export function ResultSection() {
               For Your Centre
             </h3>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              A clear competitive advantage—freeing educators from cleaning, reducing workload, and improving retention.
+              A clear competitive advantage - freeing educators from cleaning, reducing workload, and improving retention.
             </p>
             <p className="mt-4 text-card-foreground leading-relaxed">
-              In a shrinking workforce, this positions your centre to attract and keep quality educators—without relying on constant recruitment.
+              In a shrinking workforce, this positions your centre to attract and keep quality educators - without relying on constant recruitment.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export function ResultSection() {
               For Families
             </h3>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              A safer environment, with specialised infection prevention and educators fully present with children—not cleaning.
+              A safer environment, with specialised infection prevention and educators fully present with children - not cleaning.
             </p>
           </div>
         </div>

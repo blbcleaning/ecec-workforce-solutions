@@ -71,7 +71,7 @@ export function ExitIntentPopup() {
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/20">
             <Gift className="h-7 w-7 text-accent" />
           </div>
-          <DialogTitle className="mt-4 text-2xl text-balance">Wait — claim your free workbook</DialogTitle>
+          <DialogTitle className="mt-4 text-2xl text-balance">Wait - claim your free workbook</DialogTitle>
           <DialogDescription className="mt-2 text-pretty">
             Before you go: our EOFY offer ends 30 June. Buy a SSOW set now and get the Cleaning Management Workbook
             included free.
@@ -92,7 +92,7 @@ export function ExitIntentPopup() {
 
         <div className="mt-2 flex items-center justify-center gap-1.5 text-sm text-muted-foreground">
           <Clock className="h-4 w-4" />
-          <span>Offer ends 30 June — don&apos;t miss out.</span>
+          <span>Offer ends 30 June - don&apos;t miss out.</span>
         </div>
 
         <div className="mt-2 flex flex-col gap-2">

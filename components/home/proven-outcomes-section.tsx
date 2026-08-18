@@ -56,7 +56,7 @@ export function ProvenOutcomesSection() {
           <div className="inline-flex items-center gap-3 rounded-full bg-primary/10 px-6 py-3">
             <CheckCircle className="h-5 w-5 text-primary" />
             <span className="font-medium text-primary">
-              Operate a compliant, defensible, audit-ready system of work—every day
+              Operate a compliant, defensible, audit-ready system of work - every day
             </span>
           </div>
         </div>

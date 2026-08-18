@@ -60,7 +60,7 @@ export function WhyChooseUsSection() {
           <div className="mt-12 rounded-xl border border-accent/30 bg-accent/5 p-8">
             <h3 className="text-xl font-bold text-foreground">A System Built for Scrutiny</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              The NCCS was finalized on <strong className="text-foreground">December 30, 2025</strong>, specifically to prepare the sector for the increased inspection powers and tripled penalties introduced in 2026. Choosing us means you are not just hiring a service—you are adopting a <strong className="text-foreground">nationally recognized standard</strong> that restores professional boundaries for educators while providing the high-level hazard controls that the new regulatory reality demands.
+              The NCCS was finalized on <strong className="text-foreground">December 30, 2025</strong>, specifically to prepare the sector for the increased inspection powers and tripled penalties introduced in 2026. Choosing us means you are not just hiring a service - you are adopting a <strong className="text-foreground">nationally recognized standard</strong> that restores professional boundaries for educators while providing the high-level hazard controls that the new regulatory reality demands.
             </p>
           </div>
         </div>

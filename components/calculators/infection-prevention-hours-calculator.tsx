@@ -126,7 +126,7 @@ export function InfectionPreventionHoursCalculator() {
     {
       id: "capacity",
       question: "What is your centre's licensed capacity?",
-      helper: "Total approved places — check your service approval.",
+      helper: "Total approved places - check your service approval.",
       component: (
         <NumberInput value={licensedCapacity} onChange={setLicensedCapacity} min={1} max={300} />
       ),
@@ -135,7 +135,7 @@ export function InfectionPreventionHoursCalculator() {
     {
       id: "nursery",
       question: "How many nursery/infant rooms do you have? (0–2 years)",
-      helper: "Highest risk classification — nappy changes, mouthing, crawling, weakest immune systems.",
+      helper: "Highest risk classification - nappy changes, mouthing, crawling, weakest immune systems.",
       component: (
         <NumberInput value={nurseryRooms} onChange={setNurseryRooms} min={0} max={10} />
       ),
@@ -144,7 +144,7 @@ export function InfectionPreventionHoursCalculator() {
     {
       id: "toddler",
       question: "How many toddler rooms? (2–3 years)",
-      helper: "High risk — still nappying, high-touch surfaces, frequent illness.",
+      helper: "High risk - still nappying, high-touch surfaces, frequent illness.",
       component: (
         <NumberInput value={toddlerRooms} onChange={setToddlerRooms} min={0} max={10} />
       ),
@@ -153,7 +153,7 @@ export function InfectionPreventionHoursCalculator() {
     {
       id: "preschool",
       question: "How many preschool rooms? (3–5 years)",
-      helper: "Moderate risk — more independent but still high-touch environments.",
+      helper: "Moderate risk - more independent but still high-touch environments.",
       component: (
         <NumberInput value={preschoolRooms} onChange={setPreschoolRooms} min={0} max={10} />
       ),
@@ -171,7 +171,7 @@ export function InfectionPreventionHoursCalculator() {
     {
       id: "nappyAreas",
       question: "How many nappy change areas?",
-      helper: "Dedicated nappy change stations — highest biological hazard zones.",
+      helper: "Dedicated nappy change stations - highest biological hazard zones.",
       component: (
         <NumberInput value={nappyChangeAreas} onChange={setNappyChangeAreas} min={0} max={10} />
       ),

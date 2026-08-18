@@ -67,7 +67,7 @@ export function SiteFooter() {
                   rel="noopener noreferrer"
                   className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors inline-flex items-center gap-1"
                 >
-                  CCS Consulting — NCCS Research
+                  CCS Consulting - NCCS Research
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
@@ -78,7 +78,7 @@ export function SiteFooter() {
                   rel="noopener noreferrer"
                   className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors inline-flex items-center gap-1"
                 >
-                  Compliance Portal — SSOW Packs &amp; Training
+                  Compliance Portal - SSOW Packs &amp; Training
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
