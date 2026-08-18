@@ -124,6 +124,10 @@ export default function CoursesPage() {
                     Australia&apos;s 2026 biohazard code. Practical, educator-facing procedures across 15 modules that
                     lift standards, reduce biohazard risk, and give every staff member evidenced competency.
                   </p>
+                  <p className="mt-4 flex items-center gap-2 text-sm font-semibold text-foreground">
+                    <Clock className="h-4 w-4 flex-shrink-0 text-accent" />
+                    Approx. 6 hours - online, self-paced.
+                  </p>
                   <div className="mt-6 flex flex-wrap gap-3">
                     {featuredHighlights.map((h) => (
                       <div
