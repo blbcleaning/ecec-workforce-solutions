@@ -202,12 +202,12 @@ export default function ServicesPage() {
                 Our Courses
               </h2>
               <p className="mt-2 text-lg font-medium text-foreground">
-                Practical training your staff can apply on the floor.
+                Certified Infection Control &amp; Biohazard Management - required under the 2026 biohazard code.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Courses built for ECEC teams - covering infection control, biological hazard response, and the safe
-                work practices your documented SSOW relies on. Delivered so training becomes an evidenced control, not
-                just an intention.
+                Certified courses built for ECEC teams - covering infection control, biological hazard response, and
+                the safe work practices your documented SSOW relies on. Delivered so training becomes an evidenced
+                control your centre can prove, not just an intention.
               </p>
               <div className="mt-8">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
