@@ -395,8 +395,12 @@ export default function CoursesPage() {
                   <ul className="mt-5 space-y-4">
                     {[
                       {
+                        title: "ECEC-specific compliance training",
+                        text: "Biohazard-safe cleaning aligned with current WHS, NQF, NQS, ACECQA and Biohazard Code requirements, not generic infection-control training.",
+                      },
+                      {
                         title: "Fast-tracked 3-hour intensive",
-                        text: "Get your whole centre trained in one high-impact session without disrupting daily operations.",
+                        text: "Train and verify your whole team in one high-impact onsite session without disrupting daily operations.",
                       },
                       {
                         title: "Flexible scheduling",
@@ -404,11 +408,11 @@ export default function CoursesPage() {
                       },
                       {
                         title: "Fully catered and resource-packed",
-                        text: "Lunch or dinner is included in your booking price, together with the practical resources your team needs.",
+                        text: "Lunch or dinner and refreshments, a comprehensive workbook, editable cleaning schedules and reference materials are included.",
                       },
                       {
                         title: "Staff consultation built in",
-                        text: "One hour is dedicated to discussing problematic practices and changes your team can make. This supports Safe Work Australia's requirement for staff involvement in creating safer workplaces.",
+                        text: "One hour explores problematic practices, cleaning barriers and practical changes. This supports Safe Work Australia's requirement for staff involvement in creating safer workplaces.",
                       },
                     ].map((item) => (
                       <li key={item.title} className="flex items-start gap-3">
@@ -419,15 +423,68 @@ export default function CoursesPage() {
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-6 border-t border-border pt-5">
+                    <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                      Practical topics covered
+                    </h3>
+                    <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                      {[
+                        "Daily, weekly and periodic cleaning routines",
+                        "Outbreak response and cross-contamination prevention",
+                        "Cleaning documentation and audit readiness",
+                        "Safe use of cleaning products and equipment",
+                        "Delegation, accountability and hygiene culture",
+                        "Time management and cleaning preparedness",
+                        "Reviewing professional cleaning contracts",
+                        "Child-led hygiene and embedding best practice",
+                      ].map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+                          <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   <div className="mt-6 rounded-lg border border-accent/30 bg-accent/10 p-4">
                     <div className="flex items-center justify-between gap-4">
-                      <p className="text-xs font-bold uppercase tracking-wide text-accent">Free bonus</p>
-                      <p className="text-sm font-bold text-accent">Value $150</p>
+                      <p className="text-xs font-bold uppercase tracking-wide text-accent">Free bonuses</p>
+                      <p className="text-sm font-bold text-accent">Combined value $520</p>
                     </div>
-                    <p className="mt-1 text-sm font-semibold text-foreground">
-                      Digital Cleaning Management Workbook included with your onsite booking.
+                    <p className="mt-2 text-sm font-semibold text-foreground">
+                      Digital Cleaning Management Workbook included with every onsite booking (value $150).
+                    </p>
+                    <p className="mt-2 text-sm font-semibold text-foreground">
+                      Book a group of 6 or more and receive 2 printed 12-month Cleaning Management Workbooks free
+                      (RRP $185 each).
                     </p>
                   </div>
+                </div>
+              </div>
+
+              <div className="mt-10 border-t border-border pt-10">
+                <div className="text-center">
+                  <p className="text-sm font-bold uppercase tracking-wide text-accent">Onsite group pricing</p>
+                  <h3 className="mt-2 text-2xl font-bold text-card-foreground">Choose your group size</h3>
+                  <p className="mt-3 text-sm text-muted-foreground">Minimum booking of 5 participants. Maximum group size: 25.</p>
+                </div>
+                <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+                  {[
+                    { staff: "Up to 10 staff", price: "$1,100" },
+                    { staff: "Up to 20 staff", price: "$1,900" },
+                    { staff: "Up to 25 staff", price: "$2,200" },
+                  ].map((option) => (
+                    <div key={option.staff} className="rounded-xl border border-border bg-background p-6 text-center">
+                      <p className="text-sm font-semibold text-card-foreground">{option.staff}</p>
+                      <p className="mt-2 text-3xl font-bold tracking-tight text-foreground">{option.price}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 flex flex-col gap-2 text-center text-sm text-muted-foreground">
+                  <p>Payment plans are available, with the cost split over 4 weeks after a deposit.</p>
+                  <p>
+                    Prices apply within Greater Sydney. Training is available Australia-wide; additional travel costs
+                    apply outside Greater Sydney.
+                  </p>
                 </div>
               </div>
             </div>
