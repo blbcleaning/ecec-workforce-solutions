@@ -1,17 +1,11 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { Button } from "@/components/ui/button"
-import { SsowCheckout } from "@/components/ssow-checkout"
-import { getSsowProducts } from "@/app/actions/stripe"
 import {
   AlertTriangle,
-  ArrowRight,
   FileCheck,
   ClipboardCheck,
   CheckCircle,
-  CheckCircle2,
   ShieldAlert,
   Star,
   TrendingDown,
@@ -19,19 +13,11 @@ import {
   Gauge,
 } from "lucide-react"
 
-// Render at request time so live Stripe products/prices are always current.
-export const dynamic = "force-dynamic"
-
 export const metadata: Metadata = {
   title: "Our Services",
   description:
     "Custom-built Safe Systems of Work (SSOW) and WHS Compliance Reviews for ECEC. Meet your WHS Regulation 39 obligations under Safe Work Australia's March 2026 biological hazards code.",
 }
-
-const reviewPackages = [
-  { name: "Health Check (1 hr + written summary)", price: "$450" },
-  { name: "Full Compliance Review (gap check + action plan)", price: "$1,350" },
-]
 
 const ssowIncludes = [
   "Nappy zones & change areas",
@@ -61,35 +47,11 @@ const nccsAudience = [
   },
 ]
 
-const nccsPayPlan = [
-  { label: "Upfront", amount: "$2,000" },
-  { label: "Weekly (12 weeks)", amount: "~$500–$667" },
-  { label: "Monitoring subscription", amount: "$100/month per centre" },
-]
-
-export default async function ServicesPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ checkout?: string }>
-}) {
-  const { checkout } = await searchParams
-  const ssowProducts = await getSsowProducts()
-
+export default function ServicesPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        {checkout === "success" ? (
-          <div className="bg-accent/10 px-4 py-3 text-center text-sm font-medium text-accent">
-            <CheckCircle2 className="mr-2 inline h-4 w-4" />
-            Payment successful — thank you. We&apos;ll be in touch shortly to begin your SSOW build.
-          </div>
-        ) : null}
-        {checkout === "cancelled" ? (
-          <div className="bg-muted px-4 py-3 text-center text-sm font-medium text-muted-foreground">
-            Checkout cancelled — your card was not charged.
-          </div>
-        ) : null}
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-primary py-20 sm:py-28">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -116,22 +78,6 @@ export default async function ServicesPage({
                 maintain a documented Safe System of Work for high-exposure tasks — including biological hazard response
                 and infection-control cleaning.
               </p>
-              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
-                  <Link href="/book">
-                    Book a Call
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 px-8"
-                >
-                  <Link href="/contact">Submit an Enquiry</Link>
-                </Button>
-              </div>
             </div>
           </div>
         </section>
@@ -178,62 +124,29 @@ export default async function ServicesPage({
                   </li>
                 ))}
               </ul>
-              <SsowCheckout products={ssowProducts} />
-              <p className="mt-4 text-sm text-muted-foreground">
-                Prefer to talk first?{" "}
-                <Link href="/contact" className="font-medium text-accent underline underline-offset-4">
-                  Submit an enquiry
-                </Link>{" "}
-                and we&apos;ll scope your build.
-              </p>
             </div>
           </div>
         </section>
 
         {/* Service 2 — WHS Compliance Review */}
         <section className="py-16 sm:py-20 bg-background">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-              <div className="rounded-xl border border-border bg-card p-6 sm:p-8 lg:order-last">
-                <div className="flex items-baseline justify-between border-b border-border pb-4">
-                  <h3 className="text-lg font-semibold text-card-foreground">Packages</h3>
-                  <span className="text-sm text-muted-foreground">ex GST</span>
-                </div>
-                <ul className="mt-4 divide-y divide-border">
-                  {reviewPackages.map((pkg) => (
-                    <li key={pkg.name} className="flex items-center justify-between gap-4 py-4">
-                      <span className="text-sm font-medium text-card-foreground">{pkg.name}</span>
-                      <span className="whitespace-nowrap text-right text-sm text-muted-foreground">
-                        From <span className="text-lg font-bold text-foreground">{pkg.price}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <Button asChild className="mt-6 w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  <Link href="/book">
-                    Book a Compliance Review
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
+                <ClipboardCheck className="h-4 w-4" />
+                Service 2
               </div>
-
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
-                  <ClipboardCheck className="h-4 w-4" />
-                  Service 2
-                </div>
-                <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                  WHS Compliance Review
-                </h2>
-                <p className="mt-2 text-lg font-medium text-foreground">
-                  Know your gaps before a regulator finds them.
-                </p>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  A structured review of your current SSOW, training records, and documentation against the March 2026
-                  biohazard standard. You leave with a clear gap list, priority fixes, and implementation steps — not
-                  just a report.
-                </p>
-              </div>
+              <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                WHS Compliance Review
+              </h2>
+              <p className="mt-2 text-lg font-medium text-foreground">
+                Know your gaps before a regulator finds them.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                A structured review of your current SSOW, training records, and documentation against the March 2026
+                biohazard standard. You leave with a clear gap list, priority fixes, and implementation steps — not
+                just a report.
+              </p>
             </div>
           </div>
         </section>
@@ -331,35 +244,7 @@ export default async function ServicesPage({
               <h3 className="text-center text-sm font-semibold uppercase tracking-wide text-primary-foreground/60">
                 Investment
               </h3>
-              <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-start">
-                {/* Payment plan */}
-                <div className="rounded-xl border border-primary-foreground/10 bg-card p-6 sm:p-8">
-                  <div className="flex items-baseline justify-between border-b border-border pb-4">
-                    <h4 className="text-base font-semibold text-card-foreground">Program fee</h4>
-                    <span className="text-right">
-                      <span className="text-lg font-bold text-foreground">$8,000–$10,000</span>{" "}
-                      <span className="text-sm text-muted-foreground">ex GST</span>
-                    </span>
-                  </div>
-                  <p className="mt-4 text-sm font-medium text-foreground">
-                    Payment plan available — designed for operational cashflow:
-                  </p>
-                  <ul className="mt-4 divide-y divide-border">
-                    {nccsPayPlan.map((row) => (
-                      <li key={row.label} className="flex items-center justify-between gap-4 py-3">
-                        <span className="text-sm text-card-foreground">{row.label}</span>
-                        <span className="whitespace-nowrap text-sm font-semibold text-foreground">{row.amount}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-4 rounded-lg bg-muted p-4 text-sm leading-relaxed text-muted-foreground">
-                    Total weekly cost during implementation:{" "}
-                    <strong className="text-foreground">
-                      less than most centres spend on agency fill-in cover for a single shift.
-                    </strong>
-                  </p>
-                </div>
-
+              <div className="mx-auto mt-6 max-w-2xl">
                 {/* R&D Tax Incentive */}
                 <div className="rounded-xl border border-accent/30 bg-accent/10 p-6 sm:p-8">
                   <div className="flex items-center gap-3">
@@ -391,23 +276,6 @@ export default async function ServicesPage({
                 </div>
               </div>
             </div>
-
-            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
-                <Link href="/book">
-                  Book a Call
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 px-8"
-              >
-                <Link href="/contact">Submit an Enquiry</Link>
-              </Button>
-            </div>
           </div>
         </section>
 
@@ -425,17 +293,6 @@ export default async function ServicesPage({
             <p className="mt-4 text-base text-muted-foreground">
               The March 2026 update triggered your r39 review obligation. We make it straightforward.
             </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
-                <Link href="/book">
-                  Book a Call
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="px-8">
-                <Link href="/contact">Submit an Enquiry</Link>
-              </Button>
-            </div>
           </div>
         </section>
       </main>
