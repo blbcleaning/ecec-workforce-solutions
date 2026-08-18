@@ -281,6 +281,10 @@ export default function CoursesPage() {
                 not just a score. Every completed module builds the verified competency logs you need for WHS and
                 ACECQA audits.
               </p>
+              <p className="mt-5 inline-flex items-center gap-2 rounded-lg border border-accent/30 bg-accent/10 px-4 py-3 text-sm font-semibold text-foreground">
+                <BookOpen className="h-4 w-4 flex-shrink-0 text-accent" />
+                Each module includes a multiple-choice knowledge quiz and a written assignment.
+              </p>
             </div>
             <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
               <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
