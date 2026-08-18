@@ -560,6 +560,29 @@ export default function CoursesPage() {
               ))}
             </div>
 
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+              {[
+                {
+                  title: "Monthly compliance briefing",
+                  text: "A concise update on regulatory changes, new codes of practice and ACECQA guidance relevant to your centre.",
+                },
+                {
+                  title: "Priority email support",
+                  text: "Direct access to Lindsay for compliance questions, with responses within one business day.",
+                },
+                {
+                  title: "Staff induction WHS module",
+                  text: "A standalone onboarding module so every new employee starts with a documented WHS foundation.",
+                },
+              ].map((extra) => (
+                <div key={extra.title} className="rounded-xl border border-border bg-card p-6">
+                  <CheckCircle className="h-5 w-5 text-accent" />
+                  <h3 className="mt-4 font-semibold text-card-foreground">{extra.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{extra.text}</p>
+                </div>
+              ))}
+            </div>
+
             <div className="mt-10 grid grid-cols-1 gap-6 rounded-2xl border border-accent/30 bg-accent/10 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
                 <p className="text-sm font-bold uppercase tracking-wide text-accent">Unlimited training seats</p>
@@ -570,21 +593,54 @@ export default function CoursesPage() {
                   Your organisation receives a secure online workspace, a manager self-service dashboard for enrolling
                   staff and tracking progress, and ongoing access to your training records and compliance library.
                 </p>
+                <ul className="mt-5 flex flex-col gap-3 text-sm text-foreground">
+                  {[
+                    "Lifetime Infection Control & Biohazard Management course licence from $1,200",
+                    "One licence with unlimited certified training seats and competency assessment",
+                    "Add new centres to the licence at no additional cost",
+                    "Add and remove employees as your workforce changes",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
               <div className="rounded-xl border border-border bg-card p-6">
-                <p className="text-xs font-bold uppercase tracking-wide text-accent">Price-lock guarantee</p>
-                <p className="mt-2 text-xl font-bold text-card-foreground">Your rate will not increase or change.</p>
+                <p className="text-xs font-bold uppercase tracking-wide text-accent">Ongoing compliance management</p>
+                <p className="mt-2 text-2xl font-bold text-card-foreground">$50 per centre, per week</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  As the platform develops, entry pricing for new centres will rise. Existing centres keep the price
-                  they joined at, without regular increases to access and manage their training and compliance system.
+                  Includes the secure workspace, real-time manager dashboard, annual refresher certification, updated
+                  compliance materials, documentation and dedicated account support.
                 </p>
+                <div className="mt-5 border-t border-border pt-5">
+                  <p className="text-xs font-bold uppercase tracking-wide text-accent">Price-lock guarantee</p>
+                  <p className="mt-2 text-lg font-bold text-card-foreground">Your founding rate stays locked.</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    Future entry prices may rise as the platform expands, but existing centres retain their agreed rate.
+                  </p>
+                </div>
                 <Button asChild size="lg" className="mt-6 w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  <Link href="/contact">
-                    Enquire About the Compliance Bundle
+                  <Link href="https://compliance.ececworkforcesolutions.au/whs-bundle">
+                    View Full Bundle Details
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
+            </div>
+
+            <div className="mt-6 grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
+              {[
+                ["30-day guarantee", "Full refund if you are not satisfied within 30 days."],
+                ["Free walkthrough", "A no-obligation 30-minute call focused on your centre's gaps."],
+                ["Flexible commitment", "Six-month initial term, then month-to-month with cancellation available."],
+              ].map(([title, text]) => (
+                <div key={title} className="rounded-xl border border-border bg-card p-5">
+                  <p className="font-semibold text-card-foreground">{title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
