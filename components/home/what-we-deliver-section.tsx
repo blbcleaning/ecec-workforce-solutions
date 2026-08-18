@@ -13,8 +13,8 @@ const deliverables = [
   },
   {
     icon: GraduationCap,
-    title: "Workforce training and certification",
-    description: "Accredited programs for all roles",
+    title: "Certified infection control & biohazard management",
+    description: "Certification required under the 2026 biohazard code",
   },
   {
     icon: Activity,
