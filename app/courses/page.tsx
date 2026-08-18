@@ -114,7 +114,8 @@ export default function CoursesPage() {
             <div className="rounded-2xl border border-border bg-card p-6 sm:p-10">
               <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
                 <div>
-                  <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
+                  <p className="text-sm font-bold uppercase tracking-wide text-accent">Option 1 - Online, self-paced</p>
+                  <span className="mt-3 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
                     <ShieldCheck className="h-3.5 w-3.5" />
                     Required under the 2026 Biohazard Code
                   </span>
@@ -176,12 +177,9 @@ export default function CoursesPage() {
         <section className="py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
-                <BookOpen className="h-3.5 w-3.5" />
-                Online, self-paced
-              </span>
-              <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Course modules - what you will learn
+              <p className="text-sm font-bold uppercase tracking-wide text-accent">Option 1 - Course modules</p>
+              <h2 className="mt-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                What you will learn
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 15 self-paced modules covering infection control and biohazard management from foundations through to
@@ -206,8 +204,73 @@ export default function CoursesPage() {
           </div>
         </section>
 
-        {/* Who it's for */}
+        {/* Option 2 - Group onsite training */}
         <section className="py-16 sm:py-20 bg-background">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl border border-border bg-card p-6 sm:p-10">
+              <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-wide text-accent">Option 2 - Onsite &amp; group</p>
+                  <span className="mt-3 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
+                    <Users className="h-3.5 w-3.5" />
+                    Delivered at your centre
+                  </span>
+                  <h2 className="mt-4 text-2xl font-bold tracking-tight text-card-foreground sm:text-3xl">
+                    Group Onsite Infection Control &amp; Biohazard Management
+                  </h2>
+                  <p className="mt-4 leading-relaxed text-muted-foreground">
+                    A 3-hour instructor-led session delivered onsite for your whole team - scheduled after hours on a
+                    week night or weekend so it fits around care hours and doesn&apos;t disrupt your day.
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <div className="flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2">
+                      <Clock className="h-4 w-4 text-accent" />
+                      <span className="text-sm font-medium text-foreground">3 hours</span>
+                    </div>
+                    <div className="flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2">
+                      <Users className="h-4 w-4 text-accent" />
+                      <span className="text-sm font-medium text-foreground">Whole team, onsite</span>
+                    </div>
+                    <div className="flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2">
+                      <BookOpen className="h-4 w-4 text-accent" />
+                      <span className="text-sm font-medium text-foreground">After hours - week night or weekend</span>
+                    </div>
+                  </div>
+                  <div className="mt-8">
+                    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
+                      <Link href="/contact">
+                        Enquire About Onsite Training
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-border bg-muted p-6 sm:p-8">
+                  <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                    Why choose onsite group training
+                  </h3>
+                  <ul className="mt-5 space-y-3">
+                    {[
+                      "Train your entire team in one session",
+                      "Delivered in your own rooms and real spaces",
+                      "Scheduled after hours to protect care time",
+                      "Consistent practice and evidence across the team",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                        <span className="text-sm text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Who it's for */}
+        <section className="py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Who our courses are for</h2>
