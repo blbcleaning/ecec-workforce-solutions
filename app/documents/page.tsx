@@ -115,18 +115,26 @@ const ssowCategories = [
   },
 ]
 
-const formats = [
+const ssowFormats = [
   {
     icon: Monitor,
     title: "Digital only",
     description:
       "Delivered as ready-to-use digital files your team can access, share and print on demand - ideal for centres managing documentation electronically.",
+    tiers: [
+      { label: "Pack of 7", price: "$399" },
+      { label: "Full set of 14", price: "$699" },
+    ],
   },
   {
     icon: Printer,
     title: "Professionally printed & bound",
     description:
       "Have your documents professionally printed and bound as durable, floor-ready reference books - built to survive daily use in real cleaning environments.",
+    tiers: [
+      { label: "Pack of 7", price: "$580" },
+      { label: "Full set of 14", price: "$1,100" },
+    ],
   },
 ]
 
@@ -241,22 +249,28 @@ export default function DocumentsPage() {
         <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Choose how you receive them
-              </h2>
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">SSOW Packs &amp; Pricing</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 Available in digital-only format or professionally printed and bound. Either way, we customise every
                 document to reflect your centre.
               </p>
             </div>
             <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-              {formats.map((format) => (
-                <div key={format.title} className="rounded-xl border border-border bg-card p-6 sm:p-8">
+              {ssowFormats.map((format) => (
+                <div key={format.title} className="flex flex-col rounded-xl border border-border bg-card p-6 sm:p-8">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
                     <format.icon className="h-6 w-6 text-accent" />
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-card-foreground">{format.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{format.description}</p>
+                  <ul className="mt-6 divide-y divide-border border-t border-border">
+                    {format.tiers.map((tier) => (
+                      <li key={tier.label} className="flex items-center justify-between gap-4 py-3">
+                        <span className="text-sm font-medium text-card-foreground">{tier.label}</span>
+                        <span className="text-lg font-bold text-foreground">{tier.price}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -297,7 +311,7 @@ export default function DocumentsPage() {
             <p className="mt-6 text-sm font-medium text-foreground">Setup guide and print plan included.</p>
 
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div className="rounded-xl border border-border bg-card p-6">
+              <div className="flex flex-col rounded-xl border border-border bg-card p-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
                   <Monitor className="h-6 w-6 text-accent" />
                 </div>
@@ -305,8 +319,12 @@ export default function DocumentsPage() {
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   Delivered as a ready-to-use digital workbook you can print on demand, room by room.
                 </p>
+                <div className="mt-6 flex items-baseline justify-between border-t border-border pt-4">
+                  <span className="text-sm font-medium text-card-foreground">Digital version</span>
+                  <span className="text-lg font-bold text-foreground">$150</span>
+                </div>
               </div>
-              <div className="rounded-xl border border-border bg-card p-6">
+              <div className="flex flex-col rounded-xl border border-border bg-card p-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
                   <Printer className="h-6 w-6 text-accent" />
                 </div>
@@ -315,6 +333,10 @@ export default function DocumentsPage() {
                   A pack of 4 ready-to-use, professionally printed and bound workbooks - built to survive daily use in
                   real cleaning environments.
                 </p>
+                <div className="mt-6 flex items-baseline justify-between border-t border-border pt-4">
+                  <span className="text-sm font-medium text-card-foreground">Printed 4-pack</span>
+                  <span className="text-lg font-bold text-foreground">$900</span>
+                </div>
               </div>
             </div>
             <p className="mt-6 flex items-center gap-2 text-sm font-medium text-accent">
