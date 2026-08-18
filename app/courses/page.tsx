@@ -360,8 +360,9 @@ export default function CoursesPage() {
                     Group Onsite Infection Control &amp; Biohazard Management
                   </h2>
                   <p className="mt-4 leading-relaxed text-muted-foreground">
-                    A 3-hour instructor-led session delivered onsite for your whole team - scheduled after hours on a
-                    week night or weekend so it fits around care hours and doesn&apos;t disrupt your day.
+                    Ideal for bringing your entire team up to speed simultaneously and building a unified compliance
+                    culture. This 3-hour instructor-led intensive is delivered onsite after hours on a week night or
+                    weekend, so your centre can complete training without disrupting daily operations.
                   </p>
                   <div className="mt-6 flex flex-wrap gap-3">
                     <div className="flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2">
@@ -389,21 +390,41 @@ export default function CoursesPage() {
 
                 <div className="rounded-xl border border-border bg-muted p-6 sm:p-8">
                   <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-                    Why choose onsite group training
+                    What your booking includes
                   </h3>
-                  <ul className="mt-5 space-y-3">
+                  <ul className="mt-5 space-y-4">
                     {[
-                      "Train your entire team in one session",
-                      "Delivered in your own rooms and real spaces",
-                      "Scheduled after hours to protect care time",
-                      "Consistent practice and evidence across the team",
+                      {
+                        title: "Fast-tracked 3-hour intensive",
+                        text: "Get your whole centre trained in one high-impact session without disrupting daily operations.",
+                      },
+                      {
+                        title: "Flexible scheduling",
+                        text: "After-hours and weekend sessions are available to suit staff meetings or professional development days.",
+                      },
+                      {
+                        title: "Fully catered and resource-packed",
+                        text: "Lunch or dinner is included in your booking price, together with the practical resources your team needs.",
+                      },
+                      {
+                        title: "Staff consultation built in",
+                        text: "One hour is dedicated to discussing problematic practices and changes your team can make. This supports Safe Work Australia's requirement for staff involvement in creating safer workplaces.",
+                      },
                     ].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
+                      <li key={item.title} className="flex items-start gap-3">
                         <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
-                        <span className="text-sm text-foreground">{item}</span>
+                        <span className="text-sm leading-relaxed text-foreground">
+                          <strong>{item.title}:</strong> {item.text}
+                        </span>
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-6 rounded-lg border border-accent/30 bg-accent/10 p-4">
+                    <p className="text-xs font-bold uppercase tracking-wide text-accent">Free bonus</p>
+                    <p className="mt-1 text-sm font-semibold text-foreground">
+                      Digital Cleaning Management Workbook included with your onsite booking.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
