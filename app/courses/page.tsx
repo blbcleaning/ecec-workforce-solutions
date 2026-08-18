@@ -420,7 +420,10 @@ export default function CoursesPage() {
                     ))}
                   </ul>
                   <div className="mt-6 rounded-lg border border-accent/30 bg-accent/10 p-4">
-                    <p className="text-xs font-bold uppercase tracking-wide text-accent">Free bonus</p>
+                    <div className="flex items-center justify-between gap-4">
+                      <p className="text-xs font-bold uppercase tracking-wide text-accent">Free bonus</p>
+                      <p className="text-sm font-bold text-accent">Value $150</p>
+                    </div>
                     <p className="mt-1 text-sm font-semibold text-foreground">
                       Digital Cleaning Management Workbook included with your onsite booking.
                     </p>
