@@ -46,15 +46,12 @@ export function CoursesSection() {
             ))}
           </ul>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
+          <div className="mt-8 flex justify-center">
+            <Button asChild size="lg" className="bg-accent px-8 text-accent-foreground hover:bg-accent/90">
               <Link href="/courses">
-                Explore Our Courses
+                View Training Options
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="px-8">
-              <Link href="/training/infection-control">View Course &amp; Enrol</Link>
             </Button>
           </div>
         </div>

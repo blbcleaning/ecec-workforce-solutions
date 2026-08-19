@@ -156,7 +156,7 @@ export default function CoursesPage() {
                   </div>
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
-                      <Link href="/training/infection-control">
+                      <Link href="/contact">
                         View Course &amp; Enrol
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -705,7 +705,7 @@ export default function CoursesPage() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
-                <Link href="/training/infection-control">
+                <Link href="/contact">
                   View Course &amp; Enrol
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
