@@ -328,8 +328,8 @@ export default function CoursesPage() {
               {[
                 { staff: "Up to 5 staff", price: "$400" },
                 { staff: "Up to 10 staff", price: "$700" },
-                { staff: "Up to 20 staff", price: "$1,150" },
-                { staff: "Up to 30 staff", price: "$1,600" },
+                { staff: "Up to 20 staff", price: "$1,500" },
+                { staff: "Up to 30 staff", price: "$1,900" },
               ].map((option) => (
                 <div key={option.staff} className="rounded-xl border border-border bg-card p-6 text-center shadow-sm sm:p-8">
                   <p className="text-sm font-semibold uppercase tracking-wide text-accent">Online team pack</p>
