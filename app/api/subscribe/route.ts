@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     // Send notification to admin
     await resend.emails.send({
       from: "ECEC Workforce Solutions <noreply@ececworkforcesolutions.au>",
-      to: "lindzzz41@gmail.com",
+      to: "lindsay@ececworkforcesolutions.au",
       subject: "New Blog Subscriber",
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
