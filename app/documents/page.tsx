@@ -338,7 +338,7 @@ export default function DocumentsPage() {
                 <h3 className="mt-4 text-lg font-semibold text-card-foreground">4-pack, printed &amp; bound</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   A pack of 4 ready-to-use, professionally printed and bound workbooks - built to survive daily use in
-                  real cleaning environments.
+                  real cleaning environments. The cover page can be customised to include your centre&apos;s logo.
                 </p>
                 <div className="mt-6 flex items-baseline justify-between border-t border-border pt-4">
                   <span className="text-sm font-medium text-card-foreground">Printed 4-pack</span>
