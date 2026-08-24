@@ -65,7 +65,10 @@ const ssowIncludes = [
   },
   {
     category: "Standalone",
-    items: ["Biohazard Incident Response SSOW (ECEC)"],
+    items: [
+      "Biohazard Incident Response SSOW (ECEC)",
+      "Cleaning Management Workbook: verification and reporting logs",
+    ],
   },
 ]
 
