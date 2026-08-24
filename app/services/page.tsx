@@ -285,23 +285,52 @@ export default async function ServicesPage({
               </ul>
 
               <div className="mt-10">
-                <div className="flex items-baseline justify-between gap-4">
-                  <h3 className="text-xl font-bold text-foreground">Monthly pricing</h3>
-                  <span className="text-sm text-muted-foreground">Subscription-based</span>
+                <div className="flex flex-wrap items-baseline justify-between gap-4">
+                  <h3 className="text-xl font-bold text-foreground">Partnership pricing</h3>
+                  <span className="rounded-full bg-accent/10 px-3 py-1 text-sm font-semibold text-accent">
+                    Pay annually and save 20%
+                  </span>
                 </div>
                 <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                   {[
-                    { team: "Up to 25 staff", price: "$300", suffix: "per month" },
-                    { team: "Up to 50 staff", price: "$500", suffix: "per month" },
-                    { team: "Up to 100 staff", price: "$700", suffix: "per month" },
-                    { team: "Over 100 staff", price: "Contact us", suffix: "Enterprise rates" },
+                    {
+                      team: "Up to 25 staff",
+                      monthly: "$300/month",
+                      annual: "$2,880/year",
+                      saving: "Save $720",
+                    },
+                    {
+                      team: "Up to 50 staff",
+                      monthly: "$500/month",
+                      annual: "$4,800/year",
+                      saving: "Save $1,200",
+                    },
+                    {
+                      team: "Up to 100 staff",
+                      monthly: "$700/month",
+                      annual: "$6,720/year",
+                      saving: "Save $1,680",
+                    },
+                    {
+                      team: "Over 100 staff",
+                      monthly: "Contact us",
+                      annual: "Enterprise rates",
+                      saving: "Tailored pricing",
+                    },
                   ].map((tier) => (
-                    <div key={tier.team} className="rounded-xl border border-border bg-card p-5">
+                    <div key={tier.team} className="flex flex-col rounded-xl border border-border bg-card p-5">
                       <p className="text-sm font-medium text-muted-foreground">{tier.team}</p>
-                      <p className="mt-2 text-2xl font-bold text-card-foreground">{tier.price}</p>
-                      <p className="mt-1 text-sm text-muted-foreground">{tier.suffix}</p>
+                      <p className="mt-2 text-2xl font-bold text-card-foreground">{tier.monthly}</p>
+                      <div className="mt-4 border-t border-border pt-4">
+                        <p className="font-semibold text-card-foreground">{tier.annual}</p>
+                        <p className="mt-1 text-sm font-medium text-accent">{tier.saving}</p>
+                      </div>
                     </div>
                   ))}
+                </div>
+                <div className="mt-5 flex flex-col gap-2 rounded-xl border border-accent/30 bg-accent/10 p-5 text-sm text-foreground sm:flex-row sm:items-center sm:justify-between">
+                  <p className="font-semibold">30-day money-back guarantee</p>
+                  <p>Initial 12-month contract, then no lock-in.</p>
                 </div>
               </div>
 
