@@ -178,14 +178,14 @@ export default async function ServicesPage({
                 <FileCheck className="h-4 w-4" />
                 Service 1
               </div>
-              <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Documentation Support
+              <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl text-balance">
+                The Three WHS Documents Every Childcare Centre Must Have
               </h2>
-              <p className="mt-2 text-lg font-medium text-foreground">Centre-specific. Task-level. Defensible.</p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Custom-built SSOW and cleaning management workbooks are customised to your centre - built around your
-                real spaces and real hazards. Written so staff can follow it under pressure and so you can demonstrate
-                r39 compliance when it matters.
+                Beyond your QIP and childcare policies, Safe Systems of Work (SSOW) are a legal WHS requirement. They
+                show regulators that your centre has identified potential hazards, assessed the risk of harm, and
+                predetermined the procedures for completing these tasks safely. These documents provide evidence that
+                risks are being managed in advance in accordance with national safety and WHS law.
               </p>
               <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {ssowIncludes.map((item) => (
