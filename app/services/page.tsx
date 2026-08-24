@@ -269,9 +269,10 @@ export default async function ServicesPage({
               <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {[
                   "Unlimited staff access to certified online Infection Control & Biohazard Management training",
-                  "A dedicated online compliance and training management portal",
+                  "Unlimited access to annual refresher training",
+                  "Manage your WHS training and compliance documentation from one dedicated online portal",
                   "Self-service access for managers to enrol staff and monitor training progress",
-                  "Access to the complete compliance documentation library",
+                  "Access to the complete compliance documentation library, updated regularly in line with legislative changes",
                   "A dedicated support manager to assist with implementation and customisation",
                 ].map((benefit) => (
                   <li key={benefit} className="flex items-start gap-3 rounded-xl border border-border bg-card p-5">
