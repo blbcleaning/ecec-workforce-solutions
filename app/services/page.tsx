@@ -248,8 +248,50 @@ export default async function ServicesPage({
           </div>
         </section>
 
-        {/* Service 2 - WHS Compliance Review */}
+        {/* Service 2 - Compliance Partnership */}
         <section className="py-16 sm:py-20 bg-background">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl">
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
+                <ShieldAlert className="h-4 w-4" />
+                Service 2
+              </div>
+              <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Compliance Partnership
+              </h2>
+              <p className="mt-2 text-lg font-medium text-foreground">
+                Subscription-based compliance and training support for your centre.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Give your team ongoing access to certified training, compliance documentation and dedicated
+                implementation support through one managed partnership.
+              </p>
+              <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {[
+                  "Unlimited staff access to certified online Infection Control & Biohazard Management training",
+                  "A dedicated online compliance and training management portal",
+                  "Self-service access for managers to enrol staff and monitor training progress",
+                  "Access to the complete compliance documentation library",
+                  "A dedicated support manager to assist with implementation and customisation",
+                ].map((benefit) => (
+                  <li key={benefit} className="flex items-start gap-3 rounded-xl border border-border bg-card p-5">
+                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                    <span className="text-sm leading-relaxed text-card-foreground">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button asChild className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
+                <Link href="/contact">
+                  Enquire about a Compliance Partnership
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Service 3 - WHS Compliance Review */}
+        <section className="py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
               <div className="rounded-xl border border-border bg-card p-6 sm:p-8 lg:order-last">
@@ -278,7 +320,7 @@ export default async function ServicesPage({
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
                   <ClipboardCheck className="h-4 w-4" />
-                  Service 2
+                  Service 3
                 </div>
                 <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
                   WHS Compliance Review
