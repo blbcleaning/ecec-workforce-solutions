@@ -187,6 +187,10 @@ export default async function ServicesPage({
                 predetermined the procedures for completing these tasks safely. These documents provide evidence that
                 risks are being managed in advance in accordance with national safety and WHS law.
               </p>
+              <p className="mt-4 font-medium leading-relaxed text-foreground">
+                We have custom-built 14 Safe Systems of Work (SSOW), plus the verification documents required under WHS
+                law.
+              </p>
               <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {ssowIncludes.map((item) => (
                   <li key={item} className="flex items-start gap-3">
