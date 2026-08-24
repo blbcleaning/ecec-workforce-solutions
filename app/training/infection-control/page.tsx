@@ -168,10 +168,10 @@ export default async function InfectionControlCoursePage({
                 Choose Your Option
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Three ways to complete your Infection Control &amp; Biohazard Management training.
+                Four ways to complete your Infection Control &amp; Biohazard Management training.
               </p>
             </div>
-            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+            <div className="mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
               {/* Option 1 */}
               <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
                 <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 1</span>
@@ -218,6 +218,42 @@ export default async function InfectionControlCoursePage({
               {/* Option 3 */}
               <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
                 <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 3</span>
+                <h3 className="mt-2 text-xl font-bold text-card-foreground">SSOW Building Workshop</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">
+                  Build the documents that support daily practice while your team completes certified, onsite
+                  Infection Control &amp; Biohazard Management training.
+                </p>
+                <div className="mt-5 flex-1 rounded-lg border border-accent/30 bg-accent/10 p-5">
+                  <ul className="flex flex-col gap-2.5">
+                    {[
+                      "4-hour onsite, practice-based workshop",
+                      "SSOW, infection control and implementation training",
+                      "Templates valued at $600 included",
+                      "Meets WHS team consultation requirements",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                        <span className="text-sm font-medium text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 border-t border-accent/20 pt-3 text-sm font-semibold text-foreground">
+                    $1,500 per centre, for up to 20 staff
+                  </p>
+                </div>
+                <div className="mt-6">
+                  <Button asChild size="lg" className="bg-accent px-8 text-accent-foreground hover:bg-accent/90">
+                    <Link href="/contact">
+                      Book the workshop
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Option 4 */}
+              <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
+                <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 4</span>
                 <h3 className="mt-2 text-xl font-bold text-card-foreground">Training &amp; Compliance Bundle</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   Combine this certified training with a complete WHS compliance package for your service.
