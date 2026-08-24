@@ -3,9 +3,9 @@ import { CheckCircle } from "lucide-react"
 const reasons = [
   "Australia's first published, evidence-based infection prevention governance framework for ECEC",
   "Supported by five DOI-registered research papers",
-  "Featured in The Sector — Australia's leading ECEC publication",
+  "Featured in The Sector - Australia's leading ECEC publication",
   "Built by a practitioner with lived experience inside ECEC services",
-  "Committed to solutions that don't just ensure compliance — they reduce educator workloads, improve working conditions, and support educator retention through role clarity and professional respect",
+  "Committed to solutions that don't just ensure compliance - they reduce educator workloads, improve working conditions, and support educator retention through role clarity and professional respect",
 ]
 
 export function WhyUs() {

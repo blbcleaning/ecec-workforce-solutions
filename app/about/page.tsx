@@ -75,13 +75,13 @@ export default function AboutPage() {
                 </div>
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p className="text-xl leading-relaxed">
-                    ECEC Workforce Solutions was founded by Lindsay Smith — a practitioner who started working inside ECEC services and identified a structural gap: no evidence-based infection prevention standard existed for childcare in Australia.
+                    ECEC Workforce Solutions was founded by Lindsay Smith - a practitioner who started working inside ECEC services and identified a structural gap: no evidence-based infection prevention standard existed for childcare in Australia.
                   </p>
                 <p className="leading-relaxed">
                     The National Childcare Cleaning Standard (NCCS) was built from lived experience, operational insight, and a commitment to solving a real problem the sector had been missing. It is Australia&apos;s first published, governance-aligned infection prevention framework designed specifically for early childhood education and care.
                   </p>
                   <p className="leading-relaxed">
-                    NCCS is supported by five DOI-registered research papers and has been featured in The Sector, Australia&apos;s leading ECEC publication. The framework is currently in early commercial rollout — we are working with centres and cleaning companies to deliver NCCS certification, compliance tools, and implementation support.
+                    NCCS is supported by five DOI-registered research papers and has been featured in The Sector, Australia&apos;s leading ECEC publication. The framework is currently in early commercial rollout - we are working with centres and cleaning companies to deliver NCCS certification, compliance tools, and implementation support.
                   </p>
                 <p className="leading-relaxed">
                     We are based in Western Sydney, NSW.
@@ -138,7 +138,7 @@ export default function AboutPage() {
                   <div className="flex items-start gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
                     <p className="text-muted-foreground">
-                      <strong className="text-foreground">Practical solutions:</strong> We deliver real compliance tools that work in real centres — not academic frameworks that gather dust.
+                      <strong className="text-foreground">Practical solutions:</strong> We deliver real compliance tools that work in real centres - not academic frameworks that gather dust.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -154,7 +154,7 @@ export default function AboutPage() {
                   &quot;Educators Educate. Cleaners Clean.&quot;
                 </p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  This tagline captures our core belief: infection prevention in childcare should be performed by trained specialists — not educators who are already stretched thin with their primary responsibilities.
+                  This tagline captures our core belief: infection prevention in childcare should be performed by trained specialists - not educators who are already stretched thin with their primary responsibilities.
                 </p>
               </div>
             </div>

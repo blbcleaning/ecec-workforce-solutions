@@ -27,7 +27,7 @@ const newRequirements = [
   {
     icon: GraduationCap,
     title: "Infection-control and biohazard certification",
-    description: "Centres increasingly need to demonstrate that their cleaning staff are competent in infection-control procedures specific to childcare environments. General commercial cleaning credentials may not be sufficient. NCCS certification provides a structured, evidence-based pathway to demonstrate this competence — giving your company a clear competitive advantage when servicing ECEC clients.",
+    description: "Centres increasingly need to demonstrate that their cleaning staff are competent in infection-control procedures specific to childcare environments. General commercial cleaning credentials may not be sufficient. NCCS certification provides a structured, evidence-based pathway to demonstrate this competence - giving your company a clear competitive advantage when servicing ECEC clients.",
   },
   {
     icon: UserCheck,
@@ -37,7 +37,7 @@ const newRequirements = [
   {
     icon: Search,
     title: "National Register clearance",
-    description: "All staff — including after-hours cleaners — must be cleared against the National Register. There is no exemption for staff who work outside operating hours.",
+    description: "All staff - including after-hours cleaners - must be cleared against the National Register. There is no exemption for staff who work outside operating hours.",
   },
   {
     icon: FileWarning,
@@ -71,7 +71,7 @@ const nccsOfferings = [
 
 const commercialBenefits = [
   "8,500+ approved ECEC services in Australia need compliant cleaning providers",
-  "No prior infection prevention standard existed — NCCS fills the gap",
+  "No prior infection prevention standard existed - NCCS fills the gap",
   "Daytime infection prevention contracts are a new revenue stream",
   "First-mover advantage: centres are choosing providers based on NCCS compliance now",
   "Differentiate your business from competitors who lack certification",
@@ -110,7 +110,7 @@ export default function ForCleaningCompaniesPage() {
                 This is how cleaning companies move from commodity services to certified, compliance-aligned providers in the childcare sector.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-primary-foreground/70">
-                New regulatory requirements mean every person performing cleaning in ECEC must have proof of certification in infection-control cleaning. NCCS goes one better — it offers industry-specific infection-control training that includes biological hazard workplace management, providing a structured pathway to demonstrate competence and meet your clients&apos; compliance expectations.
+                New regulatory requirements mean every person performing cleaning in ECEC must have proof of certification in infection-control cleaning. NCCS goes one better - it offers industry-specific infection-control training that includes biological hazard workplace management, providing a structured pathway to demonstrate competence and meet your clients&apos; compliance expectations.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
@@ -168,10 +168,10 @@ export default function ForCleaningCompaniesPage() {
                 A New Market Standard: The End of the &quot;Race to the Bottom&quot;
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Historically, childcare has been one of the cleaning industry&apos;s most challenging sectors—defined by razor-thin margins and a &quot;lowest price&quot; mentality. <strong className="text-foreground">The March 2026 SWA high-risk biohazard profiling has fundamentally ended that era.</strong>
+                Historically, childcare has been one of the cleaning industry&apos;s most challenging sectors - defined by razor-thin margins and a &quot;lowest price&quot; mentality. <strong className="text-foreground">The March 2026 SWA high-risk biohazard profiling has fundamentally ended that era.</strong>
               </p>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                In this new regulatory environment, a childcare centre cutting cleaning hours or hiring uncertified labor is the legal equivalent of a <strong className="text-foreground">builder expecting workers to operate at heights without a harness.</strong> It is no longer just &quot;budgeting&quot;—it is a catastrophic breach of safety standards.
+                In this new regulatory environment, a childcare centre cutting cleaning hours or hiring uncertified labor is the legal equivalent of a <strong className="text-foreground">builder expecting workers to operate at heights without a harness.</strong> It is no longer just &quot;budgeting&quot; - it is a catastrophic breach of safety standards.
               </p>
 
               <div className="mt-10 rounded-xl border border-accent/30 bg-card p-8">
@@ -180,7 +180,7 @@ export default function ForCleaningCompaniesPage() {
                   The NCCS gives cleaning companies the leverage to reset the market and move from a disposable expense to a <strong className="text-foreground">statutory necessity.</strong>
                 </p>
                 <p className="mt-4 text-foreground font-semibold leading-relaxed">
-                  Childcare centres implementing the CCS/NCCS model require certified cleaning providers—this certification positions your business to meet that demand.
+                  Childcare centres implementing the CCS/NCCS model require certified cleaning providers - this certification positions your business to meet that demand.
                 </p>
                 <ul className="mt-6 space-y-4">
                   <li className="flex items-start gap-3">
@@ -233,7 +233,7 @@ export default function ForCleaningCompaniesPage() {
                   </ul>
                 </div>
                 <p className="mt-6 text-muted-foreground">
-                  We don&apos;t provide general cleaning training—we certify your workforce to operate in compliant childcare environments. This positions your business to move from low-cost cleaning to a certified, compliance-aligned service that centres now require.
+                  We don&apos;t provide general cleaning training - we certify your workforce to operate in compliant childcare environments. This positions your business to move from low-cost cleaning to a certified, compliance-aligned service that centres now require.
                 </p>
               </div>
 
@@ -329,10 +329,10 @@ export default function ForCleaningCompaniesPage() {
                 Why This Matters
               </h2>
               <p className="mt-6 text-lg text-muted-foreground">
-                Cleaning in childcare is no longer general cleaning—it is a regulated, compliance-driven function.
+                Cleaning in childcare is no longer general cleaning - it is a regulated, compliance-driven function.
               </p>
               <p className="mt-4 text-lg font-semibold text-foreground">
-                Certification is becoming the requirement—not the advantage.
+                Certification is becoming the requirement - not the advantage.
               </p>
             </div>
           </div>
@@ -373,7 +373,7 @@ export default function ForCleaningCompaniesPage() {
             <div className="rounded-xl border border-border bg-card p-8 shadow-sm">
               <h3 className="text-2xl font-bold text-card-foreground">The New Standard of Care: Mandatory Requirements for ECEC Service Partners</h3>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                The <strong className="text-foreground">Paramount Consideration</strong>—the legal principle that the safety, health, and wellbeing of children must be the primary concern—has fundamentally redefined cleaning governance. Under the <strong className="text-foreground">SWA March 2026 Biological Hazards Code</strong>, childcare is no longer a general commercial site; it is a <strong className="text-foreground">high-risk biohazardous environment</strong>.
+                The <strong className="text-foreground">Paramount Consideration</strong> - the legal principle that the safety, health, and wellbeing of children must be the primary concern - has fundamentally redefined cleaning governance. Under the <strong className="text-foreground">SWA March 2026 Biological Hazards Code</strong>, childcare is no longer a general commercial site; it is a <strong className="text-foreground">high-risk biohazardous environment</strong>.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 To remain viable partners in the ECEC sector, cleaning providers must now move beyond aesthetic cleaning and meet these three mandatory pillars of compliance:
@@ -425,19 +425,19 @@ export default function ForCleaningCompaniesPage() {
                 <ul className="mt-6 space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
-                    <span className="text-foreground"><strong>Increase contract cleaning hours</strong> — centres now need daytime infection prevention cleans in addition to traditional after-hours cleaning, creating a new revenue stream for every childcare client</span>
+                    <span className="text-foreground"><strong>Increase contract cleaning hours</strong> - centres now need daytime infection prevention cleans in addition to traditional after-hours cleaning, creating a new revenue stream for every childcare client</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
-                    <span className="text-foreground"><strong>Provide agency-style NCCS workforce coverage</strong> — supply NCCS-trained Infection Prevention Specialists to fill daytime cleaning shifts when a centre&apos;s internal cleaner is unable to attend</span>
+                    <span className="text-foreground"><strong>Provide agency-style NCCS workforce coverage</strong> - supply NCCS-trained Infection Prevention Specialists to fill daytime cleaning shifts when a centre&apos;s internal cleaner is unable to attend</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
-                    <span className="text-foreground"><strong>Expand into NCCS-certified training delivery</strong> — become a licensed NCCS training provider and deliver certification to cleaners outside your own workforce, opening an entirely new service line</span>
+                    <span className="text-foreground"><strong>Expand into NCCS-certified training delivery</strong> - become a licensed NCCS training provider and deliver certification to cleaners outside your own workforce, opening an entirely new service line</span>
                   </li>
                 </ul>
                 <p className="mt-6 text-muted-foreground leading-relaxed">
-                  An NCCS licence positions your company as the go-to provider for centres that need structured, compliant infection prevention services — giving you a competitive edge in a market where 8,500+ approved ECEC services need this support.
+                  An NCCS licence positions your company as the go-to provider for centres that need structured, compliant infection prevention services - giving you a competitive edge in a market where 8,500+ approved ECEC services need this support.
                 </p>
               </div>
             </div>
@@ -573,7 +573,7 @@ export default function ForCleaningCompaniesPage() {
                 Position Your Business for Childcare Contracts
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Get your staff NCCS certified and start winning ECEC contracts. The regulatory requirements are in effect now — the time to act is today.
+                Get your staff NCCS certified and start winning ECEC contracts. The regulatory requirements are in effect now - the time to act is today.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">

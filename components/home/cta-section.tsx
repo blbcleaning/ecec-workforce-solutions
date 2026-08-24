@@ -9,7 +9,7 @@ export function CTASection() {
         <div className="rounded-2xl bg-primary px-6 py-16 sm:px-12 sm:py-20 lg:px-16">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-lg text-primary-foreground/80">
-              If you&apos;re looking to reduce workload, strengthen compliance, and stabilise your workforce—this is where to start.
+              If you&apos;re looking to reduce workload, strengthen compliance, and stabilise your workforce - this is where to start.
             </p>
             <h2 className="mt-4 text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl lg:text-4xl">
               Start With a Baseline Assessment

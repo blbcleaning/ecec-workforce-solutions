@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Terms of Service | ECEC Workforce Solutions",
-  description: "Terms of Service for ECEC Workforce Solutions — the terms governing use of our website and services.",
+  description: "Terms of Service for ECEC Workforce Solutions - the terms governing use of our website and services.",
 }
 
 export default function TermsPage() {

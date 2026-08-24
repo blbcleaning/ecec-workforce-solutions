@@ -57,7 +57,7 @@ const nccsAudience = [
   },
   {
     icon: FileCheck,
-    text: "Approved Providers who want accreditation with ongoing monitoring — not a one-off deliverable",
+    text: "Approved Providers who want accreditation with ongoing monitoring - not a one-off deliverable",
   },
 ]
 
@@ -100,12 +100,12 @@ export default async function ServicesPage({
         {checkout === "success" ? (
           <div className="bg-accent/10 px-4 py-3 text-center text-sm font-medium text-accent">
             <CheckCircle2 className="mr-2 inline h-4 w-4" />
-            Payment successful — thank you. We&apos;ll be in touch shortly to begin your SSOW build.
+            Payment successful - thank you. We&apos;ll be in touch shortly to begin your SSOW build.
           </div>
         ) : null}
         {checkout === "cancelled" ? (
           <div className="bg-muted px-4 py-3 text-center text-sm font-medium text-muted-foreground">
-            Checkout cancelled — your card was not charged.
+            Checkout cancelled - your card was not charged.
           </div>
         ) : null}
         {/* Hero Section */}
@@ -123,7 +123,7 @@ export default async function ServicesPage({
             <div className="mx-auto max-w-3xl text-center">
               <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-2 text-sm font-medium text-accent">
                 <AlertTriangle className="h-4 w-4" />
-                Biological Hazards Code — March 2026
+                Biological Hazards Code - March 2026
               </div>
               <h1 className="mt-6 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl">
                 We provide WHS Compliance Assistance to Early Childhood Education and Care.
@@ -131,7 +131,7 @@ export default async function ServicesPage({
               <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80">
                 Safe Work Australia&apos;s updated biological hazards code names ECEC as a case study sector. Under{" "}
                 <strong className="text-primary-foreground">WHS Regulation 39</strong>, you have a legal obligation to
-                maintain a documented Safe System of Work for high-exposure tasks — including biological hazard response
+                maintain a documented Safe System of Work for high-exposure tasks - including biological hazard response
                 and infection-control cleaning.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -170,7 +170,7 @@ export default async function ServicesPage({
           </div>
         </section>
 
-        {/* Service 1 — Custom-Built SSOW */}
+        {/* Service 1 - Custom-Built SSOW */}
         <section id="ssow" className="scroll-mt-24 py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl">
@@ -183,7 +183,7 @@ export default async function ServicesPage({
               </h2>
               <p className="mt-2 text-lg font-medium text-foreground">Centre-specific. Task-level. Defensible.</p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Custom-built SSOW and cleaning management workbooks are customised to your centre — built around your
+                Custom-built SSOW and cleaning management workbooks are customised to your centre - built around your
                 real spaces and real hazards. Written so staff can follow it under pressure and so you can demonstrate
                 r39 compliance when it matters.
               </p>
@@ -207,7 +207,7 @@ export default async function ServicesPage({
           </div>
         </section>
 
-        {/* Service 2 — WHS Compliance Review */}
+        {/* Service 2 - WHS Compliance Review */}
         <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
@@ -247,7 +247,7 @@ export default async function ServicesPage({
                 </p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
                   A structured review of your current SSOW, training records, and documentation against the March 2026
-                  biohazard standard. You leave with a clear gap list, priority fixes, and implementation steps — not
+                  biohazard standard. You leave with a clear gap list, priority fixes, and implementation steps - not
                   just a report.
                 </p>
               </div>
@@ -255,7 +255,7 @@ export default async function ServicesPage({
           </div>
         </section>
 
-        {/* Flagship — NCCS Integration Program */}
+        {/* Flagship - NCCS Integration Program */}
         <section className="relative overflow-hidden bg-primary py-16 sm:py-20">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -323,7 +323,7 @@ export default async function ServicesPage({
               </div>
             </div>
 
-            {/* What's included — Phases */}
+            {/* What's included - Phases */}
             <div className="mx-auto mt-14 max-w-5xl">
               <h3 className="text-center text-sm font-semibold uppercase tracking-wide text-primary-foreground/60">
                 What&apos;s included
@@ -339,7 +339,7 @@ export default async function ServicesPage({
                     {[
                       "Pre-NCCS baseline metrics collection",
                       "Onsite implementation to NCCS accredited status",
-                      "Full operational embedding — not policy-only",
+                      "Full operational embedding - not policy-only",
                     ].map((point) => (
                       <li key={point} className="flex items-start gap-3">
                         <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
@@ -383,7 +383,7 @@ export default async function ServicesPage({
                     </span>
                   </div>
                   <p className="mt-4 text-sm font-medium text-foreground">
-                    Payment plan available — designed for operational cashflow:
+                    Payment plan available - designed for operational cashflow:
                   </p>
                   <ul className="mt-4 divide-y divide-border">
                     {nccsPayPlan.map((row) => (
@@ -408,12 +408,12 @@ export default async function ServicesPage({
                       <TrendingDown className="h-5 w-5 text-accent" />
                     </div>
                     <h4 className="text-base font-semibold text-primary-foreground">
-                      R&amp;D Tax Incentive — reduce your net cost
+                      R&amp;D Tax Incentive - reduce your net cost
                     </h4>
                   </div>
                   <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
                     Depending on your eligibility, a portion of program costs may be claimable under the R&amp;D Tax
-                    Incentive — commonly cited at up to{" "}
+                    Incentive - commonly cited at up to{" "}
                     <strong className="text-primary-foreground">43.5% of eligible expenditure</strong>.
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
@@ -423,7 +423,7 @@ export default async function ServicesPage({
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
                     Where staff wage time is spent on eligible NCCS-related R&amp;D activities, that time may also be
-                    includable in your claim — which can materially increase the total offset.
+                    includable in your claim - which can materially increase the total offset.
                   </p>
                   <p className="mt-4 text-xs leading-relaxed text-primary-foreground/50">
                     Eligibility must be confirmed with your accountant or tax advisor. We can provide supporting
@@ -456,7 +456,7 @@ export default async function ServicesPage({
         <section className="py-20 sm:py-24 bg-background">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
             <h2 className="text-balance text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              Close the gap now — not after an incident.
+              Close the gap now - not after an incident.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               Estimated to reduce educator workload by{" "}

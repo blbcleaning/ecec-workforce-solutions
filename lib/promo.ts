@@ -1,4 +1,4 @@
-// EOFY promotion config — single source of truth shared by the promo bar
+// EOFY promotion config - single source of truth shared by the promo bar
 // and the exit-intent popup.
 
 // Deadline: end of the Australian financial year (30 June 2026, 23:59:59 AEST/UTC+10).

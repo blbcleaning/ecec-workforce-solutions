@@ -43,21 +43,21 @@ const whatsIncluded = [
 ]
 
 const modules = [
-  "Module 1 — Overview & foundations",
-  "Module 2 — Understanding Biological Hazards in ECEC",
-  "Module 3 — Infection Control Cleaning: Principles and Procedures",
-  "Module 4 — Risk assessment & controls (WHS lens)",
-  "Module 5 — PPE selection, use, and disposal",
-  "Module 6 — Air Quality, Ventilation, and Environmental Controls",
-  "Module 7 — Laundry and linen handling as infection control",
-  "Module 8 — Safe Handling of Cleaning Chemicals",
-  "Module 9 — Cleaning schedules, checklists, and recordkeeping",
-  "Module 10 — Managing incidents, exposures, and notifications",
-  "Module 11 — High-touch surfaces and shared equipment controls",
-  "Module 12 — Clean and Contaminated Zones",
-  "Module 13 — Nappy Changing Procedure as a Biohazard Control",
-  "Module 14 — Waste Stream Management",
-  "Module 15 — Post-Outbreak Terminal Clean and Return to Normal",
+  "Module 1 - Overview & foundations",
+  "Module 2 - Understanding Biological Hazards in ECEC",
+  "Module 3 - Infection Control Cleaning: Principles and Procedures",
+  "Module 4 - Risk assessment & controls (WHS lens)",
+  "Module 5 - PPE selection, use, and disposal",
+  "Module 6 - Air Quality, Ventilation, and Environmental Controls",
+  "Module 7 - Laundry and linen handling as infection control",
+  "Module 8 - Safe Handling of Cleaning Chemicals",
+  "Module 9 - Cleaning schedules, checklists, and recordkeeping",
+  "Module 10 - Managing incidents, exposures, and notifications",
+  "Module 11 - High-touch surfaces and shared equipment controls",
+  "Module 12 - Clean and Contaminated Zones",
+  "Module 13 - Nappy Changing Procedure as a Biohazard Control",
+  "Module 14 - Waste Stream Management",
+  "Module 15 - Post-Outbreak Terminal Clean and Return to Normal",
 ]
 
 const pricing = [
@@ -72,7 +72,7 @@ const FREE_WHS_URL = "https://compliance.ececworkforcesolutions.au/free"
 
 const onsiteTrainingFeatures = [
   "3-hour certified onsite group session",
-  "Available after hours — weeknights or weekends",
+  "Available after hours - weeknights or weekends",
   "Fully catered: lunch or dinner included in your booking price",
   "Resource-packed and delivered at your centre",
 ]
@@ -123,12 +123,12 @@ export default async function InfectionControlCoursePage({
         {checkout === "success" ? (
           <div className="bg-accent/10 px-4 py-3 text-center text-sm font-medium text-accent">
             <CheckCircle2 className="mr-2 inline h-4 w-4" />
-            Enrolment successful — thank you. Check your email for course access details.
+            Enrolment successful - thank you. Check your email for course access details.
           </div>
         ) : null}
         {checkout === "cancelled" ? (
           <div className="bg-muted px-4 py-3 text-center text-sm font-medium text-muted-foreground">
-            Enrolment cancelled — your card was not charged.
+            Enrolment cancelled - your card was not charged.
           </div>
         ) : null}
         {/* Hero Section */}
@@ -190,7 +190,7 @@ export default async function InfectionControlCoursePage({
                 <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 2</span>
                 <h3 className="mt-2 text-xl font-bold text-card-foreground">Onsite Group Training</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">
-                  Instructor-led, 3-hour certified group session delivered at your centre — an in-person
+                  Instructor-led, 3-hour certified group session delivered at your centre - an in-person
                   alternative to the online course.
                 </p>
                 <div className="mt-5 flex-1 rounded-lg border border-accent/30 bg-accent/10 p-5">
@@ -203,7 +203,7 @@ export default async function InfectionControlCoursePage({
                     ))}
                   </ul>
                   <p className="mt-4 border-t border-accent/20 pt-3 text-sm font-semibold text-foreground">
-                    From $1,500 (up to 10) — up to $2,600 (20 participants)
+                    From $1,500 (up to 10) - up to $2,600 (20 participants)
                   </p>
                 </div>
                 <div className="mt-6">
@@ -285,7 +285,7 @@ export default async function InfectionControlCoursePage({
                 Who It&apos;s For &amp; What You Get
               </h2>
               <p className="mt-4 text-lg text-muted-foreground text-pretty">
-                Everything below applies to the online self-paced course — who it&apos;s built for and what&apos;s
+                Everything below applies to the online self-paced course - who it&apos;s built for and what&apos;s
                 included when you enrol.
               </p>
             </div>
@@ -365,7 +365,7 @@ export default async function InfectionControlCoursePage({
                       {module}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground leading-relaxed">
-                      Comprehensive coverage of {module.toLowerCase().replace(/^module \d+ — /, "")} with practical applications for ECEC settings.
+                      Comprehensive coverage of {module.toLowerCase().replace(/^module \d+ - /, "")} with practical applications for ECEC settings.
                     </AccordionContent>
                   </AccordionItem>
                 ))}

@@ -269,7 +269,7 @@ export function ROICalculator() {
       {/* Dynamic Summary */}
       <div className={`rounded-xl border p-4 ${results.netSavings >= 0 ? "border-green-300 bg-green-50" : "border-red-300 bg-red-50"}`}>
         <p className={`text-center font-medium ${results.netSavings >= 0 ? "text-green-800" : "text-red-800"}`}>
-          Retaining just {results.educatorsRetained} educator{results.educatorsRetained !== 1 ? "s" : ""} {results.netSavings >= 0 ? "saves" : "costs"} your centre {formatCurrency(Math.abs(results.netSavings))} in Year 1 — a {results.roi}% return on investment.
+          Retaining just {results.educatorsRetained} educator{results.educatorsRetained !== 1 ? "s" : ""} {results.netSavings >= 0 ? "saves" : "costs"} your centre {formatCurrency(Math.abs(results.netSavings))} in Year 1 - a {results.roi}% return on investment.
         </p>
       </div>
 

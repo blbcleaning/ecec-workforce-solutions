@@ -54,7 +54,7 @@ export function DocumentationSection() {
             </p>
             <div className="mt-8 rounded-lg border border-accent/30 bg-accent/10 p-4">
               <p className="text-sm font-medium text-foreground">
-                When a regulator, auditor, or WHS inspector asks to see evidence — you can produce it immediately.
+                When a regulator, auditor, or WHS inspector asks to see evidence - you can produce it immediately.
               </p>
             </div>
           </div>

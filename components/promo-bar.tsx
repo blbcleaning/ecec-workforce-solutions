@@ -38,7 +38,7 @@ export function PromoBar() {
         <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-medium text-balance">
           <span aria-hidden="true">⏳</span>
           <span>
-            <span className="font-bold">EOFY Special</span> — free Cleaning Management Workbook with every SSOW set.
+            <span className="font-bold">EOFY Special</span> - free Cleaning Management Workbook with every SSOW set.
           </span>
           <Link
             href={PROMO_CTA_HREF}

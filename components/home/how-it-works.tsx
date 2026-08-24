@@ -17,7 +17,7 @@ const steps = [
     number: "03",
     icon: Wrench,
     title: "We deliver training, tools, and documentation",
-    description: "On-site or remotely — whatever works for your centre.",
+    description: "On-site or remotely - whatever works for your centre.",
   },
   {
     number: "04",

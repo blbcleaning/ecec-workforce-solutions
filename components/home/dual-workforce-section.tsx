@@ -68,7 +68,7 @@ export function DualWorkforceSection() {
               For Cleaning Companies
             </h3>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              We certify cleaning providers to operate within the NCCS standard—creating a qualified workforce that centres can trust for compliant infection prevention.
+              We certify cleaning providers to operate within the NCCS standard - creating a qualified workforce that centres can trust for compliant infection prevention.
             </p>
             <ul className="mt-6 space-y-3">
               <li className="flex items-center gap-3 text-sm text-card-foreground">

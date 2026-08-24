@@ -37,7 +37,7 @@ export function HeroSection() {
             Reduce educator workload. Improve retention. Achieve audit-ready compliance.
           </p>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/70 sm:text-xl font-normal">
-            A compliance-based operating system for childcare—implemented through workforce training, certification, and verification.
+            A compliance-based operating system for childcare - implemented through workforce training, certification, and verification.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">

@@ -10,15 +10,15 @@ import {
 const faqs = [
   {
     question: "Who holds compliance responsibility?",
-    answer: "Your centre always retains governance oversight and ultimate compliance responsibility — regardless of whether you use an external managed service, an internal team, or a hybrid model. ECEC Workforce Solutions certifies personnel; your centre governs the program.",
+    answer: "Your centre always retains governance oversight and ultimate compliance responsibility - regardless of whether you use an external managed service, an internal team, or a hybrid model. ECEC Workforce Solutions certifies personnel; your centre governs the program.",
   },
   {
     question: "Do I need to hire new staff?",
-    answer: "Yes — NCCS requires dedicated infection prevention personnel who are separate from your educators. This is a core governance principle: educators educate, and NCCS Infection Prevention Specialists handle infection-control cleaning. If you already have cleaning staff, we can train and certify them. If you use an external cleaning company, we certify their team. Either way, the role must be held by someone other than an educator.",
+    answer: "Yes - NCCS requires dedicated infection prevention personnel who are separate from your educators. This is a core governance principle: educators educate, and NCCS Infection Prevention Specialists handle infection-control cleaning. If you already have cleaning staff, we can train and certify them. If you use an external cleaning company, we certify their team. Either way, the role must be held by someone other than an educator.",
   },
   {
     question: "Can my existing staff member be the NCCS Supervisor?",
-    answer: "Yes — the NCCS Supervisor role can be held by a director, nominated supervisor, or other member of your centre's management team. The Supervisor's role is to verify, document, and oversee the infection prevention program — not to perform cleaning duties. This is a core NCCS governance principle: the person who verifies compliance must be separate from the person who performs the work. Educators cannot hold the Supervisor role, and the Supervisor cannot also be an NCCS Infection Prevention Specialist.",
+    answer: "Yes - the NCCS Supervisor role can be held by a director, nominated supervisor, or other member of your centre's management team. The Supervisor's role is to verify, document, and oversee the infection prevention program - not to perform cleaning duties. This is a core NCCS governance principle: the person who verifies compliance must be separate from the person who performs the work. Educators cannot hold the Supervisor role, and the Supervisor cannot also be an NCCS Infection Prevention Specialist.",
   },
   {
     question: "What happens when the certificate expires?",

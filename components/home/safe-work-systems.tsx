@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react"
 const controls = [
   {
     title: "Risk assessment and hazard identification",
-    description: "For all infection-control tasks — biological hazards, chemical hazards, manual handling, and environmental risks",
+    description: "For all infection-control tasks - biological hazards, chemical hazards, manual handling, and environmental risks",
   },
   {
     title: "Elimination and substitution controls",
@@ -23,7 +23,7 @@ const controls = [
   },
   {
     title: "Documented systems of work",
-    description: "Satisfy WHS Act s.19(3)(c) — replacing ad hoc, undocumented practices with repeatable, governed, and verifiable procedures",
+    description: "Satisfy WHS Act s.19(3)(c) - replacing ad hoc, undocumented practices with repeatable, governed, and verifiable procedures",
   },
 ]
 
@@ -36,7 +36,7 @@ export function SafeWorkSystems() {
             Statutory Safe Work Systems & The Hierarchy of Control
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80">
-            All NCCS infection prevention protocols are engineered in strict alignment with the WHS Hierarchy of Control—the legally mandated framework for the elimination or minimisation of workplace risk. Under the new SWA Biohazard Code, &quot;administrative controls&quot; (like staff training alone) are no longer sufficient for high-risk environments. Our systems implement higher-order Engineering and Substitution controls to ensure your centre meets the highest legal standard of care.
+            All NCCS infection prevention protocols are engineered in strict alignment with the WHS Hierarchy of Control - the legally mandated framework for the elimination or minimisation of workplace risk. Under the new SWA Biohazard Code, &quot;administrative controls&quot; (like staff training alone) are no longer sufficient for high-risk environments. Our systems implement higher-order Engineering and Substitution controls to ensure your centre meets the highest legal standard of care.
           </p>
         </div>
 

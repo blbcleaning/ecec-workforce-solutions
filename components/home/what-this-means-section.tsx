@@ -28,7 +28,7 @@ export function WhatThisMeansSection() {
             What This Means for Your Centre
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            This is no longer an operational choice—it&apos;s a compliance requirement.
+            This is no longer an operational choice - it&apos;s a compliance requirement.
           </p>
         </div>
 

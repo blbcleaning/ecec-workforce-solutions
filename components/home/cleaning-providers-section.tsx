@@ -28,7 +28,7 @@ export function CleaningProvidersSection() {
             </div>
 
             <p className="mt-6 text-center text-lg text-card-foreground leading-relaxed">
-              We don&apos;t replace your cleaning provider—we upgrade them.
+              We don&apos;t replace your cleaning provider - we upgrade them.
             </p>
 
             <p className="mt-4 text-center text-muted-foreground leading-relaxed">

@@ -30,7 +30,7 @@ const tools = [
   {
     icon: TrendingUp,
     title: "ROI Calculator",
-    description: "Does NCCS pay for itself? Calculate your return on investment — most centres see positive ROI by retaining just 2 educators. See your potential savings from reduced turnover and sick days.",
+    description: "Does NCCS pay for itself? Calculate your return on investment - most centres see positive ROI by retaining just 2 educators. See your potential savings from reduced turnover and sick days.",
     href: "/for-centres#roi-calculator",
     page: "For Centres Page",
     buttonText: "Calculate ROI",
@@ -76,7 +76,7 @@ export default function ToolsPage() {
                   With $226 million in new safety reform funding, increased powers granted to the National Early Childhood Worker Register, and over 300 targeted inspections already underway, the risk of prosecution has never been higher.
                 </p>
                 <p>
-                  Failing to meet these standards—such as relying on overstretched educators or inadequate night-cleaning contracts—now exposes providers to tripled penalties reaching millions of dollars and the very real threat of jail time.
+                  Failing to meet these standards - such as relying on overstretched educators or inadequate night-cleaning contracts - now exposes providers to tripled penalties reaching millions of dollars and the very real threat of jail time.
                 </p>
               </div>
             </div>

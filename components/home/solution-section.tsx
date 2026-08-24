@@ -37,7 +37,7 @@ export function SolutionSection() {
             </div>
 
             <p className="mt-8 text-center text-xl font-semibold text-primary">
-              This is a complete system—implemented, verified, and sustained.
+              This is a complete system - implemented, verified, and sustained.
             </p>
           </div>
         </div>
