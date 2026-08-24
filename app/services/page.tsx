@@ -34,12 +34,39 @@ const reviewPackages = [
 ]
 
 const ssowIncludes = [
-  "Nappy zones & change areas",
-  "Vomit / blood incident response",
-  "Outbreak response procedures",
-  "Waste stream handling",
-  "Chemical controls",
-  "Verification records",
+  {
+    category: "Routine cleaning",
+    items: [
+      "SSOW Toilet & Children's Bathroom Clean and Disinfect",
+      "SSOW High-Touch Surface Disinfection",
+      "SSOW Toy Cleaning & Sanitation",
+      "SSOW Sleep Surfaces (Cot, Mattress & Sleep-Mat Sanitation)",
+      "SSOW Kitchen & Food-Prep Surface Cleaning",
+      "SSOW Floor Cleaning & Mopping",
+    ],
+  },
+  {
+    category: "Supporting hygiene",
+    items: [
+      "SSOW Cleaning Equipment Hygiene & Maintenance",
+      "SSOW Chemical Mixing, Decanting & Dilution",
+      "SSOW Linen & Laundry Management",
+    ],
+  },
+  {
+    category: "Biohazard & outbreak response",
+    items: [
+      "SSOW Nappy Change Biohazard Response",
+      "SSOW Vomit Spill Response",
+      "SSOW Blood Spill Response",
+      "SSOW Urine & Faeces Spill Response (Outside Nappy Change)",
+      "SSOW Outbreak / Enhanced Disinfection Clean",
+    ],
+  },
+  {
+    category: "Standalone",
+    items: ["Biohazard Incident Response SSOW (ECEC)"],
+  },
 ]
 
 const nccsAudience = [
@@ -191,14 +218,21 @@ export default async function ServicesPage({
                 We have custom-built 14 Safe Systems of Work (SSOW), plus the verification documents required under WHS
                 law.
               </p>
-              <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {ssowIncludes.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
-                    <span className="text-sm text-foreground">{item}</span>
-                  </li>
+              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                {ssowIncludes.map((group) => (
+                  <div key={group.category} className="rounded-xl border border-border bg-card p-5">
+                    <h3 className="font-semibold text-card-foreground">{group.category}</h3>
+                    <ul className="mt-4 flex flex-col gap-3">
+                      {group.items.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                          <span className="text-sm leading-relaxed text-card-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
               <SsowCheckout products={ssowProducts} />
               <p className="mt-4 text-sm text-muted-foreground">
                 Prefer to talk first?{" "}
