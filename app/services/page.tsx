@@ -270,6 +270,8 @@ export default async function ServicesPage({
                 {[
                   "Unlimited staff access to certified online Infection Control & Biohazard Management training",
                   "Unlimited access to annual refresher training",
+                  "No large upfront cost for staff training",
+                  "Enrol new hires before they start so they are certified to manage cleaning and biohazards from day one",
                   "Manage your WHS training and compliance documentation from one dedicated online portal",
                   "Self-service access for managers to enrol staff and monitor training progress",
                   "Access to the complete compliance documentation library, updated regularly in line with legislative changes",
@@ -281,6 +283,28 @@ export default async function ServicesPage({
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-10">
+                <div className="flex items-baseline justify-between gap-4">
+                  <h3 className="text-xl font-bold text-foreground">Monthly pricing</h3>
+                  <span className="text-sm text-muted-foreground">Subscription-based</span>
+                </div>
+                <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  {[
+                    { team: "Up to 25 staff", price: "$300", suffix: "per month" },
+                    { team: "Up to 50 staff", price: "$500", suffix: "per month" },
+                    { team: "Up to 100 staff", price: "$700", suffix: "per month" },
+                    { team: "Over 100 staff", price: "Contact us", suffix: "Enterprise rates" },
+                  ].map((tier) => (
+                    <div key={tier.team} className="rounded-xl border border-border bg-card p-5">
+                      <p className="text-sm font-medium text-muted-foreground">{tier.team}</p>
+                      <p className="mt-2 text-2xl font-bold text-card-foreground">{tier.price}</p>
+                      <p className="mt-1 text-sm text-muted-foreground">{tier.suffix}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <Button asChild className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
                 <Link href="/contact">
                   Enquire about a Compliance Partnership
