@@ -8,6 +8,7 @@ import { getSsowProducts } from "@/app/actions/stripe"
 import {
   AlertTriangle,
   ArrowRight,
+  BookOpen,
   FileCheck,
   ClipboardCheck,
   CheckCircle,
@@ -344,8 +345,90 @@ export default async function ServicesPage({
           </div>
         </section>
 
-        {/* Service 3 - WHS Compliance Review */}
+        {/* Service 3 - SSOW Building Workshop */}
         <section className="py-16 sm:py-20 bg-muted">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-5xl rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-10">
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
+                <BookOpen className="h-4 w-4" />
+                Service 3
+              </div>
+              <div className="mt-5 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
+                <div>
+                  <h2 className="text-balance text-2xl font-bold tracking-tight text-card-foreground sm:text-3xl">
+                    Safe System of Work Building Workshop
+                  </h2>
+                  <p className="mt-4 text-lg font-medium leading-relaxed text-card-foreground">
+                    Get the documentation and training required to meet the 2026 WHS standards in one workshop.
+                  </p>
+                  <p className="mt-4 leading-relaxed text-muted-foreground">
+                    Skip generic infection control and biohazard training. Your staff become certified by building the
+                    documents that support their daily actions.
+                  </p>
+                  <ul className="mt-6 flex flex-col gap-3">
+                    {[
+                      "SSOW Building Workshop",
+                      "Onsite, practice-based certified group training",
+                      "Infection Control & Biohazard Management",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                        <span className="font-medium text-card-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-6 rounded-xl border border-accent/30 bg-accent/10 p-5">
+                    <p className="font-semibold text-foreground">
+                      Outcome: Real compliance. Real understanding. Real time saved.
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      Satisfies WHS team consultation requirements through a practical, collaborative process.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="rounded-xl bg-primary p-6 text-primary-foreground">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-primary-foreground/70">
+                      4-hour onsite workshop
+                    </p>
+                    <p className="mt-3 text-4xl font-bold">$1,500</p>
+                    <p className="mt-2 text-primary-foreground/80">Per centre, for up to 20 staff</p>
+                    <div className="mt-5 border-t border-primary-foreground/20 pt-5">
+                      <p className="font-semibold text-accent">Includes templates valued at $600</p>
+                    </div>
+                  </div>
+                  <h3 className="mt-7 text-xl font-bold text-card-foreground">
+                    Compliance everyone understands because they helped create it
+                  </h3>
+                  <ul className="mt-5 flex flex-col gap-3">
+                    {[
+                      "70%+ better knowledge retention compared with theory-based training",
+                      "35%+ higher compliance rates from team-built policies",
+                      "80–100 hours saved by not building the documents from scratch",
+                      "3-in-1 Infection Control, SSOW and Implementation Training",
+                      "Designed to meet WHS team consultation requirements",
+                    ].map((outcome) => (
+                      <li key={outcome} className="flex items-start gap-3">
+                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                        <span className="text-sm leading-relaxed text-card-foreground">{outcome}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button asChild className="mt-7 w-full bg-accent text-accent-foreground hover:bg-accent/90 sm:w-auto">
+                    <Link href="/contact">
+                      Book the workshop
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Service 4 - WHS Compliance Review */}
+        <section className="py-16 sm:py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
               <div className="rounded-xl border border-border bg-card p-6 sm:p-8 lg:order-last">
@@ -374,7 +457,7 @@ export default async function ServicesPage({
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
                   <ClipboardCheck className="h-4 w-4" />
-                  Service 3
+                  Service 4
                 </div>
                 <h2 className="mt-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
                   WHS Compliance Review
