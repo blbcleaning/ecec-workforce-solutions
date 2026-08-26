@@ -32,6 +32,11 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/services" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Our Services
+                </Link>
+              </li>
+              <li>
                 <Link href="/for-centres" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   For Centres
                 </Link>

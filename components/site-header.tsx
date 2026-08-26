@@ -3,12 +3,12 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { serviceHref, services } from "@/lib/services"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Our Services", href: "/services" },
   { name: "For Centres", href: "/for-centres" },
   { name: "For Cleaning Companies", href: "/for-cleaning-companies" },
   { name: "Training", href: "/training/infection-control" },
@@ -49,15 +49,26 @@ export function SiteHeader() {
         </div>
         {/* Navigation and buttons below logo on desktop */}
         <div className="hidden w-full lg:mt-4 lg:flex lg:items-center lg:justify-between">
-          <div className="flex gap-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
-              >
-                {item.name}
+          <div className="flex items-center gap-x-8">
+            <Link href="/" className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">Home</Link>
+            <div className="group relative">
+              <Link href="/services" className="flex items-center gap-1 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground" aria-haspopup="true">
+                Our Services <ChevronDown className="size-4" aria-hidden="true" />
               </Link>
+              <div className="invisible absolute left-0 top-full z-20 w-80 pt-3 opacity-0 transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <div className="rounded-xl border border-border bg-background p-2 shadow-lg">
+                  <Link href="/services" className="block rounded-lg px-3 py-2 text-sm font-semibold text-foreground hover:bg-muted">All services</Link>
+                  {services.map((service) => (
+                    <Link key={service.slug} href={serviceHref(service.slug)} className="block rounded-lg px-3 py-2 hover:bg-muted">
+                      <span className="block text-sm font-medium text-foreground">{service.shortTitle}</span>
+                      <span className="mt-0.5 block text-xs text-muted-foreground">{service.eyebrow}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+            {navigation.slice(1).map((item) => (
+              <Link key={item.name} href={item.href} className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">{item.name}</Link>
             ))}
           </div>
           <div className="flex gap-x-3">
@@ -98,15 +109,20 @@ export function SiteHeader() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-border">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-muted"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
+                  <Link href="/" className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-muted" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+                  <details className="group -mx-3 rounded-lg">
+                    <summary className="flex cursor-pointer list-none items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-muted">
+                      Our Services <ChevronDown className="size-5 transition-transform group-open:rotate-180" aria-hidden="true" />
+                    </summary>
+                    <div className="flex flex-col gap-1 px-3 pb-2 pt-1">
+                      <Link href="/services" className="rounded-lg px-3 py-2 text-sm font-semibold text-foreground hover:bg-muted" onClick={() => setMobileMenuOpen(false)}>All services</Link>
+                      {services.map((service) => (
+                        <Link key={service.slug} href={serviceHref(service.slug)} className="rounded-lg px-3 py-2 text-sm text-foreground hover:bg-muted" onClick={() => setMobileMenuOpen(false)}>{service.shortTitle}</Link>
+                      ))}
+                    </div>
+                  </details>
+                  {navigation.slice(1).map((item) => (
+                    <Link key={item.name} href={item.href} className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-muted" onClick={() => setMobileMenuOpen(false)}>{item.name}</Link>
                   ))}
                 </div>
                 <div className="py-6 space-y-3">
