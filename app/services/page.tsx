@@ -237,6 +237,16 @@ export default async function ServicesPage({
                   </div>
                 ))}
               </div>
+              <Button asChild size="lg" className="mt-8 w-full bg-accent text-accent-foreground hover:bg-accent/90 sm:w-auto">
+                <a
+                  href="https://compliance.ececworkforcesolutions.au/orderssow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Purchase SSOW
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
               <SsowCheckout products={ssowProducts} />
               <p className="mt-4 text-sm text-muted-foreground">
                 Prefer to talk first?{" "}

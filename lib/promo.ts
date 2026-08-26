@@ -4,7 +4,7 @@
 // Deadline: end of the Australian financial year (30 June 2026, 23:59:59 AEST/UTC+10).
 export const PROMO_DEADLINE = new Date("2026-06-30T23:59:59+10:00")
 
-export const PROMO_CTA_HREF = "/services#ssow"
+export const PROMO_CTA_HREF = "https://compliance.ececworkforcesolutions.au/orderssow"
 
 export interface TimeLeft {
   days: number

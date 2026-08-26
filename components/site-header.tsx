@@ -64,6 +64,15 @@ export function SiteHeader() {
             <Button asChild variant="outline">
               <Link href="/contact">Enquire Now</Link>
             </Button>
+            <Button asChild variant="outline">
+              <a
+                href="https://compliance.ececworkforcesolutions.au/orderssow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Purchase SSOW
+              </a>
+            </Button>
             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
               <Link href="/book">Book a Call</Link>
             </Button>
@@ -112,6 +121,16 @@ export function SiteHeader() {
                 <div className="py-6 space-y-3">
                   <Button asChild variant="outline" className="w-full">
                     <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Enquire Now</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="w-full">
+                    <a
+                      href="https://compliance.ececworkforcesolutions.au/orderssow"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Purchase SSOW
+                    </a>
                   </Button>
                   <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
                     <Link href="/book" onClick={() => setMobileMenuOpen(false)}>Book a Call</Link>
