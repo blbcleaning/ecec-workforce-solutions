@@ -39,15 +39,7 @@ function BuyButton() {
 
 export function SsowCheckout({ products }: { products: SsowProduct[] }) {
   if (products.length === 0) {
-    return (
-      <div className="mt-8 rounded-xl border border-border bg-card p-6 text-sm text-muted-foreground">
-        Online purchasing is being set up. Please{" "}
-        <a href="/contact" className="font-medium text-accent underline underline-offset-4">
-          submit an enquiry
-        </a>{" "}
-        and we&apos;ll get you started.
-      </div>
-    )
+    return null
   }
 
   return (
