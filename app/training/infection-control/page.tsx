@@ -230,10 +230,14 @@ export default async function InfectionControlCoursePage({
                 </div>
                 <div className="mt-6">
                   <Button asChild size="lg" className="bg-accent px-8 text-accent-foreground hover:bg-accent/90">
-                    <Link href="/contact">
+                    <a
+                      href="https://compliance.ececworkforcesolutions.au/onsitessowbuilding"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Book the workshop
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               </div>

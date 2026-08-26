@@ -416,10 +416,14 @@ export default async function ServicesPage({
                     ))}
                   </ul>
                   <Button asChild className="mt-7 w-full bg-accent text-accent-foreground hover:bg-accent/90 sm:w-auto">
-                    <Link href="/contact">
+                    <a
+                      href="https://compliance.ececworkforcesolutions.au/onsitessowbuilding"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Book the workshop
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               </div>
