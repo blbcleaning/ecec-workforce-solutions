@@ -16,16 +16,19 @@ const blogTopics = [
     icon: FileText,
     title: "Research & Evidence",
     description: "DOI-registered papers and evidence-based insights on infection prevention in childcare",
+    href: "https://ccsconsulting.odoo.com/ccs-document-suite",
   },
   {
     icon: Newspaper,
     title: "Industry Updates",
     description: "Latest news on ECEC compliance, WHS regulations, and sector developments",
+    href: "https://ccsconsulting.odoo.com/blog/whs-compliance-newsroom-2",
   },
   {
     icon: BookOpen,
-    title: "Practical Guidance",
-    description: "How-to guides and best practices for centres and cleaning companies",
+    title: "Articles & Opinion Pieces",
+    description: "Articles, perspectives and practical insights for centres and cleaning companies",
+    href: "https://ccsconsulting.odoo.com/blog",
   },
 ]
 
@@ -54,13 +57,23 @@ export default function BlogPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {blogTopics.map((topic) => (
-                <div key={topic.title} className="rounded-xl border border-border bg-card p-6 shadow-sm text-center">
+                <a
+                  key={topic.title}
+                  href={topic.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group rounded-xl border border-border bg-card p-6 text-center shadow-sm transition-colors hover:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  aria-label={`${topic.title} (opens in a new tab)`}
+                >
                   <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
                     <topic.icon className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="mt-4 font-semibold text-card-foreground">{topic.title}</h3>
+                  <h3 className="mt-4 flex items-center justify-center gap-2 font-semibold text-card-foreground">
+                    {topic.title}
+                    <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
+                  </h3>
                   <p className="mt-2 text-sm text-muted-foreground">{topic.description}</p>
-                </div>
+                </a>
               ))}
             </div>
           </div>
