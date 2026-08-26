@@ -269,8 +269,8 @@ export default async function ServicesPage({
               </p>
               <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {[
-                  "Unlimited staff access to certified online Infection Control & Biohazard Management training",
-                  "Unlimited access to annual refresher training",
+                  "Unlimited staff access to certified online Infection Control & Biohazard Management training, valued at $2,000 for 25 staff",
+                  "Unlimited access to annual refresher training, valued at $1,200 for every 25 staff",
                   "No large upfront cost for staff training",
                   "Enrol new hires before they start so they are certified to manage cleaning and biohazards from day one",
                   "Manage your WHS training and compliance documentation from one dedicated online portal",
