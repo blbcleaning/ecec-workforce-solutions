@@ -216,6 +216,7 @@ export default async function InfectionControlCoursePage({
                       "4-hour onsite, practice-based workshop",
                       "SSOW, infection control and implementation training",
                       "Templates valued at $600 included",
+                      "Cleaning Management Workbook valued at $200 included",
                       "Meets WHS team consultation requirements",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-2.5">
