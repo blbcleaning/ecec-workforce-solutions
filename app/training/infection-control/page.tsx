@@ -61,9 +61,9 @@ const modules = [
 ]
 
 const pricing = [
-  { type: "Individual enrolment", detail: "Up to 5 people", price: "$180 per person" },
-  { type: "Group booking", detail: "6–10 people", price: "$140 per person" },
-  { type: "Group booking", detail: "11+ people", price: "$100 per person" },
+  { type: "Individual enrolment", detail: "Up to 5 people", price: "$140 per person" },
+  { type: "Group booking", detail: "6–10 people", price: "$100 per person" },
+  { type: "Group booking", detail: "11+ people", price: "$80 per person" },
   { type: "Groups of 15+", detail: "Larger teams", price: "Contact us for pricing" },
 ]
 
@@ -101,7 +101,7 @@ const faqs = [
   },
   {
     question: "How do group bookings work?",
-    answer: "Group rates apply automatically based on your team size: $180 per person for up to 5, $140 per person for 6–10, and $100 per person for 11 or more. For teams of 15+, contact us for tailored pricing. Each team member receives individual access so everyone can complete the course at their own pace.",
+    answer: "Group rates apply automatically based on your team size: $140 per person for up to 5, $100 per person for 6–10, and $80 per person for 11 or more. For teams of 15+, contact us for tailored pricing. Each team member receives individual access so everyone can complete the course at their own pace.",
   },
   {
     question: "What access do I get after enrolling?",
