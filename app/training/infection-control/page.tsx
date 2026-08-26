@@ -175,19 +175,6 @@ export default async function InfectionControlCoursePage({
               {/* Option 1 */}
               <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
                 <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 1</span>
-                <h3 className="mt-2 text-xl font-bold text-card-foreground">Online Self-Paced Training</h3>
-                <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">
-                  Complete all 15 modules at your own pace. Certification requires completion of every quiz
-                  module and submission of all assignments, marked competent under our Competency-Based
-                  Assessment model.
-                </p>
-                <div className="mt-6">
-                  <EnrolButton />
-                </div>
-              </div>
-              {/* Option 2 */}
-              <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
-                <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 2</span>
                 <h3 className="mt-2 text-xl font-bold text-card-foreground">Onsite Group Training</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   Instructor-led, 3-hour certified group session delivered at your centre - an in-person
@@ -215,9 +202,9 @@ export default async function InfectionControlCoursePage({
                   </Button>
                 </div>
               </div>
-              {/* Option 3 */}
+              {/* Option 2 */}
               <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
-                <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 3</span>
+                <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 2</span>
                 <h3 className="mt-2 text-xl font-bold text-card-foreground">SSOW Building Workshop</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   Build the documents that support daily practice while your team completes certified, onsite
@@ -251,9 +238,9 @@ export default async function InfectionControlCoursePage({
                 </div>
               </div>
 
-              {/* Option 4 */}
+              {/* Option 3 */}
               <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-sm">
-                <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 4</span>
+                <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 3</span>
                 <h3 className="mt-2 text-xl font-bold text-card-foreground">Training &amp; Compliance Bundle</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   Combine this certified training with a complete WHS compliance package for your service.
@@ -277,6 +264,29 @@ export default async function InfectionControlCoursePage({
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
+                </div>
+              </div>
+
+              {/* Option 4 */}
+              <div className="flex flex-col rounded-xl border border-accent/50 bg-card p-8 shadow-sm">
+                <span className="text-sm font-semibold uppercase tracking-wide text-accent">Option 4</span>
+                <h3 className="mt-2 text-xl font-bold text-card-foreground">Online Self-Paced Training</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">
+                  Complete all 15 modules at your own pace. Certification requires completion of every quiz module
+                  and submission of all assignments, marked competent under our Competency-Based Assessment model.
+                </p>
+                <div className="mt-5 flex-1 rounded-lg border border-accent/30 bg-accent/10 p-5">
+                  <p className="text-sm font-semibold text-foreground">Full course details continue below.</p>
+                  <a
+                    href="#online-self-paced-details"
+                    className="mt-3 inline-flex items-center text-sm font-semibold text-accent underline-offset-4 hover:underline"
+                  >
+                    See who it&apos;s for and what you get
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </div>
+                <div className="mt-6">
+                  <EnrolButton />
                 </div>
               </div>
             </div>
@@ -310,8 +320,8 @@ export default async function InfectionControlCoursePage({
           </div>
         </section>
 
-        {/* Who It's For Section */}
-        <section className="py-16 sm:py-20 bg-background">
+        {/* Online Self-Paced Training Details */}
+        <section id="online-self-paced-details" className="scroll-mt-24 border-t border-accent/30 bg-background py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <span className="text-sm font-semibold uppercase tracking-wide text-accent">
