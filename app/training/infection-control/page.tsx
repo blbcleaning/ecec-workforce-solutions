@@ -189,7 +189,7 @@ export default async function InfectionControlCoursePage({
                     ))}
                   </ul>
                   <p className="mt-4 border-t border-accent/20 pt-3 text-sm font-semibold text-foreground">
-                    From $1,500 (up to 10) - up to $2,600 (20 participants)
+                    From $1,500 (up to 20) - up to $2,600 (20 participants)
                   </p>
                 </div>
                 <div className="mt-6">
